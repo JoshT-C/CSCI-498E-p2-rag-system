@@ -31,3 +31,16 @@ top = 5
 [claude]
 # The model for every claude -p call (the reranker and the answers).
 model = "sonnet"
+
+[dense]
+# The embedding model for the dense system (bge-small-en-v1.5, through fastembed).
+model = "BAAI/bge-small-en-v1.5"
+
+[hybrid]
+# Reciprocal rank fusion constant: each document scores the sum of 1 / (rrf_k + rank).
+rrf_k = 60
+
+[rerank]
+# How many first-stage (hybrid) documents Claude reorders, and how many words of each it sees.
+candidates = 20
+passage_words = 300
