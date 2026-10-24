@@ -22,7 +22,7 @@ Every batch of Claude calls is announced with its count, tried on 2 items first,
 - [x] [C] `scripts/fetch_arxiv.py`: 960 open abstracts harvested; 42 off-topic set aside (no security or repair keyword): arXiv abstracts whose paper license is CC BY / CC BY-SA / CC0 -> `../p2-raw/`
 - [x] [C] full-text PDFs: 6 openly licensed PRD references (OR-Bench, CoCoTen, Musaffar, Li, Chu, Campbell); 7 others excluded by license
 - [x] [C] ingested: 918 abstracts + 19 full-text parts = 937 docs, ~332k tokens; one 82-word part dropped
-- [x] [C→YOU] `p2 license`: 0 fail; 3 flags reviewed by you with quotes; `--online` run in progress
+- [x] [C→YOU] `p2 license`: 0 fail; 3 flags reviewed by you with quotes; `--online`: arXiv confirms all 937 licenses, 0 mismatches
 - [ ] [YOU] DECISIONS.md prompt 1, committed before the first own-corpus `p2 score`
 - [ ] [YOU] at least 10 `hand` queries in `eval/own/queries.tsv`
 - [x] [C] 22 `claude` queries drafted (c01-c22: 7 identifier, 7 mixed, 8 paraphrase)
