@@ -26,7 +26,7 @@ Commit this answer before your first `uv run p2 score` on the own corpus.
 Git history then shows that the expectation came first, which is what lets it be wrong in a way that teaches you something.
 If you were surprised later, say so in prompt 4 or in EVAL.md; do not come back and rewrite this one.
 
-TODO: your answer to prompt 1.
+I chose this document corpus for two primary reasons, notably the first being my interest in running local models on my own hardware, and secondly recent developments in cybersecurity regarding Large Language Models. Recently LLMs (Through projects like Mythos and Glasswing) have become foundational in finding and reporting critical vulnerabilities in across the internet. I would expect BM25 to be more performant in these types of searches as semantic ideals surrounding cybersecurity often overlap greatly, while the specific keywords and topics surrounding adversarial parameters often have very specific and distinct language used to describe their nature.
 
 ---
 
