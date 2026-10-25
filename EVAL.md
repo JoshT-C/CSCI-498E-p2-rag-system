@@ -153,6 +153,8 @@ How did you decide that a document is relevant: write your relevance rule in two
 How did you find candidates (the systems' top 10, a keyword search, reading), and did you read every document before you labeled it?
 Your labels are binary (`rel` 1) unless you say otherwise: if you use graded labels, declare the scale here, for example 2 means the document answers the query fully and 1 means it helps.
 
+Relevance rule: Relevance is judged based on 1. The Semantic Value of the information returned, defined as the the value that the item provided in answering the users initial query. 2. The Logical Value, in terms of how accurately the document answers the users question, a semantically cohesive response that has no logical basis is not valuable.
+
 TODO: describe your gold set and your relevance rule.
 
 ---

@@ -23,11 +23,11 @@ Every batch of Claude calls is announced with its count, tried on 2 items first,
 - [x] [C] full-text PDFs: 6 openly licensed PRD references (OR-Bench, CoCoTen, Musaffar, Li, Chu, Campbell); 7 others excluded by license
 - [x] [C] ingested: 918 abstracts + 19 full-text parts = 937 docs, ~332k tokens; one 82-word part dropped
 - [x] [C→YOU] `p2 license`: 0 fail; 3 flags reviewed by you with quotes; `--online`: arXiv confirms all 937 licenses, 0 mismatches
-- [ ] [YOU] DECISIONS.md prompt 1, committed before the first own-corpus `p2 score`
+- [x] [YOU] DECISIONS.md prompt 1, committed before any own-corpus score
 - [ ] [YOU] at least 10 `hand` queries in `eval/own/queries.tsv`
 - [x] [C] 22 `claude` queries drafted (c01-c22: 7 identifier, 7 mixed, 8 paraphrase)
 - [x] [C] `scripts/candidates.py` builds the candidate sheet (bm25, dense, hybrid top 10 + keyword top 10)
-- [ ] [YOU] relevance judgments (you read each candidate) and the relevance rule in EVAL.md section 3
+- [~] [YOU] relevance rule recorded in EVAL.md section 3 (binary labels: rel 1 only with both semantic and logical value); judgments still to do
 - [ ] [C] own runs: `p2 run --all`, rerank trial then ~35 calls (ask first), `p2 score`
 - [ ] [YOU] ablation choice + hypothesis in EVAL.md section 5, committed before the run
 - [ ] [C] ablation system in `p2/retrievers/`, `--ablation` run, `p2 score`
