@@ -24,3 +24,15 @@ c19	paraphrase	can reducing a model to fewer bits per weight hide malicious beha
 c20	paraphrase	instructions hidden in fetched web content take over an assistant	claude
 c21	paraphrase	turning off a model's tendency to say no by editing one internal direction	claude
 c22	paraphrase	using neural networks to automatically fix security bugs in C programs	claude
+h01	identifier	TrojLLM black-box trojan prompt attack	hand
+h02	identifier	ZeroLeak side-channel patching with LLMs	hand
+h03	identifier	PoisonPrompt backdoor attack on prompt-based LLMs	hand
+h04	identifier	K-ASTRO structure-aware code vulnerability detection	hand
+h05	mixed	circuit-guided weight scaling to improve LLM refusal safety	hand
+h06	mixed	comparing aligned and obliterated LLMs of the same lineage on vulnerability tasks	hand
+h07	mixed	multi-round automatic red-teaming with MART for LLM safety	hand
+h08	mixed	bit-flip hardware fault attacks during neural network training	hand
+h09	paraphrase	fixing software bugs in a multi-turn chat for less than fifty cents per bug	hand
+h10	paraphrase	generating cyber attack techniques mapped to MITRE frameworks from natural language	hand
+h11	paraphrase	stopping backdoors by preventing models from learning spurious shortcut features	hand
+h12	paraphrase	recovering masked personally identifiable information using language models	hand
