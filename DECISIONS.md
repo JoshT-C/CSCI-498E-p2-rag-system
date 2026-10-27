@@ -69,8 +69,6 @@ Claude recommended building the corpus from arXiv abstracts only, which would ha
 That cost extra license review: three full-text parts were flagged, and Claude fetched the arXiv pages and quoted the license lines, but I decided to keep each one.
 It also created the near-duplicate problem I describe in prompt 5, where parts of one paper crowd the top 10.
 
-A second time, Claude pointed out that my query `h06` spells "obliterated" where the papers say "abliterated", and that `bm25` would not match it. I kept my spelling.
-
 In judging, I also rejected candidates that the pooled sheet offered and that matched the query's words. For `c10` ("pruning weights to increase jailbreak resistance without fine-tuning"), the sheet included `2402.05162`, which shares the words about pruning and safety alignment, but reading it showed that it uses pruning to break safety rather than to improve resistance, so under my logical-value rule I marked only `2401.10862` relevant.
 
 ---
