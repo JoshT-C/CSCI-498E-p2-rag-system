@@ -88,7 +88,7 @@ The number I trust least is the perfect 1.000 MRR@10 that `rerank` and `dense` s
 I do not fully trust it for three reasons.
 1. Twelve queries is very few: each query is a twelfth of the mean, so one query slipping from rank 1 to rank 2 drops MRR@10 by about 0.04.
 2. I wrote `h01` to `h12` after browsing the corpus, to be sure each had a matching paper, so they share more words with their targets (0.79 content-word overlap against 0.76 for `claude`), and seven of them name a specific method or tool (TrojLLM, ZeroLeak, PoisonPrompt, K-ASTRO, circuit-guided weight scaling, MART, bit-flip attacks). They are close to known-item lookups.
-3. The judgments came from the pooled top 10 of `bm25`, `dense`, `hybrid` and a keyword search, so a relevant paper that all four missed was never read and is not in `qrels.txt`. An independent review already found relevant papers I had missed on five `claude` queries, so my labels are not complete.
+3. The judgments came from the pooled top 10 of `bm25`, `dense`, `hybrid` and a keyword search, so a relevant paper that all four missed was never read and is not in `qrels.txt`. An independent review already found relevant papers I had missed on four `claude` queries, so my labels are not complete.
 
 To check whether my queries tilted the comparison between systems, I looked at `bm25`'s lead over `dense` in `own-origins`: -0.046 nDCG@10 on the `claude` queries and -0.112 on the `hand` queries, and the difference between the groups (+0.066 [-0.080, +0.261]) is not distinguishable. That means this gold set cannot tell whether who wrote the queries changes the comparison, not that it makes no difference.
 To trust the 1.000 itself, I would want at least 30 `hand` queries written before looking at the corpus, judged by someone who did not write them.
@@ -102,7 +102,7 @@ One thing in your system, your corpus or your gold set that is not right, not fi
 What would you do next, and how would you find out whether it matters?
 Name the file, the query or the document where someone could look.
 
-What is still wrong is that the 6 full-text papers are split into separate 5-page documents that sit next to their own abstracts.
+What is still wrong is that the 6 full-text papers are split into separate 5-page documents, and four of them also sit next to their own abstract.
 For example, OR-Bench (`2405.20947`) is 7 documents in `corpora/own/docs/` (the abstract plus six parts), `2609.00051` is 6, `2603.01246` is 4 and `2607.05842` is 3.
 
 This causes two problems.

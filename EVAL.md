@@ -197,8 +197,9 @@ I used three classes so that the per-class scores test different kinds of search
 
 To find candidates, `scripts/candidates.py` pooled the top 10 of `bm25`, `dense` and `hybrid` with the top 10 of a plain keyword search into one review sheet, and I read every candidate before labeling it.
 When a paper appears both as its abstract and as full-text parts, I judged each document on its own text.
-After an independent review of the gold set, I re-judged five queries (c15, c16, c17, c20 and c21) and added six relevant documents that I had first missed; c21 stayed as it was.
-Several of my `hand` queries reuse most of the words of their target paper's title (for example `h03` and PoisonPrompt), so they are close to known-item lookups, which favours keyword search on those queries.
+After an independent review of the gold set, I re-judged five queries (c15, c16, c17, c20 and c21) and added six relevant documents, to four of them, that I had first missed; c21 stayed as it was.
+Many of my `hand` queries reuse much of their target paper's title: in 5 of the 12, at least 60% of the title's content words appear in the query (for example `h03` and PoisonPrompt), so they are close to known-item lookups. Even so, `bm25` did not do relatively better on them (see `own-origins` in section 4).
+All four systems score 1.000 MRR@10 on the 11 identifier queries, so that third of the gold set cannot tell the systems apart.
 
 ---
 
@@ -324,6 +325,7 @@ On my 34 queries (`own-pairs`), `dense` (0.858 MRR@10, 0.805 nDCG@10) is **relia
 `hybrid` (0.843 Recall@10, 0.847 MRR@10, 0.814 nDCG@10) is reliably better than `bm25` on all three metrics, for example +0.075 [+0.020, +0.141] on MRR@10.
 `hybrid` and `dense` are **not distinguishable** on any metric (MRR@10 -0.011 [-0.057, +0.034]; nDCG@10 +0.009 [-0.028, +0.049], MDD 0.056).
 `rerank` (0.887 Recall@10, 0.936 MRR@10, 0.880 nDCG@10) is **reliably better than all three** on every metric; over `hybrid` it is +0.044 [+0.009, +0.092] on Recall@10, +0.090 [+0.022, +0.175] on MRR@10 and +0.066 [+0.024, +0.116] on nDCG@10.
+The MRR@10 lead over `hybrid` depends on my re-judging: before I added six labels after the independent review, `rerank` minus `hybrid` on MRR@10 was +0.071 [-0.007, +0.162], not distinguishable. Five of the six added documents were ones `rerank` itself had ranked in its top 5, so the re-judging was not blind to the systems, and this result should be read with that in mind.
 
 On the `hand` and `claude` queries separately, every system has a higher mean on my `hand` queries.
 That gap is distinguishable for `dense` and `hybrid` on all three metrics and for `rerank` on Recall@10 and nDCG@10 (for example +0.183 [+0.077, +0.312] nDCG@10 for `rerank`), but not for `bm25`, and not for `rerank` on MRR@10 (+0.098 [+0.000, +0.220]).
@@ -414,8 +416,9 @@ Then sort the failures by cause, for example a vocabulary mismatch, near-duplica
 | c21 | Relevant documents at #1, #2, #6 and #10 (MRR 1.000), but only 4 of 12 relevant documents in the top 10 (Recall@10 0.333) | 12 refusal-direction and abliteration documents, including `2607.05842` and its two full-text parts | Too many relevant documents for 10 places: dozens of refusal papers compete, only 4 of the 12 relevant ones made `hybrid`'s top 20, and the reranker can only reorder what it gets. | Merge each paper's full-text parts into one document, and pool deeper for broad questions. |
 
 Across these five, two patterns stand out.
-First, everyday wording meets the field's own terms in crowded topic areas: all five are `claude` queries (`c13` is mixed, the other four are paraphrases) that describe a problem in plain words ("secretly derived from", "turns harmful after deployment", "tendency to say no") while the papers use their own names for it ("model attribution", "sleeper agents", "abliteration"), and in four of them (c13, c16, c17, c21) relevant documents never reached `hybrid`'s top 20, so the reranker had no chance to bring them up.
+First, everyday wording meets the field's own terms in crowded topic areas: all five are `claude` queries (`c13` is mixed, the other four are paraphrases) that describe a problem in plain words ("secretly derived from", "turns harmful after deployment", "tendency to say no") while the papers use their own names for it ("model attribution", "sleeper agents", "abliteration"), and in all five some relevant documents never reached `hybrid`'s top 20, so the reranker had no chance to bring them up.
 Second, the gold set itself failed twice: on c17 and c20, the documents the reranker ranked high were relevant and I had first missed them, so part of what looked like system failure was my labeling.
+Some other candidates are arguably relevant too, such as `2609.00051` for c08 and `2605.01769` for c22. I did not add more, because they came from `rerank`'s own top results, and adding them would tilt the comparison further toward it; my labels are a limit of this gold set.
 
 ---
 
@@ -436,13 +439,13 @@ Scores copied from the `shared-practice` table (section 1) and the `own` table (
 | Own (LLM security) | 34 | 0.736 | 0.805 | 0.814 | **0.880** |
 
 `rerank` has the highest mean on both corpora, but how clearly it wins depends on the metric.
-On my corpus it is reliably better than all three other systems on every metric.
+On my corpus it is reliably better than all three other systems on every metric, though over `hybrid` on MRR@10 only after my re-judging (see section 4).
 On 30 CFR it is reliably better than `dense` and `hybrid` on every metric, but over `bm25` only on MRR@10 (+0.293 [+0.043, +0.533]); its nDCG@10 lead over `bm25` (+0.225 [-0.011, +0.451]) and its Recall@10 lead are not distinguishable.
 What changed is the order of the first-stage systems underneath it.
-On 30 CFR, `bm25` had the highest mean of the three, though none of those differences is distinguishable; on my corpus, `dense` and `hybrid` are reliably better than `bm25` (`dense` minus `bm25` +0.069 [+0.004, +0.150], `hybrid` minus `bm25` +0.078 [+0.027, +0.140] on nDCG@10).
+On 30 CFR, `bm25` had the highest mean of the three on nDCG@10 and Recall@10 (on MRR@10 `dense` was higher, 0.562 against 0.507), and none of those differences is distinguishable; on my corpus, `dense` and `hybrid` are reliably better than `bm25` (`dense` minus `bm25` +0.069 [+0.004, +0.150], `hybrid` minus `bm25` +0.078 [+0.027, +0.140] on nDCG@10).
 
 Three differences between the collections could explain it.
-(1) Identifiers: 30 CFR queries often name a section number, which only keyword search can match, and there `bm25` beat `dense` 0.857 to 0.211 nDCG@10 on the identifier queries; on my corpus the identifiers are tool and benchmark names that each abstract explains in its first sentence, and `dense` nearly tied `bm25` on them (0.997 against 1.000).
+(1) Identifiers: 30 CFR queries often name a section number, which only keyword search can match, and there `bm25` beat `dense` 0.857 to 0.211 nDCG@10 on the identifier queries; on my corpus the identifiers are tool and benchmark names that appear in each paper's title, which every abstract document carries at its top, and `dense` nearly tied `bm25` on them (0.997 against 1.000).
 (2) Reworded questions: on my paraphrase queries, `dense` and `hybrid` (0.572 and 0.592 nDCG@10) were ahead of `bm25` (0.402).
 (3) Document length: the CFR sections are short (median 68 words) while my abstracts are longer (median about 205 words) and written as connected prose, which may give an embedding model more meaning to work with.
 For (1) and (2) I have observed class means, over 7 queries per class on 30 CFR and 11 or 12 on my corpus, with no interval, so they point in a direction but do not prove it. Why security papers reward embeddings (for example, that they describe the same attack in many different ways) is a guess, and so is (3); I tested neither.
@@ -543,8 +546,8 @@ _No stretch runs yet (stretch option 5): `uv run p2 run --corpus own --queries e
 3. **The table:** `stretch-cost`, above.
 4. **What the intervals let me claim:**
    - Shared practice: `rerank_c10` saves 5,517 input tokens per query (8,263 against 13,780, 40% fewer) and 0.5 seconds per query. Its MRR@10 drop against `rerank` (-0.136 [-0.286, +0.000]) is not distinguishable, but `rerank` is reliably better on Recall@10 (+0.142 [+0.050, +0.258]) and nDCG@10 (+0.158 [+0.054, +0.279]). Against free `hybrid`, `rerank_c10` is reliably better on nDCG@10 (+0.142 [+0.020, +0.267]) but not distinguishable on MRR@10 (+0.193 [-0.008, +0.391]).
-   - My corpus: skipping Claude and using `hybrid` alone saves all of `rerank`'s 14,891 input tokens and 4.0 seconds per query (`hybrid` takes about 7 ms per query locally), but it costs a distinguishable amount of quality: `hybrid` minus `rerank` is -0.090 [-0.175, -0.022] on MRR@10, and `rerank` is also reliably better on nDCG@10 (+0.066 [+0.024, +0.116]) and Recall@10 (+0.044 [+0.009, +0.092]).
-   - So I would make neither cheap trade by default: cutting to 10 candidates costs measurable recall on the shared corpus, and dropping the reranker costs measurable MRR@10 on mine. Where cost matters more than the order of the top 10, `hybrid` is the free option, with a loss somewhere between about 0.02 and 0.18 MRR@10 on my corpus.
+   - My corpus: skipping Claude and using `hybrid` alone saves all of `rerank`'s 14,891 input tokens and 4.0 seconds per query (`hybrid` takes about 7 ms per query locally), but it costs a distinguishable amount of quality on the current labels: `hybrid` minus `rerank` is -0.090 [-0.175, -0.022] on MRR@10 (before my six added labels it was -0.071 [-0.162, +0.007], not distinguishable, so this part depends on them), and `rerank` is also reliably better on nDCG@10 (+0.066 [+0.024, +0.116]) and Recall@10 (+0.044 [+0.009, +0.092]).
+   - So I would make neither cheap trade by default: cutting to 10 candidates costs measurable recall on the shared corpus, and dropping the reranker costs measurable MRR@10 on mine, on the current labels. Where cost matters more than the order of the top 10, `hybrid` is the free option, with a loss somewhere between about 0.02 and 0.18 MRR@10 on my corpus.
    - What it does not let me claim: these are 20 and 34 queries, so differences smaller than the MDDs (0.160 to 0.209 for `rerank_c10` against `rerank`) are invisible, the cheaper variant was only run on the shared corpus, and the seconds come from one run each.
 5. **Next:** a gate in front of the reranker that calls Claude only when `hybrid`'s first and second results score close together, and skips it on easy identifier lookups, where `hybrid` already scores 1.000 MRR@10 on my corpus. It worked if tokens per query fall by at least a third while the interval of gated minus full `rerank` stays around zero and within plus or minus the MDD.
 
