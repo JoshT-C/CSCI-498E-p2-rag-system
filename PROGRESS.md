@@ -38,10 +38,10 @@ Every batch of Claude calls is announced with its count, tried on 2 items first,
 
 ## Phase 4 - analysis and writing
 - [ ] [C→YOU] at least 5 failures of the best own system laid out; you sort causes in EVAL.md section 6
-- [ ] [YOU] EVAL.md sections 3, 4, 7 prose
-- [ ] [YOU] DECISIONS.md prompts 2-5
+- [x] [YOU] EVAL.md prose, all sections (student draft, fact-checked and edited by Claude at the student's request)
+- [x] [YOU] DECISIONS.md prompts 2-5 (student draft, fact-checked and edited by Claude at the student's request)
 - [ ] [YOU] the 5-10 minute video and the Canvas post
 
 ## Phase 5 - submission
-- [ ] [C] `uv run p2 check --final` clean, final push
+- [x] [C] `uv run p2 check --final`: 24 passed, 0 to do, 0 failed
 - [ ] [YOU] merge into your default branch / confirm the repo is public

@@ -25,7 +25,11 @@ The minimum detectable difference is the smallest gap this many queries could re
 
 For each of `dense`, `hybrid` and `rerank`, one or two sentences: the embedding model, how documents were chunked, what was fused and how, how many candidates the reranker saw, and anything you changed from the 12 and 13 lab code.
 
-TODO: describe your three systems.
+All four systems split each document into 300-word chunks that overlap by 50 words (`[chunking]` in `p2.toml`), and a document scores as high as its best chunk.
+`bm25` is the provided keyword baseline (`k1 = 0.9`, `b = 0.4`, the `"codes"` tokenizer, which keeps section numbers such as `75.403` whole).
+`dense` (`p2/retrievers/dense.py`) turns every chunk and every query into a vector with the `BAAI/bge-small-en-v1.5` embedding model and ranks chunks by cosine similarity.
+`hybrid` (`p2/retrievers/hybrid.py`) merges the full rankings of `bm25` and `dense` with reciprocal rank fusion: each document scores the sum of 1 / (60 + its rank) in each list.
+`rerank` (`p2/retrievers/rerank.py`) takes `hybrid`'s top 20 documents, shows Claude (Sonnet, the `sonnet` setting in `p2.toml`) the first 300 words of each, and asks for them back in order from most to least relevant; if the reply is not a valid ordering of all 20, it keeps `hybrid`'s order.
 
 ### Practice queries (20)
 
@@ -113,7 +117,16 @@ Which differences are distinguishable from zero and which are not?
 What is the minimum detectable difference at 20 queries, and what does that say about any gap smaller than it?
 Which claim from lecture 12 or 13 did your numbers support, and which did they leave open?
 
-TODO: write what the practice-query intervals let you claim.
+On the 20 practice queries (`shared-practice-pairs`), `bm25`, `dense` and `hybrid` are **not distinguishable on this gold set**: every interval between those three crosses zero.
+For example, on nDCG@10, `dense` minus `bm25` is -0.039 [-0.302, +0.231], `hybrid` minus `bm25` is -0.075 [-0.238, +0.075], and `hybrid` minus `dense` is -0.036 [-0.200, +0.113].
+With only 20 queries, the minimum detectable difference (MDD) for those pairs is 0.192 to 0.415, so gaps of 4 to 9 points like these are far too small for this gold set to see.
+
+`rerank` (0.800 MRR@10, 0.743 nDCG@10, 0.733 Recall@10) is **reliably better** than both `dense` and `hybrid` on all three metrics; for example, on nDCG@10 it is +0.264 [+0.128, +0.413] over `dense` and +0.300 [+0.176, +0.430] over `hybrid`.
+Against `bm25` it is reliably better on MRR@10 (+0.293 [+0.043, +0.533]), but its nDCG@10 lead (+0.225 [-0.011, +0.451]) and its Recall@10 lead (+0.108 [-0.133, +0.350]) are not distinguishable.
+Giving the reranker 20 candidates instead of 10 matters: `rerank` beats `rerank_c10` on Recall@10 (+0.142 [+0.050, +0.258]) and nDCG@10 (+0.158 [+0.054, +0.279]), because a relevant section at ranks 11 to 20 of `hybrid` never reaches `rerank_c10` at all.
+
+This supports what lectures 12 and 13 claimed: keyword search wins on exact identifier lookups (`bm25` Recall@10 1.000 on the 7 identifier queries, against 0.214 for `dense`), embeddings win on reworded questions (`bm25` scores 0.000 on all 7 paraphrase queries, `dense` 0.595 Recall@10), and an LLM reranker gives a real jump on top.
+It leaves open whether `hybrid` beats either of its two parts, because 20 queries cannot separate gaps that small.
 
 ---
 
@@ -132,7 +145,15 @@ Then read three in-corpus answers that `uv run p2 verify` passed.
 For each one, open the cited chunk and say whether the quote really supports the claim next to it.
 The check proves a quote is a real piece of the chunk and cannot prove that it supports the claim, so this reading is the part only you can do.
 
-TODO: write your answer choices and your three-answer audit.
+I answered with `rerank` (it reranks `hybrid`'s top 20 and passes the top 5 chunks to the answer step) because it had the best Recall@10 (0.733), MRR@10 (0.800) and nDCG@10 (0.743) on the practice queries, which gives the answer step the best chance of having the right section among its 5 chunks.
+I left `prompts/answer.txt` unchanged (`prompt_sha256` 4418806497c799a1): it tells the model to answer only from the chunks, to give a chunk id and a word-for-word quote for every claim, and to set `not_found` when the chunks do not answer the question.
+The result (`answers/shared/rerank.json`) was 8 of 8 in-corpus answers verified (95% interval [0.676, 1.000], none marked `not_found`), 4 of 4 out-of-corpus questions declined ([0.510, 1.000]), and 12 of 12 quotes found in the chunks they cite.
+
+**Three-answer audit.** I opened the cited chunk for each of these and checked whether the quote really supports the claim.
+
+1. **a01** (minutes to call MSHA after a fatal accident). The answer was "Within 15 minutes ... once it knows or should know that an accident involving a death has occurred." It cites `cfr30-50.10#0` with two quotes: "The operator shall immediately contact MSHA at once without delay and within 15 minutes at the toll-free number, 1-800-746-1553, once the operator knows or should know that an accident has occurred involving:" and "(a) A death of an individual at the mine;". The section lists the accidents that the 15-minute rule applies to, and item (a) is a death at the mine, so the quotes support the claim.
+2. **a02** (minimum incombustible content of combined dust with no methane). The answer was "not less than 80 percent where no methane is present. Methane raises that figure." It cites `cfr30-75.403#0`: "maintained in such quantities that the incombustible content of the combined coal dust, rock dust, and other dust shall be not less than 80 percent." and "Where methane is present in any ventilating current, the percent of incombustible content of such combined dust shall be increased 0.4 percent for each 0.1 percent of methane." Section 75.403 states exactly this: 80 percent is the base rule, and it rises only when methane is present.
+3. **a03** (how long a self-rescue device must protect a miner). The answer was "The device must be adequate to protect the person for 1 hour or longer." It cites `cfr30-75.1714#0`: "an approved self-rescue device or devices which is adequate to protect such person for 1 hour or longer." Section 75.1714 requires the operator to give every underground miner such a device, so the quote supports the claim directly.
 
 ---
 
@@ -144,7 +165,18 @@ What is it, where did it come from, how many documents and how many megabytes, a
 Name the one or two documents you were least sure about and what you decided.
 Say which of the allowed sources in the brief it comes from.
 
-TODO: describe your corpus and its license basis.
+My corpus (`corpora/own/`) is about LLM security, the topics of my Sentinel-Weights PRD: refusal removal ("abliteration") and safety circuits, jailbreak and adversarial-prompt detection, backdoors and sleeper models, LLM malware and code obfuscation, vulnerability detection and repair, and prompt injection.
+It comes from the brief's allowed source of openly licensed arXiv papers.
+`scripts/fetch_arxiv.py` searched arXiv by topic and kept only papers whose own license is CC BY, CC BY-SA or CC0, which gave 960 abstracts; I set aside 42 that had no security or repair keyword, which left 918.
+To those I added 19 full-text documents from 6 openly licensed papers that my PRD cites (OR-Bench `2405.20947`, CoCoTen `2508.02997`, `2603.01246`, `2603.20976`, `2607.05842` and `2609.00051`), split into 5-page parts; one 82-word leftover part was dropped.
+Seven other papers the PRD cites could not go in: six carry only arXiv's default license, which does not allow redistribution, and one (Alon and Kamfonas) is CC BY-NC-SA, which the brief does not allow. I also left out one CC0 reference that is off-topic.
+In all, the corpus has 937 documents, 1.9 MB of text, about 236,874 words (about 331,623 estimated tokens).
+Every document is CC BY 4.0, CC BY-SA 4.0 or CC0 1.0, and `uv run p2 license --online` confirmed all 937 against arXiv's own records with no mismatches (`LICENSES.md`).
+
+The three documents I was least sure about were the ones the license check flagged.
+`2405.20947-full__p001-005` (OR-Bench) has an ICML line, "Copyright 2025 by the author(s)", and `2508.02997-full` (CoCoTen) has an ACM line, "© 2025 Copyright held by the owner/author(s)"; in both, the authors hold the copyright, and arXiv lists the paper as CC BY 4.0 (CoCoTen's own text also says "This work is licensed under a Creative Commons Attribution 4.0 International License").
+`2603.20976-full__p006-010` was flagged because "Springer" appears, but only inside a reference to another paper, and arXiv lists this paper as CC BY 4.0.
+I kept all three and recorded the quote and the source for each in the `notes` column of `corpora/own/manifest.tsv`, which `LICENSES.md` repeats.
 
 ### The gold set
 
@@ -153,9 +185,18 @@ How did you decide that a document is relevant: write your relevance rule in two
 How did you find candidates (the systems' top 10, a keyword search, reading), and did you read every document before you labeled it?
 Your labels are binary (`rel` 1) unless you say otherwise: if you use graded labels, declare the scale here, for example 2 means the document answers the query fully and 1 means it helps.
 
-Relevance rule: Relevance is judged based on 1. The Semantic Value of the information returned, defined as the the value that the item provided in answering the users initial query. 2. The Logical Value, in terms of how accurately the document answers the users question, a semantically cohesive response that has no logical basis is not valuable.
+Relevance rule: Relevance is judged on two things. 1. Semantic value: how much the document contributes to answering the user's query. 2. Logical value: how accurately the document answers the user's question; a document that is on topic but does not actually answer the question has no value.
 
-TODO: describe your gold set and your relevance rule.
+Labels are binary: a document is relevant (`rel` 1) only when it has both semantic value and logical value.
+
+The gold set (`eval/own/queries.tsv`, `eval/own/qrels.txt`) has 34 queries, 12 that I wrote (`hand`) and 22 that Claude drafted (`claude`), with 78 relevance judgments.
+I used three classes so that the per-class scores test different kinds of search:
+- `identifier` (11 queries: 4 hand, 7 claude) name a specific tool, dataset or benchmark, such as XSTest, OR-Bench, TrojLLM, ZeroLeak or K-ASTRO;
+- `mixed` (11 queries: 4 hand, 7 claude) combine technical terms with an ordinary question, such as which attention heads control safety, or bit-flip attacks during training;
+- `paraphrase` (12 queries: 4 hand, 8 claude) describe an attack or defense in everyday words without the paper's own term, such as "turning off a model's tendency to say no by editing one internal direction".
+
+To find candidates, `scripts/candidates.py` pooled the top 10 of `bm25`, `dense` and `hybrid` with the top 10 of a plain keyword search into one review sheet, and I read every candidate before labeling it.
+When a paper appears both as its abstract and as full-text parts, I judged each document on its own text.
 
 ---
 
@@ -277,7 +318,18 @@ Which differences are distinguishable and which are not, at your gold-set size?
 Do the `hand` queries and the `claude` queries tell the same story?
 Did your prediction in `DECISIONS.md` prompt 1 hold?
 
-TODO: write what your own-corpus intervals let you claim.
+On my 34 queries (`own-pairs`), `dense` (0.843 MRR@10, 0.804 nDCG@10) is **reliably better than `bm25`** (0.757 MRR@10, 0.731 nDCG@10) on MRR@10 (+0.086 [+0.016, +0.174], MDD 0.115) and nDCG@10 (+0.073 [+0.013, +0.151], MDD 0.100), but not distinguishable on Recall@10 (+0.044 [-0.015, +0.120]).
+`hybrid` (0.834 Recall@10, 0.841 MRR@10, 0.809 nDCG@10) is reliably better than `bm25` on all three metrics, for example +0.084 [+0.024, +0.156] on MRR@10.
+`hybrid` and `dense` are **not distinguishable** on any metric (MRR@10 -0.002 [-0.044, +0.042]; nDCG@10 +0.005 [-0.028, +0.035], MDD 0.047).
+`rerank` (0.874 Recall@10, 0.912 MRR@10, 0.863 nDCG@10) is reliably better than `bm25` and `dense` on every metric, and better than `hybrid` on Recall@10 (+0.040 [+0.005, +0.086]) and nDCG@10 (+0.055 [+0.014, +0.104]); its MRR@10 lead over `hybrid` (+0.071 [-0.007, +0.162], MDD 0.121) is not distinguishable.
+
+The `hand` and `claude` queries tell the same story about which system wins.
+Every system has a higher mean on my `hand` queries than on the `claude` ones, and the gap is distinguishable for `dense`, `hybrid` and `rerank` (for example +0.210 [+0.092, +0.353] nDCG@10 for `rerank`) but not for `bm25`.
+My queries share slightly more words with their target documents (content-word overlap 0.79 against 0.75).
+On both groups `dense` is ahead of `bm25` (`bm25` minus `dense` on nDCG@10 is -0.052 on the claude queries and -0.112 on the hand queries), and the difference between the two groups (+0.060 [-0.081, +0.251]) is not distinguishable.
+
+So **my prediction in `DECISIONS.md` prompt 1 was wrong**: I expected `bm25` to win because security papers use very specific terms.
+`bm25` did tie for the top on the 11 identifier queries (1.000 MRR@10, as did `dense`, `hybrid` and `rerank`), but on the 12 paraphrase queries it fell far behind (0.387 nDCG@10, against 0.569 for `dense` and 0.701 for `rerank`), whenever a question described what an attack does without using the paper's own name for it.
 
 ---
 
@@ -330,7 +382,17 @@ Read the queries at the top of each list in the second table, and say whether yo
 
 Hypothesis (written before the run): I think using a simpler, dictionary-based search method will speed up the search system because it doesn't analyze word context. This comes with the dual benefit and drawback of that this algorithm only looks at exact words rather than meaning,. This means that the search accuracy will likely degrade compared to using a smart AI model like BAAI's bge-small.
 
-TODO: write the ablation: the one change, the hypothesis, the result and the claim.
+The ablation is `p2/retrievers/dense_potion.py` (`BASE = "dense"`), and it changes one thing: the embedding model inside `dense`, from `BAAI/bge-small-en-v1.5` to `minishlab/potion-retrieval-32M`; the 300-word chunks, the 50-word overlap and the scoring are the same.
+One correction to my hypothesis above: potion is not an exact-word search. It is a static embedding model, which gives every word piece one fixed vector no matter what words surround it, so it still captures some meaning, but not context the way bge-small does.
+
+Speed: `dense_potion` took about 1.4 ms per query against 4.9 ms for `dense`, and it encoded the whole corpus in under a second against about a minute and a half for bge-small. These times come from one run on one machine (`traces/retrieval/`, which git ignores), so they have no interval.
+Accuracy: in the `own-ablation` table, `dense_potion` minus `dense` is -0.037 [-0.117, +0.031] on MRR@10 (MDD 0.109) and -0.054 [-0.121, +0.003] on nDCG@10 (MDD 0.092).
+Both intervals include zero, so the two models are **not distinguishable on this 34-query gold set**: the means moved in the direction I predicted, but any difference smaller than about 0.1 is too small for this gold set to detect.
+
+The `own-ablation-queries` table only partly matches my explanation.
+The change helped 2 queries, hurt 4 and left 28 the same; the 11 identifier queries barely moved, as expected for exact names.
+It hurt `h06` (1.000 to 0.200) and `h09` (1.000 to 0.250) and the paraphrase queries `c21` and `c18`, which fits the idea that a model without context loses reworded questions.
+But it also helped `c20`, which is a paraphrase query (0.500 to 1.000), and `c13` (0.167 to 0.500), so "potion loses paraphrases" does not explain every query.
 
 ---
 
@@ -342,8 +404,15 @@ Then sort the failures by cause, for example a vocabulary mismatch, near-duplica
 
 | qid | what the best system returned | what was relevant | cause | what you would try |
 |---|---|---|---|---|
+| c16 | #1 `2607.01854` (*Has This Checkpoint Been Abliterated?*), #2 `2605.21146` (*Detecting Trojaned DNNs*); no relevant document in the top 10 | `2306.09308` (*Matching Pairs: Attributing Fine-Tuned Models to their Pre-Trained Large Language Models*) | Vocabulary mismatch: the query asks which base model a checkpoint was "secretly derived from", while the paper calls this "attributing fine-tuned models to their pre-trained" models. It was not in `hybrid`'s top 20, so `rerank` never saw it. | Expand the query with related terms before searching, or give the reranker a deeper pool (50 instead of 20). |
+| c17 | #1 `2602.08449` (*When Evaluation Becomes a Side Channel*), #4 `2510.20487` (*Steering Evaluation-Aware Language Models to Act Like They Are Deployed*); no relevant document in the top 10 | `2106.08970`, `2511.15992`, `2608.24037` (sleeper-agent and hidden-trigger backdoor papers) | Plain description against a lookalike topic: the query says "behaves well during testing but turns harmful after deployment when it sees a hidden cue" and never says "sleeper agent". Papers about models that notice when they are being tested share "testing" and "deployed", and none of the three relevant papers made `hybrid`'s top 20. | Add a one-sentence plain-English summary to each document so everyday descriptions meet terms like "sleeper agent". |
+| c13 | #1 `2505.19887` (*Deconstructing Obfuscation*), #2 `2605.06910` (relevant), #3 `2604.08083` (*Can LLMs Deobfuscate Binary Code?*) | `2310.12357`, `2605.06910`, `2606.31725` | Many similar papers on one topic: the corpus has dozens of obfuscation papers, and papers about LLMs that *undo* obfuscation crowded out two that ask whether obfuscation *breaks* LLM code analysis; neither of those two made `hybrid`'s top 20. | Tell the reranker prompt to separate "does obfuscation break analysis" from "tools that deobfuscate code", and pool deeper. |
+| c20 | #1 `2508.21669` (*Hacking the AI Hackers via Prompt Injection*), then relevant documents at #2, #5, #6 and #8 | `2306.05499`, `2403.14720`, `2507.14799`, `2605.11868`, `2605.15030` | Close neighbor at #1 and different wording: `2508.21669` is also about prompt injection against agents, and `2306.05499` (*Prompt Injection attack against LLM-integrated Applications*) speaks of "LLM-integrated applications" rather than "fetched web content", so it missed `hybrid`'s top 20. | Map everyday phrases such as "fetched web content" to the field's term, "indirect prompt injection". |
+| c21 | Relevant documents at #1, #2, #6 and #10 (MRR 1.000), but only 4 of 12 relevant documents in the top 10 (Recall@10 0.333) | 12 refusal-direction and abliteration documents, including `2607.05842` and its two full-text parts | Too many relevant documents for 10 places: dozens of refusal papers compete, only 4 of the 12 relevant ones made `hybrid`'s top 20, and the reranker can only reorder what it gets. | Merge each paper's full-text parts into one document, and pool deeper for broad questions. |
 
-TODO: add one row for each failure you analyzed, and write two or three sentences on the pattern you see across them.
+Across these five, the pattern is everyday wording meeting the field's own terms in crowded topic areas.
+All five are `claude` queries (`c13` is mixed, the other four are paraphrases) that describe a problem in plain words ("secretly derived from", "turns harmful after deployment", "tendency to say no") while the papers use their own names for it ("model attribution", "sleeper agents", "abliteration").
+In every case the missing relevant documents were not in `hybrid`'s top 20, so the reranker never had a chance to bring them up: the first stage, not the reranker, is where these failures start.
 
 ---
 
@@ -356,7 +425,26 @@ Did the winner change between the shared corpus and yours?
 Why, or why not: what is different about the two collections (document length, vocabulary, identifiers, near-duplicates, how the queries were written), and which of your explanations did you test and which are guesses?
 Say what 20 queries on one side and your gold-set size on the other cannot support.
 
-TODO: write the cross-corpus comparison.
+Scores copied from the `shared-practice` table (section 1) and the `own` table (section 4), nDCG@10:
+
+| Corpus | Queries | `bm25` | `dense` | `hybrid` | `rerank` |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Shared (30 CFR) | 20 | 0.518 | 0.480 | 0.443 | **0.743** |
+| Own (LLM security) | 34 | 0.731 | 0.804 | 0.809 | **0.863** |
+
+The winner did not change: `rerank` is first on both corpora (0.800 and 0.912 MRR@10).
+What changed is the order of the first-stage systems underneath it.
+On 30 CFR, `bm25` had the highest mean of the three, though none of those differences is distinguishable; on my corpus, `dense` and `hybrid` are reliably better than `bm25` (`dense` minus `bm25` +0.073 [+0.013, +0.151], `hybrid` minus `bm25` +0.078 [+0.025, +0.142] on nDCG@10).
+
+Three differences between the collections can explain it.
+(1) Identifiers: 30 CFR queries often name a section number, which only keyword search can match, and there `bm25` beat `dense` 0.857 to 0.211 on identifier queries; on my corpus the identifiers are tool and benchmark names that each abstract explains in its first sentence, and `dense` nearly tied `bm25` on them (0.997 against 1.000).
+(2) Reworded questions: on my paraphrase queries, `dense` and `hybrid` (0.569 and 0.576 nDCG@10) beat `bm25` (0.387), because security papers describe the same attack in many different ways.
+(3) Document length: the CFR sections are short (median 68 words) while my abstracts are longer (median about 205 words) and written as connected prose, which gives an embedding model more meaning to work with. This one is a guess; I did not test it.
+The first two I measured in the per-class tables; the third is untested.
+
+The gold-set sizes limit both sides.
+With 20 queries on 30 CFR, the minimum detectable difference is 0.160 to 0.415, so `bm25`, `dense` and `hybrid` cannot be separated there, and the "flip" in their order may be noise on that side.
+With 34 queries on my corpus it is 0.047 to 0.159, which is enough to show that `dense` and `hybrid` beat `bm25` and that `rerank` beats `hybrid` on nDCG@10, but not enough to separate `hybrid` from `dense`, or `rerank` from `hybrid` on MRR@10.
 
 ---
 
@@ -445,7 +533,15 @@ _No stretch runs yet (stretch option 5): `uv run p2 run --corpus own --queries e
 
 ### Your stretch
 
-Write the five things here.
+1. **Option:** 3, cost and latency.
+2. **What I did, and the files:** I built a cheaper reranker, `rerank_c10` (`p2/retrievers/rerank_c10.py`), that sends Claude `hybrid`'s top 10 instead of the top 20, with everything else the same as `rerank`, and ran it on the 20 shared practice queries (`runs/shared/rerank_c10.practice.trec`, `traces/shared-practice-rerank_c10.jsonl`). I compared it, and the free systems, with the `rerank` traces (`traces/shared-practice-rerank.jsonl`, `traces/shared-test-rerank.jsonl`, `traces/own-own-rerank.jsonl`, `traces/answers-rerank.jsonl`).
+3. **The table:** `stretch-cost`, above.
+4. **What the intervals let me claim:**
+   - Shared practice: `rerank_c10` saves 5,517 input tokens per query (8,263 against 13,780, 40% fewer) and 0.5 seconds per query. Its MRR@10 drop against `rerank` (-0.136 [-0.286, +0.000]) is not distinguishable, but `rerank` is reliably better on Recall@10 (+0.142 [+0.050, +0.258]) and nDCG@10 (+0.158 [+0.054, +0.279]). Against free `hybrid`, `rerank_c10` is reliably better on nDCG@10 (+0.142 [+0.020, +0.267]) but not distinguishable on MRR@10 (+0.193 [-0.008, +0.391]).
+   - My corpus: skipping Claude and using `hybrid` alone saves all of `rerank`'s 14,891 input tokens and 4.0 seconds per query (`hybrid` takes about 7 ms per query locally). The MRR@10 loss (`hybrid` minus `rerank` -0.071 [-0.162, +0.007]) is not distinguishable, although `rerank` is reliably better on nDCG@10 (+0.055 [+0.014, +0.104]) and Recall@10 (+0.040 [+0.005, +0.086]).
+   - So I would keep 20 candidates when the reranker is used, since cutting to 10 costs measurable recall. For a quick lookup tool, free `hybrid` is close enough on MRR@10; where the order of the whole top 10 matters, I would pay for `rerank`.
+   - What it does not let me claim: these are 20 and 34 queries, so differences smaller than the MDDs (0.163 to 0.209 for `rerank_c10` against `rerank`) are invisible, and the seconds come from one run each.
+5. **Next:** a gate in front of the reranker that calls Claude only when `hybrid`'s first and second results score close together, and skips it on easy identifier lookups, where `hybrid` already scores 1.000 MRR@10 on my corpus. It worked if tokens per query fall by at least a third while the interval of gated minus full `rerank` stays around zero and within plus or minus the MDD.
 
 ---
 
