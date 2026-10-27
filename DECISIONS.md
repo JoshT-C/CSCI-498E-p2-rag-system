@@ -71,6 +71,8 @@ It also created the near-duplicate problem I describe in prompt 5, where parts o
 
 In judging, I also rejected candidates that the pooled sheet offered and that matched the query's words. For `c10` ("pruning weights to increase jailbreak resistance without fine-tuning"), the sheet included `2402.05162`, which shares the words about pruning and safety alignment, but reading it showed that it uses pruning to break safety rather than to improve resistance, so under my logical-value rule I marked only `2401.10862` relevant.
 
+When I first asked Claude to audit my work, it returned a generous score and missed several potential logical problems in my judging process and in my evaluation as a whole. To fix this, I asked my main orchestrating agent to write an adversarial review prompt and run it in a separate agent, so that my work would reach the quality I wanted. That second agent found a number of issues the first audit had missed, and as a result I re-judged five queries and revised several earlier statements for accuracy.
+
 ---
 
 ## 4. A number you do not trust
