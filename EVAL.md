@@ -283,6 +283,8 @@ What did you change, what happened, and does the interval support the claim you 
 If the result is not distinguishable, say what size of effect your gold set could have seen.
 Read the queries at the top of each list in the second table, and say whether your change explains them.
 
+Hypothesis (written before the run): I think using a simpler, dictionary-based search method will speed up the search system because it doesn't analyze word context. This comes with the dual benefit and drawback of that this algorithm only looks at exact words rather than meaning,. This means that the search accuracy will likely degrade compared to using a smart AI model like BAAI's bge-small.
+
 TODO: write the ablation: the one change, the hypothesis, the result and the claim.
 
 ---
