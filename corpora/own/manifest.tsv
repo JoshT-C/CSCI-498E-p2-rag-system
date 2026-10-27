@@ -1,1 +1,938 @@
 docid	title	source	license	notes
+2405.20947-full__p001-005	OR-Bench: An Over-Refusal Benchmark for Large Language Models (pages 1-5)	https://arxiv.org/abs/2405.20947	cc-by-4.0	file: 2405.20947-full.pdf; pages 1-5 of 28; reviewed: author-held copyright line from the ICML footer; arXiv lists the paper under CC BY 4.0; the page says "Rights to this article" linking http://creativecommons.org/licenses/by/4.0/ (https://arxiv.org/abs/2405.20947)
+2405.20947-full__p006-010	OR-Bench: An Over-Refusal Benchmark for Large Language Models (pages 6-10)	https://arxiv.org/abs/2405.20947	cc-by-4.0	file: 2405.20947-full.pdf; pages 6-10 of 28
+2405.20947-full__p011-015	OR-Bench: An Over-Refusal Benchmark for Large Language Models (pages 11-15)	https://arxiv.org/abs/2405.20947	cc-by-4.0	file: 2405.20947-full.pdf; pages 11-15 of 28
+2405.20947-full__p016-020	OR-Bench: An Over-Refusal Benchmark for Large Language Models (pages 16-20)	https://arxiv.org/abs/2405.20947	cc-by-4.0	file: 2405.20947-full.pdf; pages 16-20 of 28
+2405.20947-full__p021-025	OR-Bench: An Over-Refusal Benchmark for Large Language Models (pages 21-25)	https://arxiv.org/abs/2405.20947	cc-by-4.0	file: 2405.20947-full.pdf; pages 21-25 of 28
+2405.20947-full__p026-028	OR-Bench: An Over-Refusal Benchmark for Large Language Models (pages 26-28)	https://arxiv.org/abs/2405.20947	cc-by-4.0	file: 2405.20947-full.pdf; pages 26-28 of 28
+2508.02997-full	CoCoTen: Detecting Adversarial Inputs to Large Language Models through Latent Space Features of Contextual Co-occurrence Tensors	https://arxiv.org/abs/2508.02997	cc-by-4.0	file: 2508.02997-full.pdf; cleaning removed: publisher mentioned "processing and machine learning. IEEE Transactions on signal processing 65, 13"; 5 pages; reviewed: author-held copyright on the ACM footer; the paper says "This work is licensed under a Creative Commons Attribution 4.0 International License." (https://arxiv.org/abs/2508.02997)
+2603.20976-full__p001-005	Detection of adversarial intent in Human-AI teams using LLMs (pages 1-5)	https://arxiv.org/abs/2603.20976	cc-by-4.0	file: 2603.20976-full.pdf; pages 1-5 of 10
+2603.20976-full__p006-010	Detection of adversarial intent in Human-AI teams using LLMs (pages 6-10)	https://arxiv.org/abs/2603.20976	cc-by-4.0	file: 2603.20976-full.pdf; pages 6-10 of 10; reviewed: Springer appears only in a cited reference; arXiv lists the paper under CC BY 4.0; the page says "Rights to this article" linking http://creativecommons.org/licenses/by/4.0/ (https://arxiv.org/abs/2603.20976)
+2607.05842-full__p001-005	Beyond Refusal: A Same-Lineage Study of Aligned and Abliterated LLMs for Vulnerability Analysis (pages 1-5)	https://arxiv.org/abs/2607.05842	cc-by-4.0	file: 2607.05842-full.pdf; pages 1-5 of 12
+2607.05842-full__p006-010	Beyond Refusal: A Same-Lineage Study of Aligned and Abliterated LLMs for Vulnerability Analysis (pages 6-10)	https://arxiv.org/abs/2607.05842	cc-by-4.0	file: 2607.05842-full.pdf; pages 6-10 of 12
+2609.00051-full__p001-005	From Detection to Refusal: Safer LLMs via Circuit-Guided Weight Scaling (pages 1-5)	https://arxiv.org/abs/2609.00051	cc-by-4.0	file: 2609.00051-full.pdf; pages 1-5 of 24
+2609.00051-full__p006-010	From Detection to Refusal: Safer LLMs via Circuit-Guided Weight Scaling (pages 6-10)	https://arxiv.org/abs/2609.00051	cc-by-4.0	file: 2609.00051-full.pdf; pages 6-10 of 24
+2609.00051-full__p011-015	From Detection to Refusal: Safer LLMs via Circuit-Guided Weight Scaling (pages 11-15)	https://arxiv.org/abs/2609.00051	cc-by-4.0	file: 2609.00051-full.pdf; pages 11-15 of 24
+2609.00051-full__p016-020	From Detection to Refusal: Safer LLMs via Circuit-Guided Weight Scaling (pages 16-20)	https://arxiv.org/abs/2609.00051	cc-by-4.0	file: 2609.00051-full.pdf; pages 16-20 of 24
+2609.00051-full__p021-024	From Detection to Refusal: Safer LLMs via Circuit-Guided Weight Scaling (pages 21-24)	https://arxiv.org/abs/2609.00051	cc-by-4.0	file: 2609.00051-full.pdf; pages 21-24 of 24
+2603.01246-full__p001-005	Defensive Refusal Bias: How Safety Alignment Fails Cyber Defenders (pages 1-5)	https://arxiv.org/abs/2603.01246	cc-by-sa-4.0	file: 2603.01246-full.pdf; pages 1-5 of 13
+2603.01246-full__p006-010	Defensive Refusal Bias: How Safety Alignment Fails Cyber Defenders (pages 6-10)	https://arxiv.org/abs/2603.01246	cc-by-sa-4.0	file: 2603.01246-full.pdf; pages 6-10 of 13
+2603.01246-full__p011-013	Defensive Refusal Bias: How Safety Alignment Fails Cyber Defenders (pages 11-13)	https://arxiv.org/abs/2603.01246	cc-by-sa-4.0	file: 2603.01246-full.pdf; pages 11-13 of 13
+2012.07994	Binary Black-box Evasion Attacks Against Deep Learning-based Static Malware Detectors with Adversarial Byte-Level Language Model	https://arxiv.org/abs/2012.07994	cc-by-4.0	file: 2012.07994.md
+2104.08308	Neural Transfer Learning for Repairing Security Vulnerabilities in C Code	https://arxiv.org/abs/2104.08308	cc-by-4.0	file: 2104.08308.md
+2106.08970	Sleeper Agent: Scalable Hidden Trigger Backdoors for Neural Networks Trained from Scratch	https://arxiv.org/abs/2106.08970	cc-by-4.0	file: 2106.08970.md
+2106.11821	Data Augmentation for Opcode Sequence Based Malware Detection	https://arxiv.org/abs/2106.11821	cc-by-4.0	file: 2106.11821.md
+2107.08760	CVEfixes: Automated Collection of Vulnerabilities and Their Fixes from Open-Source Software	https://arxiv.org/abs/2107.08760	cc-by-4.0	file: 2107.08760.md
+2108.01644	The Devil is in the GAN: Backdoor Attacks and Defenses in Deep Generative Models	https://arxiv.org/abs/2108.01644	cc-by-4.0	file: 2108.01644.md
+2112.01724	Single-Shot Black-Box Adversarial Attacks Against Malware Detectors: A Causal Language Model Approach	https://arxiv.org/abs/2112.01724	cc-by-4.0	file: 2112.01724.md
+2202.03055	Enabling Automatic Repair of Source Code Vulnerabilities Using Data-Driven Methods	https://arxiv.org/abs/2202.03055	cc-by-4.0	file: 2202.03055.md
+2206.03726	Hub-Pathway: Transfer Learning from A Hub of Pre-trained Models	https://arxiv.org/abs/2206.03726	cc-by-4.0	file: 2206.03726.md
+2207.07407	ERIC: An Efficient and Practical Software Obfuscation Framework	https://arxiv.org/abs/2207.07407	cc-by-4.0	file: 2207.07407.md
+2208.08067	K-ASTRO: Structure-Aware Adaptation of LLMs for Code Vulnerability Detection	https://arxiv.org/abs/2208.08067	cc-by-4.0	file: 2208.08067.md
+2210.01632	Backdoor Attacks in the Supply Chain of Masked Image Modeling	https://arxiv.org/abs/2210.01632	cc-by-4.0	file: 2210.01632.md
+2211.05631	Backdoor Defense via Suppressing Model Shortcuts	https://arxiv.org/abs/2211.05631	cc-by-4.0	file: 2211.05631.md
+2301.13246	Conversational Automated Program Repair	https://arxiv.org/abs/2301.13246	cc-by-4.0	file: 2301.13246.md
+2304.00385	Keep the Conversation Going: Fixing 162 out of 337 bugs for $0.42 each using ChatGPT	https://arxiv.org/abs/2304.00385	cc-by-4.0	file: 2304.00385.md
+2304.00409	DiverseVul: A New Vulnerable Source Code Dataset for Deep Learning Based Vulnerability Detection	https://arxiv.org/abs/2304.00409	cc-by-4.0	file: 2304.00409.md
+2305.09550	Life of PII -- A PII Obfuscation Transformer	https://arxiv.org/abs/2305.09550	cc-by-4.0	file: 2305.09550.md
+2305.14910	From Shortcuts to Triggers: Backdoor Defense with Denoised PoE	https://arxiv.org/abs/2305.14910	cc-by-4.0	file: 2305.14910.md
+2305.15336	From Text to MITRE Techniques: Exploring the Malicious Use of Large Language Models for Generating Cyber Attack Payloads	https://arxiv.org/abs/2305.15336	cc-by-4.0	file: 2305.15336.md
+2306.05499	Prompt Injection attack against LLM-integrated Applications	https://arxiv.org/abs/2306.05499	cc-by-4.0	file: 2306.05499.md
+2306.06815	TrojLLM: A Black-box Trojan Prompt Attack on Large Language Models	https://arxiv.org/abs/2306.06815	cc-by-4.0	file: 2306.06815.md
+2306.09308	Matching Pairs: Attributing Fine-Tuned Models to their Pre-Trained Large Language Models	https://arxiv.org/abs/2306.09308	cc-by-4.0	file: 2306.09308.md
+2307.09649	Application of BadNets in Spam Filters	https://arxiv.org/abs/2307.09649	cc-by-4.0	file: 2307.09649.md
+2308.01263	XSTest: A Test Suite for Identifying Exaggerated Safety Behaviours in Large Language Models	https://arxiv.org/abs/2308.01263	cc-by-4.0	file: 2308.01263.md
+2308.07934	One-bit Flip is All You Need: When Bit-flip Attack Meets Model Training	https://arxiv.org/abs/2308.07934	cc-by-4.0	file: 2308.07934.md
+2308.12533	Pre-trained Model-based Automated Software Vulnerability Repair: How Far are We?	https://arxiv.org/abs/2308.12533	cc-by-4.0	file: 2308.12533.md
+2308.12833	Use of LLMs for Illicit Purposes: Threats, Prevention Measures, and Vulnerabilities	https://arxiv.org/abs/2308.12833	cc-by-4.0	file: 2308.12833.md
+2308.13062	ZeroLeak: Using LLMs for Scalable and Cost Effective Side-Channel Patching	https://arxiv.org/abs/2308.13062	cc-by-4.0	file: 2308.13062.md
+2309.02705	Certifying LLM Safety against Adversarial Prompting	https://arxiv.org/abs/2309.02705	cc-by-4.0	file: 2309.02705.md
+2309.08628	Recovering from Privacy-Preserving Masking with Large Language Models	https://arxiv.org/abs/2309.08628	cc-by-4.0	file: 2309.08628.md
+2309.15856	Secure and Efficient Two-party Quantum Scalar Product Protocol With Application to Privacy-preserving Matrix Multiplication	https://arxiv.org/abs/2309.15856	cc-by-4.0	file: 2309.15856.md
+2310.00737	GenAI Against Humanity: Nefarious Applications of Generative Artificial Intelligence and Large Language Models	https://arxiv.org/abs/2310.00737	cc-by-4.0	file: 2310.00737.md
+2310.07676	Composite Backdoor Attacks Against Large Language Models	https://arxiv.org/abs/2310.07676	cc-by-4.0	file: 2310.07676.md
+2310.08275	Harnessing the Power of LLM to Support Binary Taint Analysis	https://arxiv.org/abs/2310.08275	cc-by-4.0	file: 2310.08275.md
+2310.12357	Large Language Models for Code Analysis: Do LLMs Really Do Their Job?	https://arxiv.org/abs/2310.12357	cc-by-4.0	file: 2310.12357.md
+2310.12439	PoisonPrompt: Backdoor Attack on Prompt-based Large Language Models	https://arxiv.org/abs/2310.12439	cc-by-4.0	file: 2310.12439.md
+2310.12815	Formalizing and Benchmarking Prompt Injection Attacks and Defenses	https://arxiv.org/abs/2310.12815	cc-by-4.0	file: 2310.12815.md
+2311.01011	Tensor Trust: Interpretable Prompt Injection Attacks from an Online Game	https://arxiv.org/abs/2311.01011	cc-by-4.0	file: 2311.01011.md
+2311.06237	Summon a Demon and Bind it: A Grounded Theory of LLM Red Teaming	https://arxiv.org/abs/2311.06237	cc-by-4.0	file: 2311.06237.md
+2311.06979	Assessing the Interpretability of Programmatic Policies with Large Language Models	https://arxiv.org/abs/2311.06979	cc-by-4.0	file: 2311.06979.md
+2311.07689	MART: Improving LLM Safety with Multi-round Automatic Red-Teaming	https://arxiv.org/abs/2311.07689	cc-by-4.0	file: 2311.07689.md
+2311.08562	MAgIC: Investigation of Large Language Model Powered Multi-Agent in Cognition, Adaptability, Rationality and Collaboration	https://arxiv.org/abs/2311.08562	cc-by-4.0	file: 2311.08562.md
+2311.08592	AART: AI-Assisted Red-Teaming with Diverse Data Generation for New LLM-powered Applications	https://arxiv.org/abs/2311.08592	cc-by-4.0	file: 2311.08592.md
+2311.09433	Trojan Activation Attack: Red-Teaming Large Language Models using Activation Steering for Safety-Alignment	https://arxiv.org/abs/2311.09433	cc-by-4.0	file: 2311.09433.md
+2311.09948	Hijacking Large Language Models via Adversarial In-Context Learning	https://arxiv.org/abs/2311.09948	cc-by-4.0	file: 2311.09948.md
+2311.11538	Assessing Prompt Injection Risks in 200+ Custom GPTs	https://arxiv.org/abs/2311.11538	cc-by-4.0	file: 2311.11538.md
+2311.14455	Universal Jailbreak Backdoors from Poisoned Human Feedback	https://arxiv.org/abs/2311.14455	cc-by-4.0	file: 2311.14455.md
+2312.08317	Prompt Engineering-assisted Malware Dynamic Analysis Using GPT-4	https://arxiv.org/abs/2312.08317	cc-by-4.0	file: 2312.08317.md
+2401.10862	Pruning for Protection: Increasing Jailbreak Resistance in Aligned LLMs Without Fine-Tuning	https://arxiv.org/abs/2401.10862	cc-by-4.0	file: 2401.10862.md
+2401.12242	BadChain: Backdoor Chain-of-Thought Prompting for Large Language Models	https://arxiv.org/abs/2401.12242	cc-by-4.0	file: 2401.12242.md
+2401.12255	Instructional Fingerprinting of Large Language Models	https://arxiv.org/abs/2401.12255	cc-by-4.0	file: 2401.12255.md
+2401.15883	Model Supply Chain Poisoning: Backdooring Pre-trained Models via Embedding Indistinguishability	https://arxiv.org/abs/2401.15883	cc-by-4.0	file: 2401.15883.md
+2401.17263	Robust Prompt Optimization for Defending Language Models Against Jailbreaking Attacks	https://arxiv.org/abs/2401.17263	cc-by-4.0	file: 2401.17263.md
+2402.00898	An Early Categorization of Prompt Injection Attacks on Large Language Models	https://arxiv.org/abs/2402.00898	cc-by-4.0	file: 2402.00898.md
+2402.02823	Evading Data Contamination Detection for Language Models is (too) Easy	https://arxiv.org/abs/2402.02823	cc-by-4.0	file: 2402.02823.md
+2402.03303	Nevermind: Instruction Override and Moderation in Large Language Models	https://arxiv.org/abs/2402.03303	cc-by-4.0	file: 2402.03303.md
+2402.04249	HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal	https://arxiv.org/abs/2402.04249	cc-by-4.0	file: 2402.04249.md
+2402.05162	Assessing the Brittleness of Safety Alignment via Pruning and Low-Rank Modifications	https://arxiv.org/abs/2402.05162	cc-by-4.0	file: 2402.05162.md
+2402.05668	JailbreakRadar: Comprehensive Assessment of Jailbreak Attacks Against LLMs	https://arxiv.org/abs/2402.05668	cc-by-4.0	file: 2402.05668.md
+2402.09091	Play Guessing Game with LLM: Indirect Jailbreak Attack with Implicit Clues	https://arxiv.org/abs/2402.09091	cc-by-4.0	file: 2402.09091.md
+2402.09179	Instruction Backdoor Attacks Against Customized LLMs	https://arxiv.org/abs/2402.09179	cc-by-4.0	file: 2402.09179.md
+2402.09674	PAL: Proxy-Guided Black-Box Attack on Large Language Models	https://arxiv.org/abs/2402.09674	cc-by-4.0	file: 2402.09674.md
+2402.11208	Watch Out for Your Agents! Investigating Backdoor Threats to LLM-Based Agents	https://arxiv.org/abs/2402.11208	cc-by-4.0	file: 2402.11208.md
+2402.12222	CovRL: Fuzzing JavaScript Engines with Coverage-Guided Reinforcement Learning for LLM-based Mutation	https://arxiv.org/abs/2402.12222	cc-by-4.0	file: 2402.12222.md
+2402.13459	Learning to Poison Large Language Models for Downstream Manipulation	https://arxiv.org/abs/2402.13459	cc-by-4.0	file: 2402.13459.md
+2402.14872	Semantic Mirror Jailbreak: Genetic Algorithm Based Jailbreak Prompts Against Open-source LLMs	https://arxiv.org/abs/2402.14872	cc-by-4.0	file: 2402.14872.md
+2402.16192	Defending Large Language Models against Jailbreak Attacks via Semantic Smoothing	https://arxiv.org/abs/2402.16192	cc-by-4.0	file: 2402.16192.md
+2402.16382	Immunization against harmful fine-tuning attacks	https://arxiv.org/abs/2402.16382	cc-by-4.0	file: 2402.16382.md
+2402.16459	Defending LLMs against Jailbreaking Attacks via Backtranslation	https://arxiv.org/abs/2402.16459	cc-by-4.0	file: 2402.16459.md
+2402.19464	Curiosity-driven Red-teaming for Large Language Models	https://arxiv.org/abs/2402.19464	cc-by-4.0	file: 2402.19464.md
+2403.06537	On the Consideration of AI Openness: Can Good Intent Be Abused?	https://arxiv.org/abs/2403.06537	cc-by-4.0	file: 2403.06537.md
+2403.09858	FakeWatch: A Framework for Detecting Fake News to Ensure Credible Elections	https://arxiv.org/abs/2403.09858	cc-by-4.0	file: 2403.09858.md
+2403.13355	BadEdit: Backdooring large language models by model editing	https://arxiv.org/abs/2403.13355	cc-by-4.0	file: 2403.13355.md
+2403.14720	Defending Against Indirect Prompt Injection Attacks With Spotlighting	https://arxiv.org/abs/2403.14720	cc-by-4.0	file: 2403.14720.md
+2403.17787	Evaluating the Efficacy of Prompt-Engineered Large Multimodal Models Versus Fine-Tuned Vision Transformers in Image-Based Security Applications	https://arxiv.org/abs/2403.17787	cc-by-4.0	file: 2403.17787.md
+2404.00629	Against The Achilles' Heel: A Survey on Red Teaming for Generative Models	https://arxiv.org/abs/2404.00629	cc-by-4.0	file: 2404.00629.md
+2404.02406	Exploring Backdoor Vulnerabilities of Chat Models	https://arxiv.org/abs/2404.02406	cc-by-4.0	file: 2404.02406.md
+2404.03263	On the Surprising Efficacy of Distillation as an Alternative to Pre-Training Small Models	https://arxiv.org/abs/2404.03263	cc-by-4.0	file: 2404.03263.md
+2404.06664	CulturalTeaming: AI-Assisted Interactive Red-Teaming for Challenging LLMs' (Lack of) Multicultural Knowledge	https://arxiv.org/abs/2404.06664	cc-by-4.0	file: 2404.06664.md
+2404.13660	Trojan Detection in Large Language Models: Insights from The Trojan Detection Challenge	https://arxiv.org/abs/2404.13660	cc-by-4.0	file: 2404.13660.md
+2404.14461	Competition Report: Finding Universal Jailbreak Backdoors in Aligned LLMs	https://arxiv.org/abs/2404.14461	cc-by-4.0	file: 2404.14461.md
+2404.14795	Watch Out for Your Guidance on Generation! Exploring Conditional Backdoor Attacks against Large Language Models	https://arxiv.org/abs/2404.14795	cc-by-4.0	file: 2404.14795.md
+2404.15236	Revisiting Unnaturalness for Automated Program Repair in the Era of Large Language Models	https://arxiv.org/abs/2404.15236	cc-by-4.0	file: 2404.15236.md
+2404.16873	AdvPrompter: Fast Adaptive Adversarial Prompting for LLMs	https://arxiv.org/abs/2404.16873	cc-by-4.0	file: 2404.16873.md
+2405.01674	Generative AI in Cybersecurity	https://arxiv.org/abs/2405.01674	cc-by-4.0	file: 2405.01674.md
+2405.04756	Red-Teaming for Inducing Societal Bias in Large Language Models	https://arxiv.org/abs/2405.04756	cc-by-4.0	file: 2405.04756.md
+2405.05418	Mitigating Exaggerated Safety in Large Language Models	https://arxiv.org/abs/2405.05418	cc-by-4.0	file: 2405.05418.md
+2405.09318	Transfer Learning in Pre-Trained Large Language Models for Malware Detection Based on System Calls	https://arxiv.org/abs/2405.09318	cc-by-4.0	file: 2405.09318.md
+2405.12750	Generative AI in Cybersecurity: A Comprehensive Review of LLM Applications and Vulnerabilities	https://arxiv.org/abs/2405.12750	cc-by-4.0	file: 2405.12750.md
+2405.14023	WordGame: Efficient & Effective LLM Jailbreak via Simultaneous Obfuscation in Query and Response	https://arxiv.org/abs/2405.14023	cc-by-4.0	file: 2405.14023.md
+2405.14577	Representation Noising: A Defence Mechanism Against Harmful Finetuning	https://arxiv.org/abs/2405.14577	cc-by-4.0	file: 2405.14577.md
+2405.15614	Harnessing Large Language Models for Software Vulnerability Detection: A Comprehensive Benchmarking Study	https://arxiv.org/abs/2405.15614	cc-by-4.0	file: 2405.15614.md
+2405.15690	A Case Study of LLM for Automated Vulnerability Repair: Assessing Impact of Reasoning and Patch Validation Feedback	https://arxiv.org/abs/2405.15690	cc-by-4.0	file: 2405.15690.md
+2405.18137	Exploiting LLM Quantization	https://arxiv.org/abs/2405.18137	cc-by-4.0	file: 2405.18137.md
+2405.18540	Learning diverse attacks on large language models for robust red-teaming and safety tuning	https://arxiv.org/abs/2405.18540	cc-by-4.0	file: 2405.18540.md
+2405.19026	DiveR-CT: Diversity-enhanced Red Teaming Large Language Model Assistants with Relaxing Constraints	https://arxiv.org/abs/2405.19026	cc-by-4.0	file: 2405.19026.md
+2405.19358	Robustifying Safety-Aligned Large Language Models through Clean Data Curation	https://arxiv.org/abs/2405.19358	cc-by-4.0	file: 2405.19358.md
+2405.20778	Improved Generation of Adversarial Examples Against Safety-aligned LLMs	https://arxiv.org/abs/2405.20778	cc-by-4.0	file: 2405.20778.md
+2405.20947	OR-Bench: An Over-Refusal Benchmark for Large Language Models	https://arxiv.org/abs/2405.20947	cc-by-4.0	file: 2405.20947.md
+2406.00628	Transforming Computer Security and Public Trust Through the Exploration of Fine-Tuning Large Language Models	https://arxiv.org/abs/2406.00628	cc-by-4.0	file: 2406.00628.md
+2406.00992	Hybrid Automated Program Repair by Combining Large Language Models and Program Analysis	https://arxiv.org/abs/2406.00992	cc-by-4.0	file: 2406.00992.md
+2406.03007	BadAgent: Inserting and Activating Backdoor Attacks in LLM Agents	https://arxiv.org/abs/2406.03007	cc-by-4.0	file: 2406.03007.md
+2406.03718	Generalization-Enhanced Code Vulnerability Detection via Multi-Task Instruction Fine-Tuning	https://arxiv.org/abs/2406.03718	cc-by-4.0	file: 2406.03718.md
+2406.05892	Security Vulnerability Detection with Multitask Self-Instructed Fine-Tuning of Large Language Models	https://arxiv.org/abs/2406.05892	cc-by-4.0	file: 2406.05892.md
+2406.05948	Chain-of-Scrutiny: Detecting Backdoor Attacks for Large Language Models	https://arxiv.org/abs/2406.05948	cc-by-4.0	file: 2406.05948.md
+2406.06637	Exploring the Efficacy of Large Language Models (GPT-4) in Binary Reverse Engineering	https://arxiv.org/abs/2406.06637	cc-by-4.0	file: 2406.06637.md
+2406.09321	JailbreakEval: An Integrated Toolkit for Evaluating Jailbreak Attempts Against Large Language Models	https://arxiv.org/abs/2406.09321	cc-by-4.0	file: 2406.09321.md
+2406.11147	Vul-RAG: Enhancing LLM-based Vulnerability Detection via Knowledge-level RAG	https://arxiv.org/abs/2406.11147	cc-by-4.0	file: 2406.11147.md
+2406.12091	Is poisoning a real threat to LLM alignment? Maybe more so than you think	https://arxiv.org/abs/2406.12091	cc-by-4.0	file: 2406.12091.md
+2406.12094	Who's asking? User personas and the mechanics of latent misalignment	https://arxiv.org/abs/2406.12094	cc-by-4.0	file: 2406.12094.md
+2406.12257	CleanGen: Mitigating Backdoor Attacks for Generation Tasks in Large Language Models	https://arxiv.org/abs/2406.12257	cc-by-4.0	file: 2406.12257.md
+2406.14144	Towards Understanding Safety Alignment: A Mechanistic Perspective from Safety Neurons	https://arxiv.org/abs/2406.14144	cc-by-4.0	file: 2406.14144.md
+2406.15481	Code-Switching Red-Teaming: LLM Evaluation for Safety and Multilingual Understanding	https://arxiv.org/abs/2406.15481	cc-by-4.0	file: 2406.15481.md
+2406.17092	BEEAR: Embedding-based Adversarial Removal of Safety Backdoors in Instruction-tuned Language Models	https://arxiv.org/abs/2406.17092	cc-by-4.0	file: 2406.17092.md
+2406.17626	CoSafe: Evaluating Large Language Model Safety in Multi-Turn Dialogue Coreference	https://arxiv.org/abs/2406.17626	cc-by-4.0	file: 2406.17626.md
+2406.18262	GlucOS: Security, correctness, and simplicity for automated insulin delivery	https://arxiv.org/abs/2406.18262	cc-by-4.0	file: 2406.18262.md
+2406.18510	WildTeaming at Scale: From In-the-Wild Jailbreaks to (Adversarially) Safer Language Models	https://arxiv.org/abs/2406.18510	cc-by-4.0	file: 2406.18510.md
+2407.04108	Future Events as Backdoor Triggers: Investigating Temporal Vulnerabilities in LLMs	https://arxiv.org/abs/2407.04108	cc-by-4.0	file: 2407.04108.md
+2407.04151	Securing Multi-turn Conversational Language Models From Distributed Backdoor Triggers	https://arxiv.org/abs/2407.04151	cc-by-4.0	file: 2407.04151.md
+2407.04295	Jailbreak Attacks and Defenses Against Large Language Models: A Survey	https://arxiv.org/abs/2407.04295	cc-by-4.0	file: 2407.04295.md
+2407.06411	If You Don't Understand It, Don't Use It: Eliminating Trojans with Filters Between Layers	https://arxiv.org/abs/2407.06411	cc-by-4.0	file: 2407.06411.md
+2407.08924	Disassembling Obfuscated Executables with LLM	https://arxiv.org/abs/2407.08924	cc-by-4.0	file: 2407.08924.md
+2407.09447	ASTPrompter: Preference-Aligned Automated Language Model Red-Teaming to Generate Low-Perplexity Unsafe Prompts	https://arxiv.org/abs/2407.09447	cc-by-4.0	file: 2407.09447.md
+2407.12352	SENTAUR: Security EnhaNced Trojan Assessment Using LLMs Against Undesirable Revisions	https://arxiv.org/abs/2407.12352	cc-by-4.0	file: 2407.12352.md
+2407.14937	Operationalizing a Threat Model for Red-Teaming Large Language Models (LLMs)	https://arxiv.org/abs/2407.14937	cc-by-4.0	file: 2407.14937.md
+2407.15549	Latent Adversarial Training Improves Robustness to Persistent Harmful Behaviors in LLMs	https://arxiv.org/abs/2407.15549	cc-by-4.0	file: 2407.15549.md
+2407.17447	FLRT: Fluent Student-Teacher Redteaming	https://arxiv.org/abs/2407.17447	cc-by-4.0	file: 2407.17447.md
+2408.00435	A Qualitative Study on Using ChatGPT for Software Security: Perception vs. Practicality	https://arxiv.org/abs/2408.00435	cc-by-4.0	file: 2408.00435.md
+2408.00523	Fuzz-Testing Meets LLM-Based Agents: An Automated and Efficient Framework for Jailbreaking Text-To-Image Generation Models	https://arxiv.org/abs/2408.00523	cc-by-4.0	file: 2408.00523.md
+2408.00761	Tamper-Resistant Safeguards for Open-Weight LLMs	https://arxiv.org/abs/2408.00761	cc-by-4.0	file: 2408.00761.md
+2408.02329	From Generalist to Specialist: Exploring CWE-Specific Vulnerability Detection	https://arxiv.org/abs/2408.02329	cc-by-4.0	file: 2408.02329.md
+2408.02479	From LLMs to LLM-based Agents for Software Engineering: A Survey of Current, Challenges and Future	https://arxiv.org/abs/2408.02479	cc-by-4.0	file: 2408.02479.md
+2408.02637	Command-line Obfuscation Detection using Small Language Models	https://arxiv.org/abs/2408.02637	cc-by-4.0	file: 2408.02637.md
+2408.03489	Harnessing the Power of LLMs in Source Code Vulnerability Detection	https://arxiv.org/abs/2408.03489	cc-by-4.0	file: 2408.03489.md
+2408.03837	WalledEval: A Comprehensive Safety Evaluation Toolkit for Large Language Models	https://arxiv.org/abs/2408.03837	cc-by-4.0	file: 2408.03837.md
+2408.04284	LLM-DetectAIve: a Tool for Fine-Grained Machine-Generated Text Detection	https://arxiv.org/abs/2408.04284	cc-by-4.0	file: 2408.04284.md
+2408.08899	Kov: Transferable and Naturalistic Black-Box LLM Attacks using Markov Decision Processes and Tree Search	https://arxiv.org/abs/2408.08899	cc-by-4.0	file: 2408.08899.md
+2408.10682	Towards Robust Knowledge Unlearning: An Adversarial Framework for Assessing and Improving Unlearning Robustness in Large Language Models	https://arxiv.org/abs/2408.10682	cc-by-4.0	file: 2408.10682.md
+2408.11308	Defending against Jailbreak through Early Exit Generation of Large Language Models	https://arxiv.org/abs/2408.11308	cc-by-4.0	file: 2408.11308.md
+2408.11313	An Optimizable Suffix Is Worth A Thousand Templates: Efficient Black-box Jailbreaking without Affirmative Phrases via LLM as Optimizer	https://arxiv.org/abs/2408.11313	cc-by-4.0	file: 2408.11313.md
+2408.11587	Large Language Models are Good Attackers: Efficient and Stealthy Textual Backdoor Attacks	https://arxiv.org/abs/2408.11587	cc-by-4.0	file: 2408.11587.md
+2408.12603	Sleeper Social Bots: a new generation of AI disinformation bots are already a political threat	https://arxiv.org/abs/2408.12603	cc-by-4.0	file: 2408.12603.md
+2408.13597	APPATCH: Automated Adaptive Prompting Large Language Models for Real-World Software Vulnerability Patching	https://arxiv.org/abs/2408.13597	cc-by-4.0	file: 2408.13597.md
+2408.14853	Atoxia: Red-teaming Large Language Models with Target Toxic Answers	https://arxiv.org/abs/2408.14853	cc-by-4.0	file: 2408.14853.md
+2408.15221	LLM Defenses Are Not Robust to Multi-Turn Human Jailbreaks Yet	https://arxiv.org/abs/2408.15221	cc-by-4.0	file: 2408.15221.md
+2408.16018	SPICED: Syntactical Bug and Trojan Pattern Identification in A/MS Circuits using LLM-Enhanced Detection	https://arxiv.org/abs/2408.16018	cc-by-4.0	file: 2408.16018.md
+2408.16028	ANVIL: Anomaly-based Vulnerability Identification without Labelled Training Data	https://arxiv.org/abs/2408.16028	cc-by-4.0	file: 2408.16028.md
+2409.01001	Beyond ChatGPT: Enhancing Software Quality Assurance Tasks with Diverse LLMs and Validation Techniques	https://arxiv.org/abs/2409.01001	cc-by-4.0	file: 2409.01001.md
+2409.04822	Exploring Straightforward Conversational Red-Teaming	https://arxiv.org/abs/2409.04822	cc-by-4.0	file: 2409.04822.md
+2409.07587	Exploring LLMs for Malware Detection: Review, Framework Design, and Countermeasure Approaches	https://arxiv.org/abs/2409.07587	cc-by-4.0	file: 2409.07587.md
+2409.10490	Code Vulnerability Detection: A Comparative Analysis of Emerging Large Language Models	https://arxiv.org/abs/2409.10490	cc-by-4.0	file: 2409.10490.md
+2409.11254	Towards Novel Malicious Packet Recognition: A Few-Shot Learning Approach	https://arxiv.org/abs/2409.11254	cc-by-4.0	file: 2409.11254.md
+2409.11445	Jailbreaking Large Language Models with Symbolic Mathematics	https://arxiv.org/abs/2409.11445	cc-by-4.0	file: 2409.11445.md
+2409.12914	Evaluating Defences against Unsafe Feedback in RLHF	https://arxiv.org/abs/2409.12914	cc-by-4.0	file: 2409.12914.md
+2409.14729	PROMPTFUZZ: Harnessing Fuzzing Techniques for Robust Testing of Prompt Injection in LLMs	https://arxiv.org/abs/2409.14729	cc-by-4.0	file: 2409.14729.md
+2409.17699	MoJE: Mixture of Jailbreak Experts, Naive Tabular Classifiers as Guard for Prompt Attacks	https://arxiv.org/abs/2409.17699	cc-by-4.0	file: 2409.17699.md
+2409.18395	Code Vulnerability Repair with Large Language Model using Context-Aware Prompt Tuning	https://arxiv.org/abs/2409.18395	cc-by-4.0	file: 2409.18395.md
+2409.19476	Overriding Safety protections of Open-source Models	https://arxiv.org/abs/2409.19476	cc-by-4.0	file: 2409.19476.md
+2410.01438	The Great Contradiction Showdown: How Jailbreak and Stealth Wrestle in Vision-Language Models?	https://arxiv.org/abs/2410.01438	cc-by-4.0	file: 2410.01438.md
+2410.01606	Automated Red Teaming with GOAT: the Generative Offensive Agent Tester	https://arxiv.org/abs/2410.01606	cc-by-4.0	file: 2410.01606.md
+2410.02163	Adversarial Decoding: Generating Readable Documents for Adversarial Objectives	https://arxiv.org/abs/2410.02163	cc-by-4.0	file: 2410.02163.md
+2410.04490	A Large-Scale Exploit Instrumentation Study of AI/ML Supply Chain Attacks in Hugging Face Models	https://arxiv.org/abs/2410.04490	cc-by-4.0	file: 2410.04490.md
+2410.06462	Hallucinating AI Hijacking Attack: Large Language Models and Malicious Code Recommenders	https://arxiv.org/abs/2410.06462	cc-by-4.0	file: 2410.06462.md
+2410.06509	PFAttack: Stealthy Attack Bypassing Group Fairness in Federated Learning	https://arxiv.org/abs/2410.06509	cc-by-4.0	file: 2410.06509.md
+2410.08811	PoisonBench: Assessing Large Language Model Vulnerability to Data Poisoning	https://arxiv.org/abs/2410.08811	cc-by-4.0	file: 2410.08811.md
+2410.09097	Recent advancements in LLM Red-Teaming: Techniques, Defenses, and Ethical Considerations	https://arxiv.org/abs/2410.09097	cc-by-4.0	file: 2410.09097.md
+2410.11283	AdvBDGen: Adversarially Fortified Prompt-Specific Fuzzy Backdoor Generator Against LLM Alignment	https://arxiv.org/abs/2410.11283	cc-by-4.0	file: 2410.11283.md
+2410.13236	SPIN: Self-Supervised Prompt INjection	https://arxiv.org/abs/2410.13236	cc-by-4.0	file: 2410.13236.md
+2410.13708	On the Role of Attention Heads in Large Language Model Safety	https://arxiv.org/abs/2410.13708	cc-by-4.0	file: 2410.13708.md
+2410.14827	Enhancing Prompt Injection Attacks to LLMs via Poisoning Alignment	https://arxiv.org/abs/2410.14827	cc-by-4.0	file: 2410.14827.md
+2410.15236	Jailbreaking and Mitigation of Vulnerabilities in Large Language Models	https://arxiv.org/abs/2410.15236	cc-by-4.0	file: 2410.15236.md
+2410.16655	Memory-Efficient Large Language Models for Program Repair with Semantic-Guided Patch Generation	https://arxiv.org/abs/2410.16655	cc-by-4.0	file: 2410.16655.md
+2410.18906	PRISM: A Methodology for Auditing Biases in Large Language Models	https://arxiv.org/abs/2410.18906	cc-by-4.0	file: 2410.18906.md
+2410.21337	Fine-tuned Large Language Models (LLMs): Improved Prompt Injection Attacks Detection	https://arxiv.org/abs/2410.21337	cc-by-4.0	file: 2410.21337.md
+2410.21723	Fine-tuning Large Language Models for DGA and DNS Exfiltration Detection	https://arxiv.org/abs/2410.21723	cc-by-4.0	file: 2410.21723.md
+2410.21791	Enhancing Adversarial Attacks through Chain of Thought	https://arxiv.org/abs/2410.21791	cc-by-4.0	file: 2410.21791.md
+2410.22284	Embedding-based classifiers can detect prompt injection attacks	https://arxiv.org/abs/2410.22284	cc-by-4.0	file: 2410.22284.md
+2410.23054	Controlling Language and Diffusion Models by Transporting Activations	https://arxiv.org/abs/2410.23054	cc-by-4.0	file: 2410.23054.md
+2411.01040	Identify Backdoored Model in Federated Learning via Individual Unlearning	https://arxiv.org/abs/2411.01040	cc-by-4.0	file: 2411.01040.md
+2411.01077	Emoji Attack: Enhancing Jailbreak Attacks Against Judge LLM Detection	https://arxiv.org/abs/2411.01077	cc-by-4.0	file: 2411.01077.md
+2411.05982	Unmasking the Shadows: Pinpoint the Implementations of Anti-Dynamic Analysis Techniques in Malware Using LLM	https://arxiv.org/abs/2411.05982	cc-by-4.0	file: 2411.05982.md
+2411.06221	Smart-LLaMA: Two-Stage Post-Training of Large Language Models for Smart Contract Vulnerability Detection and Explanation	https://arxiv.org/abs/2411.06221	cc-by-4.0	file: 2411.06221.md
+2411.06426	SequentialBreak: Large Language Models Can be Fooled by Embedding Jailbreak Prompts into Sequential Prompt Chains	https://arxiv.org/abs/2411.06426	cc-by-4.0	file: 2411.06426.md
+2411.08410	The VLLM Safety Paradox: Dual Ease in Jailbreak Attack and Defense	https://arxiv.org/abs/2411.08410	cc-by-4.0	file: 2411.08410.md
+2411.08862	LLMStinger: Jailbreaking LLMs using RL fine-tuned LLMs	https://arxiv.org/abs/2411.08862	cc-by-4.0	file: 2411.08862.md
+2411.12701	When Backdoors Speak: Understanding LLM Backdoor Attacks Through Model-Generated Explanations	https://arxiv.org/abs/2411.12701	cc-by-4.0	file: 2411.12701.md
+2411.12768	CROW: Eliminating Backdoors from Large Language Models via Internal Consistency Regularization	https://arxiv.org/abs/2411.12768	cc-by-4.0	file: 2411.12768.md
+2411.16561	EnStack: An Ensemble Stacking Framework of Large Language Models for Enhanced Vulnerability Detection in Source Code	https://arxiv.org/abs/2411.16561	cc-by-4.0	file: 2411.16561.md
+2411.17453	PEFTGuard: Detecting Backdoor Attacks Against Parameter-Efficient Fine-Tuning	https://arxiv.org/abs/2411.17453	cc-by-4.0	file: 2411.17453.md
+2411.17569	RTL-Breaker: Assessing the Security of LLMs against Backdoor Attacks on HDL Code Generation	https://arxiv.org/abs/2411.17569	cc-by-4.0	file: 2411.17569.md
+2411.18280	Neutralizing Backdoors through Information Conflicts for Large Language Models	https://arxiv.org/abs/2411.18280	cc-by-4.0	file: 2411.18280.md
+2412.03904	MISR: Measuring Instrumental Self-Reasoning in Frontier Models	https://arxiv.org/abs/2412.03904	cc-by-4.0	file: 2412.03904.md
+2412.05734	LeakAgent: RL-based Red-teaming Agent for LLM Privacy Leakage	https://arxiv.org/abs/2412.05734	cc-by-4.0	file: 2412.05734.md
+2412.06090	Trust No AI: Prompt Injection Along The CIA Security Triad	https://arxiv.org/abs/2412.06090	cc-by-4.0	file: 2412.06090.md
+2412.12192	No Free Lunch for Defending Against Prefilling Attack by In-Context Learning	https://arxiv.org/abs/2412.12192	cc-by-4.0	file: 2412.12192.md
+2412.12212	Finding a Wolf in Sheep's Clothing: Combating Adversarial Text-To-Image Prompts with Text Summarization	https://arxiv.org/abs/2412.12212	cc-by-4.0	file: 2412.12212.md
+2412.13879	Crabs: Consuming Resource via Auto-generation for LLM-DoS Attack under Black-box Settings	https://arxiv.org/abs/2412.13879	cc-by-4.0	file: 2412.13879.md
+2412.16135	Can LLMs Obfuscate Code? A Systematic Analysis of Large Language Models into Assembly Code Obfuscation	https://arxiv.org/abs/2412.16135	cc-by-4.0	file: 2412.16135.md
+2412.16325	Towards Safe and Honest AI Agents with Neural Self-Other Overlap	https://arxiv.org/abs/2412.16325	cc-by-4.0	file: 2412.16325.md
+2412.16339	Deliberative Alignment: Reasoning Enables Safer Language Models	https://arxiv.org/abs/2412.16339	cc-by-4.0	file: 2412.16339.md
+2412.17315	CodeV: Issue Resolving with Visual Data	https://arxiv.org/abs/2412.17315	cc-by-4.0	file: 2412.17315.md
+2412.17614	Emerging Security Challenges of Large Language Models	https://arxiv.org/abs/2412.17614	cc-by-4.0	file: 2412.17614.md
+2412.18693	Diverse and Effective Red Teaming with Auto-generated Rewards and Multi-step Reinforcement Learning	https://arxiv.org/abs/2412.18693	cc-by-4.0	file: 2412.18693.md
+2501.05542	Infecting Generative AI With Viruses	https://arxiv.org/abs/2501.05542	cc-by-4.0	file: 2501.05542.md
+2501.06208	Enhancing AI Safety Through the Fusion of Low Rank Adapters	https://arxiv.org/abs/2501.06208	cc-by-4.0	file: 2501.06208.md
+2501.07238	Lessons From Red Teaming 100 Generative AI Products	https://arxiv.org/abs/2501.07238	cc-by-4.0	file: 2501.07238.md
+2501.09913	Towards A Litmus Test for Common Sense	https://arxiv.org/abs/2501.09913	cc-by-4.0	file: 2501.09913.md
+2501.10639	Latent-space adversarial training with post-aware calibration for defending large language models against jailbreak attacks	https://arxiv.org/abs/2501.10639	cc-by-4.0	file: 2501.10639.md
+2501.16466	Incalmo: An Autonomous LLM-assisted System for Red Teaming Multi-Host Networks	https://arxiv.org/abs/2501.16466	cc-by-4.0	file: 2501.16466.md
+2501.16513	Deception in LLMs: Self-Preservation and Autonomous Goals in Large Language Models	https://arxiv.org/abs/2501.16513	cc-by-4.0	file: 2501.16513.md
+2501.16655	Large Language Model Critics for Execution-Free Evaluation of Code Changes	https://arxiv.org/abs/2501.16655	cc-by-4.0	file: 2501.16655.md
+2501.17315	A sketch of an AI control safety case	https://arxiv.org/abs/2501.17315	cc-by-4.0	file: 2501.17315.md
+2501.18820	SoK: Towards Effective Automated Vulnerability Repair	https://arxiv.org/abs/2501.18820	cc-by-4.0	file: 2501.18820.md
+2501.18837	Constitutional Classifiers: Defending against Universal Jailbreaks across Thousands of Hours of Red Teaming	https://arxiv.org/abs/2501.18837	cc-by-4.0	file: 2501.18837.md
+2502.01042	SafeSwitch: Steering Unsafe LLM Behavior via Internal Activation Signals	https://arxiv.org/abs/2502.01042	cc-by-4.0	file: 2502.01042.md
+2502.05223	KDA: A Knowledge-Distilled Attacker for Generating Diverse Prompts to Jailbreak LLMs	https://arxiv.org/abs/2502.05223	cc-by-4.0	file: 2502.05223.md
+2502.09990	X-Boundary: Establishing Exact Safety Boundary to Shield LLMs from Multi-Turn Jailbreaks without Compromising Usability	https://arxiv.org/abs/2502.09990	cc-by-4.0	file: 2502.09990.md
+2502.13055	LAMD: Context-driven Android Malware Detection and Classification with LLMs	https://arxiv.org/abs/2502.13055	cc-by-4.0	file: 2502.13055.md
+2502.13141	UniGuardian: A Unified Defense for Detecting Prompt Injection, Backdoor Attacks and Adversarial Attacks in Large Language Models	https://arxiv.org/abs/2502.13141	cc-by-4.0	file: 2502.13141.md
+2502.14486	How Jailbreak Defenses Work and Ensemble? A Mechanistic Investigation	https://arxiv.org/abs/2502.14486	cc-by-4.0	file: 2502.14486.md
+2502.15334	Attention Eclipse: Manipulating Attention to Bypass LLM Safety-Alignment	https://arxiv.org/abs/2502.15334	cc-by-4.0	file: 2502.15334.md
+2502.16094	Merger-as-a-Stealer: Stealing Targeted PII from Aligned LLMs with Model Merging	https://arxiv.org/abs/2502.16094	cc-by-4.0	file: 2502.16094.md
+2502.16750	Guardians of the Agentic System: Preventing Many Shots Jailbreak with Agentic System	https://arxiv.org/abs/2502.16750	cc-by-4.0	file: 2502.16750.md
+2502.17420	The Geometry of Refusal in Large Language Models: Concept Cones and Representational Independence	https://arxiv.org/abs/2502.17420	cc-by-4.0	file: 2502.17420.md
+2502.19537	No, of Course I Can! Deeper Fine-Tuning Attacks That Bypass Token-Level Safety Mechanisms	https://arxiv.org/abs/2502.19537	cc-by-4.0	file: 2502.19537.md
+2502.20426	Among Them: A game-based framework for assessing persuasion capabilities of LLMs	https://arxiv.org/abs/2502.20426	cc-by-4.0	file: 2502.20426.md
+2503.01742	Building Safe GenAI Applications: An End-to-End Overview of Red Teaming for Large Language Models	https://arxiv.org/abs/2503.01742	cc-by-4.0	file: 2503.01742.md
+2503.03586	Benchmarking LLMs and LLM-based Agents in Practical Vulnerability Detection for Code Repositories	https://arxiv.org/abs/2503.03586	cc-by-4.0	file: 2503.03586.md
+2503.03750	The MASK Benchmark: Disentangling Honesty From Accuracy in AI Systems	https://arxiv.org/abs/2503.03750	cc-by-4.0	file: 2503.03750.md
+2503.04302	Malware Detection at the Edge with Lightweight LLMs: A Performance Evaluation	https://arxiv.org/abs/2503.04302	cc-by-4.0	file: 2503.04302.md
+2503.05856	This Is Your Doge, If It Please You: Exploring Deception and Robustness in Mixture of LLMs	https://arxiv.org/abs/2503.05856	cc-by-4.0	file: 2503.05856.md
+2503.06253	MAD-MAX: Modular And Diverse Malicious Attack MiXtures for Automated LLM Red Teaming	https://arxiv.org/abs/2503.06253	cc-by-4.0	file: 2503.06253.md
+2503.07770	Evaluating LLaMA 3.2 for Software Vulnerability Detection	https://arxiv.org/abs/2503.07770	cc-by-4.0	file: 2503.07770.md
+2503.07978	Detecting Backdoor Attacks in Federated Learning via Direction Alignment Inspection	https://arxiv.org/abs/2503.07978	cc-by-4.0	file: 2503.07978.md
+2503.11517	Prompt Injection Detection and Mitigation via AI Multi-Agent NLP Frameworks	https://arxiv.org/abs/2503.11517	cc-by-4.0	file: 2503.11517.md
+2503.12339	A Closer Look at Adversarial Suffix Learning for Jailbreaking LLMs: Augmented Adversarial Trigger Learning	https://arxiv.org/abs/2503.12339	cc-by-4.0	file: 2503.12339.md
+2503.14281	XOXO: Stealthy Cross-Origin Context Poisoning Attacks against AI Coding Assistants	https://arxiv.org/abs/2503.14281	cc-by-4.0	file: 2503.14281.md
+2503.15754	AutoRedTeamer: Autonomous Red Teaming with Lifelong Attack Integration	https://arxiv.org/abs/2503.15754	cc-by-4.0	file: 2503.15754.md
+2503.17365	How Effective Is Constitutional AI in Small LLMs? A Study on DeepSeek-R1 and Its Peers	https://arxiv.org/abs/2503.17365	cc-by-4.0	file: 2503.17365.md
+2503.17578	Large Language Models Can Verbatim Reproduce Long Malicious Sequences	https://arxiv.org/abs/2503.17578	cc-by-4.0	file: 2503.17578.md
+2503.17932	STShield: Single-Token Sentinel for Real-Time Jailbreak Detection in Large Language Models	https://arxiv.org/abs/2503.17932	cc-by-4.0	file: 2503.17932.md
+2503.22406	Training Large Language Models for Advanced Typosquatting Detection	https://arxiv.org/abs/2503.22406	cc-by-4.0	file: 2503.22406.md
+2504.00019	ObscuraCoder: Powering Efficient Code LM Pre-Training Via Obfuscation Grounding	https://arxiv.org/abs/2504.00019	cc-by-4.0	file: 2504.00019.md
+2504.00285	When Do Large Language Models Exhibit Unsolicited Deception?	https://arxiv.org/abs/2504.00285	cc-by-4.0	file: 2504.00285.md
+2504.00727	Personality-Driven Decision-Making in LLM-Based Autonomous Agents	https://arxiv.org/abs/2504.00727	cc-by-4.0	file: 2504.00727.md
+2504.01550	Representation Bending for Large Language Model Safety	https://arxiv.org/abs/2504.01550	cc-by-4.0	file: 2504.01550.md
+2504.02904	How Post-Training Reshapes LLMs: A Mechanistic View on Knowledge, Truthfulness, Refusal, and Confidence	https://arxiv.org/abs/2504.02904	cc-by-4.0	file: 2504.02904.md
+2504.03174	Multi-lingual Multi-turn Automated Red Teaming for LLMs	https://arxiv.org/abs/2504.03174	cc-by-4.0	file: 2504.03174.md
+2504.03735	Misaligned Roles, Misplaced Images: Structural Input Perturbations Expose Multimodal Alignment Blind Spots	https://arxiv.org/abs/2504.03735	cc-by-4.0	file: 2504.03735.md
+2504.03767	MCP Safety Audit: LLMs with the Model Context Protocol Allow Major Security Exploits	https://arxiv.org/abs/2504.03767	cc-by-4.0	file: 2504.03767.md
+2504.04699	R2Vul: Learning to Reason about Software Vulnerabilities with Reinforcement Learning and Structured Reasoning Distillation	https://arxiv.org/abs/2504.04699	cc-by-4.0	file: 2504.04699.md
+2504.07137	Large Language Model (LLM) for Software Security: Code Analysis, Malware Analysis, Reverse Engineering	https://arxiv.org/abs/2504.07137	cc-by-4.0	file: 2504.07137.md
+2504.07467	Defense against Prompt Injection Attacks via Mixture of Encodings	https://arxiv.org/abs/2504.07467	cc-by-4.0	file: 2504.07467.md
+2504.07574	Malware analysis assisted by AI with R2AI	https://arxiv.org/abs/2504.07574	cc-by-4.0	file: 2504.07574.md
+2504.07634	Agent That Debugs: Dynamic State-Guided Vulnerability Repair	https://arxiv.org/abs/2504.07634	cc-by-4.0	file: 2504.07634.md
+2504.07830	MOSAIC: Modeling Social AI for Content Dissemination and Regulation in Multi-Agent Simulations	https://arxiv.org/abs/2504.07830	cc-by-4.0	file: 2504.07830.md
+2504.08623	Enterprise-Grade Security for the Model Context Protocol (MCP): Frameworks and Mitigation Strategies	https://arxiv.org/abs/2504.08623	cc-by-4.0	file: 2504.08623.md
+2504.11168	Bypassing LLM Guardrails: An Empirical Analysis of Evasion Attacks against Prompt Injection and Jailbreak Detection Systems	https://arxiv.org/abs/2504.11168	cc-by-4.0	file: 2504.11168.md
+2504.11358	DataSentinel: A Game-Theoretic Detection of Prompt Injection Attacks	https://arxiv.org/abs/2504.11358	cc-by-4.0	file: 2504.11358.md
+2504.11442	TextArena	https://arxiv.org/abs/2504.11442	cc-by-4.0	file: 2504.11442.md
+2504.12321	AttentionDefense: Leveraging System Prompt Attention for Explainable Defense Against Novel Jailbreaks	https://arxiv.org/abs/2504.12321	cc-by-4.0	file: 2504.12321.md
+2504.12757	MCP Guardian: A Security-First Layer for Safeguarding MCP-Based AI System	https://arxiv.org/abs/2504.12757	cc-by-4.0	file: 2504.12757.md
+2504.15047	RainbowPlus: Enhancing Adversarial Prompt Generation via Evolutionary Quality-Diversity Search	https://arxiv.org/abs/2504.15047	cc-by-4.0	file: 2504.15047.md
+2504.16877	Context-Enhanced Vulnerability Detection Based on Large Language Model	https://arxiv.org/abs/2504.16877	cc-by-4.0	file: 2504.16877.md
+2504.16902	Building A Secure Agentic AI Application Leveraging A2A Protocol	https://arxiv.org/abs/2504.16902	cc-by-4.0	file: 2504.16902.md
+2504.18333	Adversarial Attacks on LLM-as-a-Judge Systems: Insights from Prompt Injections	https://arxiv.org/abs/2504.18333	cc-by-4.0	file: 2504.18333.md
+2504.18423	LLMpatronous: Harnessing the Power of LLMs For Vulnerability Detection	https://arxiv.org/abs/2504.18423	cc-by-4.0	file: 2504.18423.md
+2504.18872	Latent Adversarial Training Improves the Representation of Refusal	https://arxiv.org/abs/2504.18872	cc-by-4.0	file: 2504.18872.md
+2504.19951	Securing GenAI Multi-Agent Systems Against Tool Squatting: A Zero Trust Registry-Based Approach	https://arxiv.org/abs/2504.19951	cc-by-4.0	file: 2504.19951.md
+2504.19997	Simplified and Secure MCP Gateways for Enterprise AI Integration	https://arxiv.org/abs/2504.19997	cc-by-4.0	file: 2504.19997.md
+2505.00467	Red Teaming Large Language Models for Healthcare	https://arxiv.org/abs/2505.00467	cc-by-4.0	file: 2505.00467.md
+2505.00951	Preserving Privacy and Utility in LLM-Based Product Recommendations	https://arxiv.org/abs/2505.00951	cc-by-4.0	file: 2505.00951.md
+2505.02306	SafeMate: A Modular RAG-Based Agent for Context-Aware Emergency Guidance	https://arxiv.org/abs/2505.02306	cc-by-4.0	file: 2505.02306.md
+2505.02884	Unlearning vs. Obfuscation: Are We Truly Removing Knowledge?	https://arxiv.org/abs/2505.02884	cc-by-4.0	file: 2505.02884.md
+2505.02931	The Art of Repair: Optimizing Iterative Program Repair with Instruction-Tuned Models	https://arxiv.org/abs/2505.02931	cc-by-4.0	file: 2505.02931.md
+2505.03818	Program Semantic Inequivalence Game with Large Language Models	https://arxiv.org/abs/2505.03818	cc-by-4.0	file: 2505.03818.md
+2505.04806	Red Teaming the Mind of the Machine: A Systematic Evaluation of Prompt Injection and Jailbreak Vulnerabilities in LLMs	https://arxiv.org/abs/2505.04806	cc-by-4.0	file: 2505.04806.md
+2505.05600	Enhancing Large Language Models with Faster Code Preprocessing for Vulnerability Detection	https://arxiv.org/abs/2505.05600	cc-by-4.0	file: 2505.05600.md
+2505.06364	LATENT: LLM-Augmented Trojan Insertion and Evaluation Framework for Analog Netlist Topologies	https://arxiv.org/abs/2505.06364	cc-by-4.0	file: 2505.06364.md
+2505.07376	A Preliminary Study of Large Language Models for Multilingual Vulnerability Detection	https://arxiv.org/abs/2505.07376	cc-by-4.0	file: 2505.07376.md
+2505.08054	FalseReject: A Resource for Improving Contextual Safety and Mitigating Over-Refusals in LLMs via Structured Reasoning	https://arxiv.org/abs/2505.08054	cc-by-4.0	file: 2505.08054.md
+2505.09602	Adversarial Suffix Filtering: a Defense Pipeline for LLMs	https://arxiv.org/abs/2505.09602	cc-by-4.0	file: 2505.09602.md
+2505.10264	Cutting Through Privacy: A Hyperplane-Based Data Reconstruction Attack in Federated Learning	https://arxiv.org/abs/2505.10264	cc-by-4.0	file: 2505.10264.md
+2505.10494	Can You Really Trust Code Copilots? Evaluating Large Language Models from a Code Security Perspective	https://arxiv.org/abs/2505.10494	cc-by-4.0	file: 2505.10494.md
+2505.10838	LARGO: Latent Adversarial Reflection through Gradient Optimization for Jailbreaking LLMs	https://arxiv.org/abs/2505.10838	cc-by-4.0	file: 2505.10838.md
+2505.10942	Nosy Layers, Noisy Fixes: Tackling DRAs in Federated Learning Systems using Explainable AI	https://arxiv.org/abs/2505.10942	cc-by-4.0	file: 2505.10942.md
+2505.12060	Why Not Act on What You Know? Unleashing Safety Potential of LLMs via Self-Aware Guard Enhancement	https://arxiv.org/abs/2505.12060	cc-by-4.0	file: 2505.12060.md
+2505.12090	Personalized Author Obfuscation with Large Language Models	https://arxiv.org/abs/2505.12090	cc-by-4.0	file: 2505.12090.md
+2505.12186	Self-Destructive Language Model	https://arxiv.org/abs/2505.12186	cc-by-4.0	file: 2505.12186.md
+2505.12368	CAPTURE: Context-Aware Prompt Injection Testing and Robustness Enhancement	https://arxiv.org/abs/2505.12368	cc-by-4.0	file: 2505.12368.md
+2505.12923	The Traitors: Deception and Trust in Multi-Agent Language Model Simulations	https://arxiv.org/abs/2505.12923	cc-by-4.0	file: 2505.12923.md
+2505.13348	Investigating the Vulnerability of LLM-as-a-Judge Architectures to Prompt-Injection Attacks	https://arxiv.org/abs/2505.13348	cc-by-4.0	file: 2505.13348.md
+2505.13763	Language Models Are Capable of Metacognitive Monitoring and Control of Their Internal Activations	https://arxiv.org/abs/2505.13763	cc-by-4.0	file: 2505.13763.md
+2505.14024	FedGraM: Defending Against Untargeted Attacks in Federated Learning via Embedding Gram Matrix	https://arxiv.org/abs/2505.14024	cc-by-4.0	file: 2505.14024.md
+2505.14300	Beyond Black-Box Obfuscation: Mechanistic Analysis and Defense of White-Box Monitors	https://arxiv.org/abs/2505.14300	cc-by-4.0	file: 2505.14300.md
+2505.14368	From ASR to ASP: Evaluating Prompt Attack Vulnerabilities Against Open-Source LLMs	https://arxiv.org/abs/2505.14368	cc-by-4.0	file: 2505.14368.md
+2505.14536	Breaking Bad Tokens: Detoxification of LLMs Using Sparse Autoencoders	https://arxiv.org/abs/2505.14536	cc-by-4.0	file: 2505.14536.md
+2505.15753	Scalable Defense against In-the-wild Jailbreaking Attacks with Safety Context Retrieval	https://arxiv.org/abs/2505.15753	cc-by-4.0	file: 2505.15753.md
+2505.16567	Watch your steps: Dormant Adversarial Behaviors that Activate upon LLM Finetuning	https://arxiv.org/abs/2505.16567	cc-by-4.0	file: 2505.16567.md
+2505.16888	PARASITE: Conditional System Prompt Poisoning to Hijack LLMs	https://arxiv.org/abs/2505.16888	cc-by-4.0	file: 2505.16888.md
+2505.16957	Invisible Prompts, Visible Threats: Malicious Font Injection in External Resources for Large Language Models	https://arxiv.org/abs/2505.16957	cc-by-4.0	file: 2505.16957.md
+2505.17306	Refusal Direction is Universal Across Safety-Aligned Languages	https://arxiv.org/abs/2505.17306	cc-by-4.0	file: 2505.17306.md
+2505.17598	One Model Transfer to All: On Robust Jailbreak Prompts Generation against LLMs	https://arxiv.org/abs/2505.17598	cc-by-4.0	file: 2505.17598.md
+2505.18955	Co-PatcheR: Collaborative Software Patching with Component(s)-specific Small Reasoning Models	https://arxiv.org/abs/2505.18955	cc-by-4.0	file: 2505.18955.md
+2505.19056	An Embarrassingly Simple Defense Against LLM Abliteration Attacks	https://arxiv.org/abs/2505.19056	cc-by-4.0	file: 2505.19056.md
+2505.19828	SecVulEval: Benchmarking LLMs for Real-World C/C++ Vulnerability Detection	https://arxiv.org/abs/2505.19828	cc-by-4.0	file: 2505.19828.md
+2505.19887	Deconstructing Obfuscation: A four-dimensional framework for evaluating Large Language Models assembly code deobfuscation capabilities	https://arxiv.org/abs/2505.19887	cc-by-4.0	file: 2505.19887.md
+2505.20162	Capability-Based Scaling Trends for LLM-Based Red-Teaming	https://arxiv.org/abs/2505.20162	cc-by-4.0	file: 2505.20162.md
+2505.20309	Guiding Giants: Lightweight Controllers for Weighted Activation Steering in LLMs	https://arxiv.org/abs/2505.20309	cc-by-4.0	file: 2505.20309.md
+2505.21347	OVERT: A Benchmark for Over-Refusal Evaluation on Text-to-Image Models	https://arxiv.org/abs/2505.21347	cc-by-4.0	file: 2505.21347.md
+2505.21784	Towards Safety Reasoning in LLMs: AI-agentic Deliberation for Policy-embedded CoT Data Creation	https://arxiv.org/abs/2505.21784	cc-by-4.0	file: 2505.21784.md
+2505.22010	VulBinLLM: LLM-powered Vulnerability Detection for Stripped Binaries	https://arxiv.org/abs/2505.22010	cc-by-4.0	file: 2505.22010.md
+2505.23598	LLM Performance for Code Generation on Noisy Tasks	https://arxiv.org/abs/2505.23598	cc-by-4.0	file: 2505.23598.md
+2505.23932	SwingArena: Competitive Programming Arena for Long-context GitHub Issue Solving	https://arxiv.org/abs/2505.23932	cc-by-4.0	file: 2505.23932.md
+2506.00085	COSMIC: Generalized Refusal Direction Identification in LLM Activations	https://arxiv.org/abs/2506.00085	cc-by-4.0	file: 2506.00085.md
+2506.00781	CoP: Agentic Red-teaming for Large Language Models using Composition of Principles	https://arxiv.org/abs/2506.00781	cc-by-4.0	file: 2506.00781.md
+2506.01333	ETDI: Mitigating Tool Squatting and Rug Pull Attacks in Model Context Protocol (MCP) by using OAuth-Enhanced Tool Definitions and Policy-Based Access Control	https://arxiv.org/abs/2506.01333	cc-by-4.0	file: 2506.01333.md
+2506.02442	Should LLM Safety Be More Than Refusing Harmful Instructions?	https://arxiv.org/abs/2506.02442	cc-by-4.0	file: 2506.02442.md
+2506.03850	Vulnerability-Aware Alignment: Mitigating Uneven Forgetting in Harmful Fine-Tuning	https://arxiv.org/abs/2506.03850	cc-by-4.0	file: 2506.03850.md
+2506.04250	SafeSteer: Interpretable Safety Steering with Refusal-Evasion in LLMs	https://arxiv.org/abs/2506.04250	cc-by-4.0	file: 2506.04250.md
+2506.06975	Auditing Black-Box LLM APIs with a Rank-Based Uniformity Test	https://arxiv.org/abs/2506.06975	cc-by-4.0	file: 2506.06975.md
+2506.07503	Evaluating Large Language Models for Multilingual Vulnerability Detection at Dual Granularities	https://arxiv.org/abs/2506.07503	cc-by-4.0	file: 2506.07503.md
+2506.08399	SafeCoT: Improving VLM Safety with Minimal Reasoning	https://arxiv.org/abs/2506.08399	cc-by-4.0	file: 2506.08399.md
+2506.08837	Design Patterns for Securing LLM Agents against Prompt Injections	https://arxiv.org/abs/2506.08837	cc-by-4.0	file: 2506.08837.md
+2506.10104	Expert-in-the-Loop Systems with Cross-Domain and In-Domain Few-Shot Learning for Software Vulnerability Detection	https://arxiv.org/abs/2506.10104	cc-by-4.0	file: 2506.10104.md
+2506.12880	Universal Jailbreak Suffixes Are Strong Attention Hijackers	https://arxiv.org/abs/2506.12880	cc-by-4.0	file: 2506.12880.md
+2506.13206	Thought Crime: Backdoors and Emergent Misalignment in Reasoning Models	https://arxiv.org/abs/2506.13206	cc-by-4.0	file: 2506.13206.md
+2506.14261	RL-Obfuscation: Can Language Models Learn to Evade Latent-Space Monitors?	https://arxiv.org/abs/2506.14261	cc-by-4.0	file: 2506.14261.md
+2506.16078	Probing the Robustness of Large Language Models Safety to Latent Perturbations	https://arxiv.org/abs/2506.16078	cc-by-4.0	file: 2506.16078.md
+2506.17772	PAGENT: Learning to Patch Software Engineering Agents	https://arxiv.org/abs/2506.17772	cc-by-4.0	file: 2506.17772.md
+2506.18053	Mechanistic Interpretability in the Presence of Architectural Obfuscation	https://arxiv.org/abs/2506.18053	cc-by-4.0	file: 2506.18053.md
+2506.18245	Smart-LLaMA-DPO: Reinforced Large Language Model for Explainable Smart Contract Vulnerability Detection	https://arxiv.org/abs/2506.18245	cc-by-4.0	file: 2506.18245.md
+2506.19109	Enhancing Security in LLM Applications: A Performance Evaluation of Early Detection Systems	https://arxiv.org/abs/2506.19109	cc-by-4.0	file: 2506.19109.md
+2506.20170	JsDeObsBench: Measuring and Benchmarking LLMs for JavaScript Deobfuscation	https://arxiv.org/abs/2506.20170	cc-by-4.0	file: 2506.20170.md
+2506.23034	Guiding AI to Fix Its Own Flaws: An Empirical Study on LLM-Driven Secure Code Generation	https://arxiv.org/abs/2506.23034	cc-by-4.0	file: 2506.23034.md
+2506.24056	Logit-Gap Steering: A Forward-Pass Diagnostic for Alignment Robustness	https://arxiv.org/abs/2506.24056	cc-by-4.0	file: 2506.24056.md
+2507.01827	PSearch: Search-based Patch Generation in the Era of LLM-based Automated Program Repair	https://arxiv.org/abs/2507.01827	cc-by-4.0	file: 2507.01827.md
+2507.02735	Meta-SecAlign: Training LLMs against Prompt Injection for Robust Agents	https://arxiv.org/abs/2507.02735	cc-by-4.0	file: 2507.02735.md
+2507.04250	Just Enough Shifts: Mitigating Over-Refusal in Aligned Language Models with Targeted Representation Fine-Tuning	https://arxiv.org/abs/2507.04250	cc-by-4.0	file: 2507.04250.md
+2507.04531	DP-Fusion: Token-Level Differentially Private Inference for Large Language Models	https://arxiv.org/abs/2507.04531	cc-by-4.0	file: 2507.04531.md
+2507.04673	Trojan Horse Prompting: Jailbreaking Conversational Multimodal Models by Forging Assistant Message	https://arxiv.org/abs/2507.04673	cc-by-4.0	file: 2507.04673.md
+2507.05630	How Not to Detect Prompt Injections with an LLM	https://arxiv.org/abs/2507.05630	cc-by-4.0	file: 2507.05630.md
+2507.05660	Optimus: A Robust Defense Framework for Mitigating Toxicity while Fine-Tuning Conversational AI	https://arxiv.org/abs/2507.05660	cc-by-4.0	file: 2507.05660.md
+2507.06323	Bridging AI and Software Security: A Comparative Vulnerability Assessment of LLM Agent Deployment Paradigms	https://arxiv.org/abs/2507.06323	cc-by-4.0	file: 2507.06323.md
+2507.07417	May I have your Attention? Breaking Fine-Tuning based Prompt Injection Defenses using Architecture-Aware Attacks	https://arxiv.org/abs/2507.07417	cc-by-4.0	file: 2507.07417.md
+2507.08898	SEALGuard: Safeguarding the Multilingual Conversations in Southeast Asian Languages for LLM Software Systems	https://arxiv.org/abs/2507.08898	cc-by-4.0	file: 2507.08898.md
+2507.09407	LLM-Stackelberg Games: Conjectural Reasoning Equilibria and Their Applications to Spearphishing	https://arxiv.org/abs/2507.09407	cc-by-4.0	file: 2507.09407.md
+2507.09411	LLMalMorph: On The Feasibility of Generating Variant Malware using Large-Language-Models	https://arxiv.org/abs/2507.09411	cc-by-4.0	file: 2507.09411.md
+2507.11878	LLMs Encode Harmfulness and Refusal Separately	https://arxiv.org/abs/2507.11878	cc-by-4.0	file: 2507.11878.md
+2507.13169	Prompt Injection 2.0: Hybrid AI Threats	https://arxiv.org/abs/2507.13169	cc-by-4.0	file: 2507.13169.md
+2507.14207	Mitigating Trojanized Prompt Chains in Educational LLM Use Cases: Experimental Findings and Detection Tool Design	https://arxiv.org/abs/2507.14207	cc-by-4.0	file: 2507.14207.md
+2507.14799	Manipulating LLM Web Agents with Indirect Prompt Injection Attack via HTML Accessibility Tree	https://arxiv.org/abs/2507.14799	cc-by-4.0	file: 2507.14799.md
+2507.20977	Repairing vulnerabilities without invisible hands. A differentiated replication study on LLMs	https://arxiv.org/abs/2507.20977	cc-by-4.0	file: 2507.20977.md
+2507.21132	Can You Trust an LLM with Your Life-Changing Decision? An Investigation into AI High-Stakes Responses	https://arxiv.org/abs/2507.21132	cc-by-4.0	file: 2507.21132.md
+2507.21176	Toward Revealing Nuanced Biases in Medical LLMs	https://arxiv.org/abs/2507.21176	cc-by-4.0	file: 2507.21176.md
+2507.22371	SAEL: Leveraging Large Language Models with Adaptive Mixture-of-Experts for Smart Contract Vulnerability Detection	https://arxiv.org/abs/2507.22371	cc-by-4.0	file: 2507.22371.md
+2507.22414	AutoCodeSherpa: Symbolic Explanations in AI Coding Agents	https://arxiv.org/abs/2507.22414	cc-by-4.0	file: 2507.22414.md
+2507.23348	SWE-Debate: Competitive Multi-Agent Debate for Software Issue Resolution	https://arxiv.org/abs/2507.23348	cc-by-4.0	file: 2507.23348.md
+2508.00602	LeakSealer: A Semisupervised Defense for LLMs Against Prompt Injection and Leakage Attacks	https://arxiv.org/abs/2508.00602	cc-by-4.0	file: 2508.00602.md
+2508.02961	Defend LLMs Through Self-Consciousness	https://arxiv.org/abs/2508.02961	cc-by-4.0	file: 2508.02961.md
+2508.03470	On the Evaluation of Large Language Models in Multilingual Vulnerability Repair	https://arxiv.org/abs/2508.03470	cc-by-4.0	file: 2508.03470.md
+2508.04451	There are Levels to It: Red Teaming Dialogue With Hierarchical Reinforcement Learning	https://arxiv.org/abs/2508.04451	cc-by-4.0	file: 2508.04451.md
+2508.06418	Quantifying Conversation Drift in MCP via Latent Polytope	https://arxiv.org/abs/2508.06418	cc-by-4.0	file: 2508.06418.md
+2508.07321	ObfusQAte: A Proposed Framework to Evaluate LLM Robustness on Obfuscated Factual Question Answering	https://arxiv.org/abs/2508.07321	cc-by-4.0	file: 2508.07321.md
+2508.09288	Can AI Keep a Secret? Contextual Integrity Verification: A Provable Security Architecture for LLMs	https://arxiv.org/abs/2508.09288	cc-by-4.0	file: 2508.09288.md
+2508.11222	ORFuzz: Fuzzing the "Other Side" of LLM Safety -- Testing Over-Refusal	https://arxiv.org/abs/2508.11222	cc-by-4.0	file: 2508.11222.md
+2508.11290	SafeConstellations: Mitigating Over-Refusals in LLMs Through Task-Aware Representation Steering	https://arxiv.org/abs/2508.11290	cc-by-4.0	file: 2508.11290.md
+2508.13214	Too Easily Fooled? Prompt Injection Breaks LLMs on Frustratingly Simple Multiple-Choice Questions	https://arxiv.org/abs/2508.13214	cc-by-4.0	file: 2508.13214.md
+2508.14128	CCFC: Core & Core-Full-Core Dual-Track Defense for LLM Jailbreak Protection	https://arxiv.org/abs/2508.14128	cc-by-4.0	file: 2508.14128.md
+2508.14853	Universal and Transferable Adversarial Attack on Large Language Models Using Exponentiated Gradient Descent	https://arxiv.org/abs/2508.14853	cc-by-4.0	file: 2508.14853.md
+2508.15847	Mechanistic Exploration of Backdoored Large Language Model Attention Patterns	https://arxiv.org/abs/2508.15847	cc-by-4.0	file: 2508.15847.md
+2508.15987	PickleBall: Secure Deserialization of Pickle-based Machine Learning Models (Extended Report)	https://arxiv.org/abs/2508.15987	cc-by-4.0	file: 2508.15987.md
+2508.16406	Retrieval-Augmented Defense: Adaptive and Controllable Jailbreak Prevention for Large Language Models	https://arxiv.org/abs/2508.16406	cc-by-4.0	file: 2508.16406.md
+2508.17856	MalLoc: Toward Fine-grained Android Malicious Payload Localization via LLMs	https://arxiv.org/abs/2508.17856	cc-by-4.0	file: 2508.17856.md
+2508.18737	FLAegis: A Two-Layer Defense Framework for Federated Learning Against Poisoning Attacks	https://arxiv.org/abs/2508.18737	cc-by-4.0	file: 2508.18737.md
+2508.19633	A Symbolic Adversarial Learning Framework for Evolving Fake News Generation and Detection	https://arxiv.org/abs/2508.19633	cc-by-4.0	file: 2508.19633.md
+2508.19774	The Art of Hide and Seek: Making Pickle-Based Model Supply Chain Poisoning Stealthy Again	https://arxiv.org/abs/2508.19774	cc-by-4.0	file: 2508.19774.md
+2508.21004	Lethe: Purifying Backdoored Large Language Models with Knowledge Dilution	https://arxiv.org/abs/2508.21004	cc-by-4.0	file: 2508.21004.md
+2509.00088	AEGIS : Automated Co-Evolutionary Framework for Guarding Prompt Injections Schema	https://arxiv.org/abs/2509.00088	cc-by-4.0	file: 2509.00088.md
+2509.00373	Activation Steering Meets Preference Optimization: Defense Against Jailbreaks in Vision Language Models	https://arxiv.org/abs/2509.00373	cc-by-4.0	file: 2509.00373.md
+2509.00391	The Resurgence of GCG Adversarial Attacks on Large Language Models	https://arxiv.org/abs/2509.00391	cc-by-4.0	file: 2509.00391.md
+2509.01631	Unraveling LLM Jailbreaks Through Safety Knowledge Neurons	https://arxiv.org/abs/2509.01631	cc-by-4.0	file: 2509.01631.md
+2509.05331	ForensicsData: A Digital Forensics Dataset for Large Language Models	https://arxiv.org/abs/2509.05331	cc-by-4.0	file: 2509.05331.md
+2509.05471	Behind the Mask: Benchmarking Camouflaged Jailbreaks in Large Language Models	https://arxiv.org/abs/2509.05471	cc-by-4.0	file: 2509.05471.md
+2509.05739	Reasoning Introduces New Poisoning Attacks Yet Makes Them More Complicated	https://arxiv.org/abs/2509.05739	cc-by-4.0	file: 2509.05739.md
+2509.06795	Anchoring Refusal Direction: Mitigating Safety Risks in Tuning via Projection Constraint	https://arxiv.org/abs/2509.06795	cc-by-4.0	file: 2509.06795.md
+2509.09708	Beyond I'm Sorry, I Can't: Dissecting Large Language Model Refusal	https://arxiv.org/abs/2509.09708	cc-by-4.0	file: 2509.09708.md
+2509.10540	EchoLeak: The First Real-World Zero-Click Prompt Injection Exploit in a Production LLM System	https://arxiv.org/abs/2509.10540	cc-by-4.0	file: 2509.10540.md
+2509.10723	Dark Patterns Meet GUI Agents: LLM Agent Susceptibility to Manipulative Interfaces and the Role of Human Oversight	https://arxiv.org/abs/2509.10723	cc-by-4.0	file: 2509.10723.md
+2509.11864	NeuroStrike: Neuron-Level Attacks on Aligned LLMs	https://arxiv.org/abs/2509.11864	cc-by-4.0	file: 2509.11864.md
+2509.13219	On the Out-of-Distribution Backdoor Attack for Federated Learning	https://arxiv.org/abs/2509.13219	cc-by-4.0	file: 2509.13219.md
+2509.14271	Early Approaches to Adversarial Fine-Tuning for Prompt Injection Defense: A 2022 Study of GPT-3 and Contemporary Models	https://arxiv.org/abs/2509.14271	cc-by-4.0	file: 2509.14271.md
+2509.16060	SABER: Uncovering Vulnerabilities in Safety Alignment via Cross-Layer Residual Connection	https://arxiv.org/abs/2509.16060	cc-by-4.0	file: 2509.16060.md
+2509.16870	DecipherGuard: Understanding and Deciphering Jailbreak Prompts for a Safer Deployment of Intelligent Software Systems	https://arxiv.org/abs/2509.16870	cc-by-4.0	file: 2509.16870.md
+2509.18058	Strategic Dishonesty Can Undermine AI Safety Evaluations of Frontier LLMs	https://arxiv.org/abs/2509.18058	cc-by-4.0	file: 2509.18058.md
+2509.19143	Anecdoctoring: Automated Red-Teaming Across Language and Place	https://arxiv.org/abs/2509.19143	cc-by-4.0	file: 2509.19143.md
+2509.20166	CyberSOCEval: Benchmarking LLMs Capabilities for Malware Analysis and Threat Intelligence Reasoning	https://arxiv.org/abs/2509.20166	cc-by-4.0	file: 2509.20166.md
+2509.20639	A Framework for Rapidly Developing and Deploying Protection Against Large Language Model Attacks	https://arxiv.org/abs/2509.20639	cc-by-4.0	file: 2509.20639.md
+2509.22745	Defending MoE LLMs against Harmful Fine-Tuning via Safety Routing Alignment	https://arxiv.org/abs/2509.22745	cc-by-4.0	file: 2509.22745.md
+2509.23037	GuardNet: Graph-Attention Filtering for Jailbreak Defense in Large Language Models	https://arxiv.org/abs/2509.23037	cc-by-4.0	file: 2509.23037.md
+2509.23970	Binary Diff Summarization using Large Language Models	https://arxiv.org/abs/2509.23970	cc-by-4.0	file: 2509.23970.md
+2509.24967	SecInfer: Preventing Prompt Injection via Inference-time Scaling	https://arxiv.org/abs/2509.24967	cc-by-4.0	file: 2509.24967.md
+2509.25843	ASGuard: Activation-Scaling Guard to Mitigate Targeted Jailbreaking Attack	https://arxiv.org/abs/2509.25843	cc-by-4.0	file: 2509.25843.md
+2509.26345	SafeBehavior: Simulating Human-Like Multistage Reasoning to Mitigate Jailbreak Attacks in Large Language Models	https://arxiv.org/abs/2509.26345	cc-by-4.0	file: 2509.26345.md
+2509.26598	Are Robust LLM Fingerprints Adversarially Robust?	https://arxiv.org/abs/2509.26598	cc-by-4.0	file: 2509.26598.md
+2510.00938	Large Reasoning Models Learn Better Alignment from Flawed Thinking	https://arxiv.org/abs/2510.00938	cc-by-4.0	file: 2510.00938.md
+2510.01002	Semantics-Aligned, Curriculum-Driven, and Reasoning-Enhanced Vulnerability Repair Framework	https://arxiv.org/abs/2510.01002	cc-by-4.0	file: 2510.01002.md
+2510.01929	Inverse Language Modeling towards Robust and Grounded LLMs	https://arxiv.org/abs/2510.01929	cc-by-4.0	file: 2510.01929.md
+2510.02325	Agentic-AI Healthcare: Multilingual, Privacy-First Framework with MCP Agents	https://arxiv.org/abs/2510.02325	cc-by-4.0	file: 2510.02325.md
+2510.02391	LLM-Generated Samples for Android Malware Detection	https://arxiv.org/abs/2510.02391	cc-by-4.0	file: 2510.02391.md
+2510.02422	Dynamic Jailbreaking Attack	https://arxiv.org/abs/2510.02422	cc-by-4.0	file: 2510.02422.md
+2510.02567	Agentic Additive Manufacturing Alloy Evaluation	https://arxiv.org/abs/2510.02567	cc-by-4.0	file: 2510.02567.md
+2510.02609	RedCodeAgent: Automatic Red-teaming Agent against Diverse Code Agents	https://arxiv.org/abs/2510.02609	cc-by-4.0	file: 2510.02609.md
+2510.02768	A Granular Study of Safety Pretraining under Model Abliteration	https://arxiv.org/abs/2510.02768	cc-by-4.0	file: 2510.02768.md
+2510.02999	NonTextual Target Attack	https://arxiv.org/abs/2510.02999	cc-by-4.0	file: 2510.02999.md
+2510.03178	When Names Disappear: Revealing What LLMs Actually Understand About Code	https://arxiv.org/abs/2510.03178	cc-by-4.0	file: 2510.03178.md
+2510.03610	PentestMCP: A Toolkit for Agentic Penetration Testing	https://arxiv.org/abs/2510.03610	cc-by-4.0	file: 2510.03610.md
+2510.04196	COSMO-RL: Towards Trustworthy LMRMs via Joint Safety and Stability	https://arxiv.org/abs/2510.04196	cc-by-4.0	file: 2510.04196.md
+2510.04309	Activation Steering with a Feedback Controller	https://arxiv.org/abs/2510.04309	cc-by-4.0	file: 2510.04309.md
+2510.05169	From Poisoned to Aware: Fostering Backdoor Self-Awareness in LLMs	https://arxiv.org/abs/2510.05169	cc-by-4.0	file: 2510.05169.md
+2510.05968	Extending ResourceLink: Patterns for Large Dataset Processing in MCP Applications	https://arxiv.org/abs/2510.05968	cc-by-4.0	file: 2510.05968.md
+2510.06594	Do Internal Layers of LLMs Reveal Patterns for Jailbreak Detection?	https://arxiv.org/abs/2510.06594	cc-by-4.0	file: 2510.06594.md
+2510.06645	Distilling Lightweight Language Models for C/C++ Vulnerabilities	https://arxiv.org/abs/2510.06645	cc-by-4.0	file: 2510.06645.md
+2510.07835	MetaDefense: Defending Finetuning-based Jailbreak Attack Before and During Generation	https://arxiv.org/abs/2510.07835	cc-by-4.0	file: 2510.07835.md
+2510.08158	Beyond Over-Refusal: Scenario-Based Diagnostics and Post-Hoc Mitigation for Exaggerated Refusals in LLMs	https://arxiv.org/abs/2510.08158	cc-by-4.0	file: 2510.08158.md
+2510.08329	AutoRed: A Free-form Adversarial Prompt Generation Framework for Automated Red Teaming	https://arxiv.org/abs/2510.08329	cc-by-4.0	file: 2510.08329.md
+2510.08604	LatentBreak: Jailbreaking Large Language Models through Latent Space Feedback	https://arxiv.org/abs/2510.08604	cc-by-4.0	file: 2510.08604.md
+2510.09689	When Search Goes Wrong: Red-Teaming Web-Augmented Large Language Models	https://arxiv.org/abs/2510.09689	cc-by-4.0	file: 2510.09689.md
+2510.10066	OBsmith: LLM-Powered JavaScript Obfuscator Testing	https://arxiv.org/abs/2510.10066	cc-by-4.0	file: 2510.10066.md
+2510.10265	Backdoor Collapse: Eliminating Unknown Threats via Known Backdoor Aggregation in Language Models	https://arxiv.org/abs/2510.10265	cc-by-4.0	file: 2510.10265.md
+2510.10452	Steering Over-refusals Towards Safety in Retrieval Augmented Generation	https://arxiv.org/abs/2510.10452	cc-by-4.0	file: 2510.10452.md
+2510.10846	DUAL-Bench: Measuring Over-Refusal and Robustness in Vision-Language Models	https://arxiv.org/abs/2510.10846	cc-by-4.0	file: 2510.10846.md
+2510.10961	Obfuscation Rules for Detecting and Detoxifying Korean Toxicity	https://arxiv.org/abs/2510.10961	cc-by-4.0	file: 2510.10961.md
+2510.11823	BlackIce: A Containerized Red Teaming Toolkit for AI Security Testing	https://arxiv.org/abs/2510.11823	cc-by-4.0	file: 2510.11823.md
+2510.12826	Scheming Ability in LLM-to-LLM Strategic Interactions	https://arxiv.org/abs/2510.12826	cc-by-4.0	file: 2510.12826.md
+2510.13893	Guarding the Guardrails: A Taxonomy-Driven Approach to Jailbreak Detection	https://arxiv.org/abs/2510.13893	cc-by-4.0	file: 2510.13893.md
+2510.13992	Signature in Code Backdoor Detection, how far are we?	https://arxiv.org/abs/2510.13992	cc-by-4.0	file: 2510.13992.md
+2510.15106	PoTS: Proof-of-Training-Steps for Backdoor Detection in Large Language Models	https://arxiv.org/abs/2510.15106	cc-by-4.0	file: 2510.15106.md
+2510.15567	MalCVE: Malware Detection and CVE Association Using Large Language Models	https://arxiv.org/abs/2510.15567	cc-by-4.0	file: 2510.15567.md
+2510.15973	Safeguarding Efficacy in Large Language Models: Evaluating Resistance to Human-Written and Algorithmic Adversarial Prompts	https://arxiv.org/abs/2510.15973	cc-by-4.0	file: 2510.15973.md
+2510.16558	A First Look at the Security Issues in the Model Context Protocol Ecosystem	https://arxiv.org/abs/2510.16558	cc-by-4.0	file: 2510.16558.md
+2510.17633	SARSteer: Safeguarding Large Audio-Language Models via Safe-Ablated Refusal Steering	https://arxiv.org/abs/2510.17633	cc-by-4.0	file: 2510.17633.md
+2510.18131	BlueCodeAgent: A Blue Teaming Agent Enabled by Automated Red Teaming for CodeGen AI	https://arxiv.org/abs/2510.18131	cc-by-4.0	file: 2510.18131.md
+2510.18541	Pay Attention to the Triggers: Constructing Backdoors That Survive Distillation	https://arxiv.org/abs/2510.18541	cc-by-4.0	file: 2510.18541.md
+2510.18936	SBAN: A Framework & Multi-Dimensional Dataset for Large Language Model Pre-Training and Software Code Mining	https://arxiv.org/abs/2510.18936	cc-by-4.0	file: 2510.18936.md
+2510.19844	CourtGuard: A Local, Multiagent Prompt Injection Classifier	https://arxiv.org/abs/2510.19844	cc-by-4.0	file: 2510.19844.md
+2510.20270	ImpossibleBench: Measuring LLMs' Propensity of Exploiting Test Cases	https://arxiv.org/abs/2510.20270	cc-by-4.0	file: 2510.20270.md
+2510.20487	Steering Evaluation-Aware Language Models to Act Like They Are Deployed	https://arxiv.org/abs/2510.20487	cc-by-4.0	file: 2510.20487.md
+2510.21190	The Trojan Example: Jailbreaking LLMs through Template Filling and Unsafety Reasoning	https://arxiv.org/abs/2510.21190	cc-by-4.0	file: 2510.21190.md
+2510.21236	AgentBound: Securing Execution Boundaries of AI Agents	https://arxiv.org/abs/2510.21236	cc-by-4.0	file: 2510.21236.md
+2510.23313	Network Intrusion Detection: Evolution from Conventional Approaches to LLM Collaboration and Emerging Risks	https://arxiv.org/abs/2510.23313	cc-by-4.0	file: 2510.23313.md
+2510.26212	Who Grants the Agent Power? Defending Against Instruction Injection via Task-Centric Access Control	https://arxiv.org/abs/2510.26212	cc-by-4.0	file: 2510.26212.md
+2511.00554	Red-teaming Activation Probes using Prompted LLMs	https://arxiv.org/abs/2511.00554	cc-by-4.0	file: 2511.00554.md
+2511.00689	Do Methods to Jailbreak and Defend LLMs Generalize Across Languages?	https://arxiv.org/abs/2511.00689	cc-by-4.0	file: 2511.00689.md
+2511.03271	Let the Bees Find the Weak Spots: A Path Planning Perspective on Multi-Turn Jailbreak Attacks against LLMs	https://arxiv.org/abs/2511.03271	cc-by-4.0	file: 2511.03271.md
+2511.03369	Silenced Biases: The Dark Side LLMs Learned to Refuse	https://arxiv.org/abs/2511.03369	cc-by-4.0	file: 2511.03369.md
+2511.04179	Explaining Software Vulnerabilities with Large Language Models	https://arxiv.org/abs/2511.04179	cc-by-4.0	file: 2511.04179.md
+2511.04316	AdversariaLLM: A Unified and Modular Toolbox for LLM Robustness Research	https://arxiv.org/abs/2511.04316	cc-by-4.0	file: 2511.04316.md
+2511.08379	SOM Directions are Better than One: Multi-Directional Refusal Suppression in Language Models	https://arxiv.org/abs/2511.08379	cc-by-4.0	file: 2511.08379.md
+2511.10720	PISanitizer: Preventing Prompt Injection to Long-Context LLMs via Prompt Sanitization	https://arxiv.org/abs/2511.10720	cc-by-4.0	file: 2511.10720.md
+2511.12271	MoralReason: Generalizable Moral Decision Alignment For LLM Agents Using Reasoning-Level Reinforcement Learning	https://arxiv.org/abs/2511.12271	cc-by-4.0	file: 2511.12271.md
+2511.12576	Can Small GenAI Language Models Rival Large Language Models in Understanding Application Behavior?	https://arxiv.org/abs/2511.12576	cc-by-4.0	file: 2511.12576.md
+2511.14140	Beyond Fixed and Dynamic Prompts: Embedded Jailbreak Templates for Advancing LLM Security	https://arxiv.org/abs/2511.14140	cc-by-4.0	file: 2511.14140.md
+2511.14423	Unified Defense for Large Language Models against Jailbreak and Fine-Tuning Attacks in Education	https://arxiv.org/abs/2511.14423	cc-by-4.0	file: 2511.14423.md
+2511.15992	Detecting Sleeper Agents in Large Language Models via Semantic Drift Analysis	https://arxiv.org/abs/2511.15992	cc-by-4.0	file: 2511.15992.md
+2511.18001	Enhancing Automated Program Repair via Faulty Token Localization and Quality-Aware Patch Refinement	https://arxiv.org/abs/2511.18001	cc-by-4.0	file: 2511.18001.md
+2511.18721	Towards Realistic Guarantees: A Probabilistic Certificate for SmoothLLM	https://arxiv.org/abs/2511.18721	cc-by-4.0	file: 2511.18721.md
+2511.18933	Defending Large Language Models Against Jailbreak Exploits with Responsible AI Considerations	https://arxiv.org/abs/2511.18933	cc-by-4.0	file: 2511.18933.md
+2511.19130	Can LLMs Recover Program Semantics? A Systematic Evaluation with Symbolic Execution	https://arxiv.org/abs/2511.19130	cc-by-4.0	file: 2511.19130.md
+2511.19654	Accuracy and Efficiency Trade-Offs in LLM-Based Malware Detection and Explanation: A Comparative Study of Parameter Tuning vs. Full Fine-Tuning	https://arxiv.org/abs/2511.19654	cc-by-4.0	file: 2511.19654.md
+2511.20090	R3A: Reliable RTL Repair Framework with Multi-Agent Fault Localization and Stochastic Tree-of-Thoughts Patch Generation	https://arxiv.org/abs/2511.20090	cc-by-4.0	file: 2511.20090.md
+2511.20920	Securing the Model Context Protocol (MCP): Risks, Controls, and Governance	https://arxiv.org/abs/2511.20920	cc-by-4.0	file: 2511.20920.md
+2511.21399	Steering Awareness: Detecting Activation Steering from Within	https://arxiv.org/abs/2511.21399	cc-by-4.0	file: 2511.21399.md
+2512.00371	Evaluating LLMs in Open-Source Games	https://arxiv.org/abs/2512.00371	cc-by-4.0	file: 2512.00371.md
+2512.02069	Large Language Model based Smart Contract Auditing with LLMBugScanner	https://arxiv.org/abs/2512.02069	cc-by-4.0	file: 2512.02069.md
+2512.04864	Are Your Agents Upward Deceivers?	https://arxiv.org/abs/2512.04864	cc-by-4.0	file: 2512.04864.md
+2512.06556	Semantic Attacks on Tool-Augmented LLMs: Securing the Model Context Protocol Against Descriptor-Level Manipulation	https://arxiv.org/abs/2512.06556	cc-by-4.0	file: 2512.06556.md
+2512.06655	Graph-Regularized Sparse Autoencoders for LLM Safety Steering	https://arxiv.org/abs/2512.06655	cc-by-4.0	file: 2512.06655.md
+2512.07667	Depth-Wise Activation Steering for Honest Language Models	https://arxiv.org/abs/2512.07667	cc-by-4.0	file: 2512.07667.md
+2512.09006	Llama-based source code vulnerability detection: Prompt engineering vs Fine tuning	https://arxiv.org/abs/2512.09006	cc-by-4.0	file: 2512.09006.md
+2512.09187	WOLF: Werewolf-based Observations for LLM Deception and Falsehoods	https://arxiv.org/abs/2512.09187	cc-by-4.0	file: 2512.09187.md
+2512.12583	Detecting Prompt Injection Attacks Against Application Using Classifiers	https://arxiv.org/abs/2512.12583	cc-by-4.0	file: 2512.12583.md
+2512.14745	Factor(U,T): Controlling Untrusted AI by Monitoring their Plans	https://arxiv.org/abs/2512.14745	cc-by-4.0	file: 2512.14745.md
+2512.20203	Well Begun is Half Done: Location-Aware and Trace-Guided Iterative Automated Vulnerability Repair	https://arxiv.org/abs/2512.20203	cc-by-4.0	file: 2512.20203.md
+2512.20677	Learning-Based Automated Adversarial Red-Teaming for Robustness Evaluation of Large Language Models	https://arxiv.org/abs/2512.20677	cc-by-4.0	file: 2512.20677.md
+2512.21008	GateBreaker: Gate-Guided Attacks on Mixture-of-Expert LLMs	https://arxiv.org/abs/2512.21008	cc-by-4.0	file: 2512.21008.md
+2512.21371	The Imitation Game: Using Large Language Models as Chatbots to Combat Chat-Based Cybercrimes	https://arxiv.org/abs/2512.21371	cc-by-4.0	file: 2512.21371.md
+2601.00254	An Empirical Evaluation of LLM-Based Approaches for Code Vulnerability Detection: RAG, SFT, and Dual-Agent Systems	https://arxiv.org/abs/2601.00254	cc-by-4.0	file: 2601.00254.md
+2601.01320	Adaptive Hierarchical Evaluation of LLMs and SAST tools for CWE Prediction in Python	https://arxiv.org/abs/2601.01320	cc-by-4.0	file: 2601.01320.md
+2601.01685	Lying with Truths: Open-Channel Multi-Agent Collusion for Belief Manipulation via Generative Montage	https://arxiv.org/abs/2601.01685	cc-by-4.0	file: 2601.01685.md
+2601.03594	Jailbreaking LLMs & VLMs: Mechanisms, Evaluation, and Unified Defense	https://arxiv.org/abs/2601.03594	cc-by-4.0	file: 2601.03594.md
+2601.04553	Deep Dive into the Abuse of DL APIs To Create Malicious AI Models and How to Detect Them	https://arxiv.org/abs/2601.04553	cc-by-4.0	file: 2601.04553.md
+2601.08489	Surgical Refusal Ablation: Disentangling Safety from Intelligence via Concept-Guided Spectral Cleaning	https://arxiv.org/abs/2601.08489	cc-by-4.0	file: 2601.08489.md
+2601.08959	Integrating APK Image and Text Data for Enhanced Threat Detection: A Multimodal Deep Learning Approach to Android Malware	https://arxiv.org/abs/2601.08959	cc-by-4.0	file: 2601.08959.md
+2601.09029	Proactively Detecting Threats: A Novel Approach Using LLMs	https://arxiv.org/abs/2601.09029	cc-by-4.0	file: 2601.09029.md
+2601.09035	A Decompilation-Driven Framework for Malware Detection with Large Language Models	https://arxiv.org/abs/2601.09035	cc-by-4.0	file: 2601.09035.md
+2601.09625	The Promptware Kill Chain: How Prompt Injections Gradually Evolved Into a Multistep Malware Delivery Mechanism	https://arxiv.org/abs/2601.09625	cc-by-4.0	file: 2601.09625.md
+2601.09869	A Scoping Review of the Ethical Perspectives on Anthropomorphising Large Language Model-Based Conversational Agents	https://arxiv.org/abs/2601.09869	cc-by-4.0	file: 2601.09869.md
+2601.13359	Sockpuppetting: Jailbreaking LLMs by Combining Prefilling with Optimization	https://arxiv.org/abs/2601.13359	cc-by-4.0	file: 2601.13359.md
+2601.13518	AgenticRed: Evolving Agentic Systems for Red-Teaming	https://arxiv.org/abs/2601.13518	cc-by-4.0	file: 2601.13518.md
+2601.13933	VulnResolver: A Hybrid Agent Framework for LLM-Based Automated Vulnerability Issue Resolution	https://arxiv.org/abs/2601.13933	cc-by-4.0	file: 2601.13933.md
+2601.14528	LLM Security and Safety: Insights from Homotopy-Inspired Prompt Obfuscation	https://arxiv.org/abs/2601.14528	cc-by-4.0	file: 2601.14528.md
+2601.15331	RECAP: A Resource-Efficient Method for Adversarial Prompting in Large Language Models	https://arxiv.org/abs/2601.15331	cc-by-4.0	file: 2601.15331.md
+2601.16034	Universal Refusal Circuits Across LLMs: Cross-Model Transfer via Trajectory Replay and Concept-Basis Reconstruction	https://arxiv.org/abs/2601.16034	cc-by-4.0	file: 2601.16034.md
+2601.17383	Physical Prompt Injection Attacks on Large Vision-Language Models	https://arxiv.org/abs/2601.17383	cc-by-4.0	file: 2601.17383.md
+2601.17471	PatchIsland: Orchestration of LLM Agents for Continuous Vulnerability Repair	https://arxiv.org/abs/2601.17471	cc-by-4.0	file: 2601.17471.md
+2601.17548	Prompt Injection Attacks on Agentic Coding Assistants: A Systematic Analysis of Vulnerabilities in Skills, Tools, and Protocol Ecosystems	https://arxiv.org/abs/2601.17548	cc-by-4.0	file: 2601.17548.md
+2601.17549	Breaking the Protocol: Security Analysis of the Model Context Protocol Specification and Prompt Injection Vulnerabilities in Tool-Integrated LLM Agents	https://arxiv.org/abs/2601.17549	cc-by-4.0	file: 2601.17549.md
+2601.18847	MulVul: Retrieval-augmented Multi-Agent Code Vulnerability Detection via Cross-Model Prompt Evolution	https://arxiv.org/abs/2601.18847	cc-by-4.0	file: 2601.18847.md
+2601.19487	LLM-VA: Resolving the Jailbreak-Overrefusal Trade-off via Vector Alignment	https://arxiv.org/abs/2601.19487	cc-by-4.0	file: 2601.19487.md
+2601.21112	How does information access affect LLM monitors' ability to detect sabotage?	https://arxiv.org/abs/2601.21112	cc-by-4.0	file: 2601.21112.md
+2601.21505	The Effectiveness of Style Vectors for Steering Large Language Models: A Human Evaluation	https://arxiv.org/abs/2601.21505	cc-by-4.0	file: 2601.21505.md
+2601.23086	Chain-of-thought obfuscation learned from output supervision can generalise to unseen tasks	https://arxiv.org/abs/2601.23086	cc-by-4.0	file: 2601.23086.md
+2602.00707	Self-Guard: Defending Large Reasoning Models via enhanced self-reflection	https://arxiv.org/abs/2602.00707	cc-by-4.0	file: 2602.00707.md
+2602.01132	Don't Judge a Book by its Cover: Testing LLMs' Robustness Under Logical Obfuscation	https://arxiv.org/abs/2602.01132	cc-by-4.0	file: 2602.01132.md
+2602.01539	MAGIC: A Co-Evolving Attacker-Defender Adversarial Game for Robust LLM Safety	https://arxiv.org/abs/2602.01539	cc-by-4.0	file: 2602.01539.md
+2602.04195	Semantic Consensus Decoding: Backdoor Defense for Verilog Code Generation	https://arxiv.org/abs/2602.04195	cc-by-4.0	file: 2602.04195.md
+2602.04197	From Helpfulness to Toxic Proactivity: Diagnosing Behavioral Misalignment in LLM Agents	https://arxiv.org/abs/2602.04197	cc-by-4.0	file: 2602.04197.md
+2602.04448	Routing-Aware Safety Alignment for Mixture-of-Experts Models	https://arxiv.org/abs/2602.04448	cc-by-4.0	file: 2602.04448.md
+2602.04581	Trust The Typical	https://arxiv.org/abs/2602.04581	cc-by-4.0	file: 2602.04581.md
+2602.04896	Steering Externalities: Benign Activation Steering Unintentionally Increases Jailbreak Risk for Large Language Models	https://arxiv.org/abs/2602.04896	cc-by-4.0	file: 2602.04896.md
+2602.05176	Among Us: Measuring and Mitigating Malicious Contributions in Model Collaboration Systems	https://arxiv.org/abs/2602.05176	cc-by-4.0	file: 2602.05176.md
+2602.05484	Clouding the Mirror: Stealthy Prompt Injection Attacks Targeting LLM-based Phishing Detection	https://arxiv.org/abs/2602.05484	cc-by-4.0	file: 2602.05484.md
+2602.05523	Capture the Flags: Family-Based Evaluation of Agentic LLMs via Semantics-Preserving Transformations	https://arxiv.org/abs/2602.05523	cc-by-4.0	file: 2602.05523.md
+2602.05746	Learning to Inject: Automated Prompt Injection via Reinforcement Learning	https://arxiv.org/abs/2602.05746	cc-by-4.0	file: 2602.05746.md
+2602.06256	Steering Safely or Off a Cliff? Rethinking Specificity and Robustness in Inference-Time Interventions	https://arxiv.org/abs/2602.06256	cc-by-4.0	file: 2602.06256.md
+2602.06887	Plato's Form: Toward Backdoor Defense-as-a-Service for LLMs with Prototype Representations	https://arxiv.org/abs/2602.06887	cc-by-4.0	file: 2602.06887.md
+2602.06941	Endogenous Resistance to Activation Steering in Language Models	https://arxiv.org/abs/2602.06941	cc-by-4.0	file: 2602.06941.md
+2602.07013	Steering to Say No: Configurable Refusal via Activation Steering in Vision Language Models	https://arxiv.org/abs/2602.07013	cc-by-4.0	file: 2602.07013.md
+2602.07276	Steer2Adapt: Dynamically Composing Steering Vectors Elicits Efficient Adaptation of LLMs	https://arxiv.org/abs/2602.07276	cc-by-4.0	file: 2602.07276.md
+2602.08449	When Evaluation Becomes a Side Channel: Regime Leakage and Structural Mitigations for Alignment Assessment	https://arxiv.org/abs/2602.08449	cc-by-4.0	file: 2602.08449.md
+2602.10161	Omni-Safety under Cross-Modality Conflict: Vulnerabilities, Dynamics Mechanisms and Efficient Alignment	https://arxiv.org/abs/2602.10161	cc-by-4.0	file: 2602.10161.md
+2602.10382	Language Triggers Hijack Language Circuits: A Mechanistic Analysis of Backdoor Behaviors in Large Language Models	https://arxiv.org/abs/2602.10382	cc-by-4.0	file: 2602.10382.md
+2602.10467	MERIT Feedback Elicits Better Bargaining in LLM Negotiators	https://arxiv.org/abs/2602.10467	cc-by-4.0	file: 2602.10467.md
+2602.10787	VulReaD: Knowledge-Graph-guided Software Vulnerability Reasoning and Detection	https://arxiv.org/abs/2602.10787	cc-by-4.0	file: 2602.10787.md
+2602.11136	FormalJudge: A Neuro-Symbolic Paradigm for Agentic Oversight	https://arxiv.org/abs/2602.11136	cc-by-4.0	file: 2602.11136.md
+2602.11358	When Models Examine Themselves: Vocabulary-Activation Correspondence in Self-Referential Processing	https://arxiv.org/abs/2602.11358	cc-by-4.0	file: 2602.11358.md
+2602.11495	Jailbreaking Leaves a Trace: Understanding and Detecting Jailbreak Attacks from Internal Representations of Large Language Models	https://arxiv.org/abs/2602.11495	cc-by-4.0	file: 2602.11495.md
+2602.16069	The Limits of Long-Context Reasoning in Automated Bug Fixing	https://arxiv.org/abs/2602.16069	cc-by-4.0	file: 2602.16069.md
+2602.19514	Security Risks of AI Agents Hiring Humans: An Empirical Marketplace Study	https://arxiv.org/abs/2602.19514	cc-by-4.0	file: 2602.19514.md
+2602.19831	An Explainable Memory Forensics Approach for Malware Analysis	https://arxiv.org/abs/2602.19831	cc-by-4.0	file: 2602.19831.md
+2602.21262	Under the Influence: Quantifying Persuasion and Vigilance in Large Language Models	https://arxiv.org/abs/2602.21262	cc-by-4.0	file: 2602.21262.md
+2602.22244	Accelerating Incident Response: A Hybrid Approach for Data Breach Reporting	https://arxiv.org/abs/2602.22244	cc-by-4.0	file: 2602.22244.md
+2602.22291	Manifold of Failure: Behavioral Attraction Basins in Language Models	https://arxiv.org/abs/2602.22291	cc-by-4.0	file: 2602.22291.md
+2602.22554	Multilingual Safety Alignment Via Sparse Weight Editing	https://arxiv.org/abs/2602.22554	cc-by-4.0	file: 2602.22554.md
+2602.23834	Enhancing Continual Learning for Software Vulnerability Prediction: Addressing Catastrophic Forgetting via Hybrid-Confidence-Aware Selective Replay for Temporal LLM Fine-Tuning	https://arxiv.org/abs/2602.23834	cc-by-4.0	file: 2602.23834.md
+2603.04355	Efficient Refusal Ablation in LLM through Optimal Transport	https://arxiv.org/abs/2603.04355	cc-by-4.0	file: 2603.04355.md
+2603.04407	Semantic Containment as a Fundamental Property of Emergent Misalignment	https://arxiv.org/abs/2603.04407	cc-by-4.0	file: 2603.04407.md
+2603.05872	Evolving Deception: When Agents Evolve, Deception Wins	https://arxiv.org/abs/2603.05872	cc-by-4.0	file: 2603.05872.md
+2603.08234	The Struggle Between Continuation and Refusal: A Mechanistic Analysis of the Continuation-Triggered Jailbreak in LLMs	https://arxiv.org/abs/2603.08234	cc-by-4.0	file: 2603.08234.md
+2603.09044	Synergistic Directed Execution and LLM-Driven Analysis for Zero-Day AI-Generated Malware Detection	https://arxiv.org/abs/2603.09044	cc-by-4.0	file: 2603.09044.md
+2603.09544	Compartmentalization-Aware Automated Program Repair	https://arxiv.org/abs/2603.09544	cc-by-4.0	file: 2603.09544.md
+2603.10163	Compatibility at a Cost: Systematic Discovery and Exploitation of MCP Clause-Compliance Vulnerabilities	https://arxiv.org/abs/2603.10163	cc-by-4.0	file: 2603.10163.md
+2603.11388	Deactivating Refusal Triggers: Understanding and Mitigating Overrefusal in Safety Alignment	https://arxiv.org/abs/2603.11388	cc-by-4.0	file: 2603.11388.md
+2603.11875	The Mirror Design Pattern: Strict Data Geometry over Model Scale for Prompt Injection Detection	https://arxiv.org/abs/2603.11875	cc-by-4.0	file: 2603.11875.md
+2603.13026	PISmith: Reinforcement Learning-based Red Teaming for Prompt Injection Defenses	https://arxiv.org/abs/2603.13026	cc-by-4.0	file: 2603.13026.md
+2603.13791	DeceptGuard :A Constitutional Oversight Framework For Detecting Deception in LLM Agents	https://arxiv.org/abs/2603.13791	cc-by-4.0	file: 2603.13791.md
+2603.14278	Activation Surgery: Jailbreaking White-box LLMs without Touching the Prompt	https://arxiv.org/abs/2603.14278	cc-by-4.0	file: 2603.14278.md
+2603.15692	BadLLM-TG: A Backdoor Defender powered by LLM Trigger Generator	https://arxiv.org/abs/2603.15692	cc-by-4.0	file: 2603.15692.md
+2603.18063	MCP-38: A Comprehensive Threat Taxonomy for Model Context Protocol Systems (v1.0)	https://arxiv.org/abs/2603.18063	cc-by-4.0	file: 2603.18063.md
+2603.20122	Evolving Jailbreaks: Automated Multi-Objective Long-Tail Attacks on Large Language Models	https://arxiv.org/abs/2603.20122	cc-by-4.0	file: 2603.20122.md
+2603.21396	Mechanisms of Introspective Awareness	https://arxiv.org/abs/2603.21396	cc-by-4.0	file: 2603.21396.md
+2603.21641	Auditing MCP Servers for Over-Privileged Tool Capabilities	https://arxiv.org/abs/2603.21641	cc-by-4.0	file: 2603.21641.md
+2603.21642	Are AI-assisted Development Tools Immune to Prompt Injection?	https://arxiv.org/abs/2603.21642	cc-by-4.0	file: 2603.21642.md
+2603.22061	On the Failure of Topic-Matched Contrast Baselines in Multi-Directional Refusal Abliteration	https://arxiv.org/abs/2603.22061	cc-by-4.0	file: 2603.22061.md
+2603.22489	Model Context Protocol Threat Modeling and Analyzing Vulnerabilities to Prompt Injection with Tool Poisoning	https://arxiv.org/abs/2603.22489	cc-by-4.0	file: 2603.22489.md
+2603.23268	SafeSeek: Universal Attribution of Safety Circuits in Language Models	https://arxiv.org/abs/2603.23268	cc-by-4.0	file: 2603.23268.md
+2603.24543	Analysing the Safety Pitfalls of Steering Vectors	https://arxiv.org/abs/2603.24543	cc-by-4.0	file: 2603.24543.md
+2603.26089	Selective Deficits in LLM Mental Self-Modeling in a Behavior-Based Test of Theory of Mind	https://arxiv.org/abs/2603.26089	cc-by-4.0	file: 2603.26089.md
+2603.26829	Squish and Release: Exposing Hidden Hallucinations by Making Them Surface as Safety Signals	https://arxiv.org/abs/2603.26829	cc-by-4.0	file: 2603.26829.md
+2603.27412	The Geometry of Harmful Intent: Training-Free Anomaly Detection via Angular Deviation in LLM Residual Streams	https://arxiv.org/abs/2603.27412	cc-by-4.0	file: 2603.27412.md
+2603.27518	Over-Refusal and Representation Subspaces: A Mechanistic Analysis of Task-Conditioned Refusal in Aligned LLMs	https://arxiv.org/abs/2603.27518	cc-by-4.0	file: 2603.27518.md
+2603.28309	VulnScout-C: A Lightweight Transformer for C Code Vulnerability Detection	https://arxiv.org/abs/2603.28309	cc-by-4.0	file: 2603.28309.md
+2603.29038	Trojan-Speak: Bypassing Constitutional Classifiers with No Jailbreak Tax via Adversarial Finetuning	https://arxiv.org/abs/2603.29038	cc-by-4.0	file: 2603.29038.md
+2603.29216	Software Vulnerability Detection Using a Lightweight Graph Neural Network	https://arxiv.org/abs/2603.29216	cc-by-4.0	file: 2603.29216.md
+2604.00324	The Persistent Vulnerability of Aligned AI Systems	https://arxiv.org/abs/2604.00324	cc-by-4.0	file: 2604.00324.md
+2604.01194	AgentWatcher: A Rule-based Prompt Injection Monitor	https://arxiv.org/abs/2604.01194	cc-by-4.0	file: 2604.01194.md
+2604.02490	Automated Malware Family Classification using Weighted Hierarchical Ensembles of Large Language Models	https://arxiv.org/abs/2604.02490	cc-by-4.0	file: 2604.02490.md
+2604.02608	Steerable but Not Decodable: Function Vectors Operate Beyond the Logit Lens	https://arxiv.org/abs/2604.02608	cc-by-4.0	file: 2604.02608.md
+2604.04842	Do No Harm: Exposing Hidden Vulnerabilities of LLMs via Persona-based Client Simulation Attack in Psychological Counseling	https://arxiv.org/abs/2604.04842	cc-by-4.0	file: 2604.04842.md
+2604.05432	Your LLM Agent Can Leak Your Data: Data Exfiltration via Backdoored Tool Use	https://arxiv.org/abs/2604.05432	cc-by-4.0	file: 2604.05432.md
+2604.06095	LLM4CodeRE: Generative AI for Code Decompilation Analysis and Reverse Engineering	https://arxiv.org/abs/2604.06095	cc-by-4.0	file: 2604.06095.md
+2604.07536	TRUSTDESC: Preventing Tool Poisoning in LLM Applications via Trusted Description Generation	https://arxiv.org/abs/2604.07536	cc-by-4.0	file: 2604.07536.md
+2604.07655	Guardian-as-an-Advisor: Advancing Next-Generation Guardian Models for Trustworthy LLMs	https://arxiv.org/abs/2604.07655	cc-by-4.0	file: 2604.07655.md
+2604.08083	Can LLMs Deobfuscate Binary Code? A Systematic Analysis of Large Language Models into Pseudocode Deobfuscation	https://arxiv.org/abs/2604.08083	cc-by-4.0	file: 2604.08083.md
+2604.08089	GALA: Multimodal Graph Alignment for Bug Localization in Automated Program Repair	https://arxiv.org/abs/2604.08089	cc-by-4.0	file: 2604.08089.md
+2604.08499	PIArena: A Platform for Prompt Injection Evaluation	https://arxiv.org/abs/2604.08499	cc-by-4.0	file: 2604.08499.md
+2604.09378	BadSkill: Backdoor Attacks on Agent Skills via Model-in-Skill Poisoning	https://arxiv.org/abs/2604.09378	cc-by-4.0	file: 2604.09378.md
+2604.09746	CONSCIENTIA: Can LLM Agents Learn to Strategize? Emergent Deception and Trust in a Multi-Agent NYC Simulation	https://arxiv.org/abs/2604.09746	cc-by-4.0	file: 2604.09746.md
+2604.09839	Steered LLM Activations are Non-Surjective	https://arxiv.org/abs/2604.09839	cc-by-4.0	file: 2604.09839.md
+2604.10326	Jailbreaking the Matrix: Nullspace Steering for Controlled Model Subversion	https://arxiv.org/abs/2604.10326	cc-by-4.0	file: 2604.10326.md
+2604.10403	Latent Instruction Representation Alignment: defending against jailbreaks, backdoors and undesired knowledge in LLMs	https://arxiv.org/abs/2604.10403	cc-by-4.0	file: 2604.10403.md
+2604.10681	Critical-CoT: A Robust Defense Framework against Reasoning-Level Backdoor Attacks in Large Language Models	https://arxiv.org/abs/2604.10681	cc-by-4.0	file: 2604.10681.md
+2604.11120	Persona Non Grata: Single-Method Safety Evaluation Is Incomplete for Persona-Imbued LLMs	https://arxiv.org/abs/2604.11120	cc-by-4.0	file: 2604.11120.md
+2604.11770	Enhancing Program Repair with Specification Guidance and Intermediate Behavioral Signals	https://arxiv.org/abs/2604.11770	cc-by-4.0	file: 2604.11770.md
+2604.12258	Coding-Free and Privacy-Preserving Agentic Framework for Data-Driven Clinical Research	https://arxiv.org/abs/2604.12258	cc-by-4.0	file: 2604.12258.md
+2604.12342	CoLA: A Choice Leakage Attack Framework to Expose Privacy Risks in Subset Training	https://arxiv.org/abs/2604.12342	cc-by-4.0	file: 2604.12342.md
+2604.13849	MCPThreatHive: Automated Threat Intelligence for Model Context Protocol Ecosystems	https://arxiv.org/abs/2604.13849	cc-by-4.0	file: 2604.13849.md
+2604.16022	SocialGrid: A Benchmark for Planning and Social Reasoning in Embodied Multi-Agent Systems	https://arxiv.org/abs/2604.16022	cc-by-4.0	file: 2604.16022.md
+2604.17132	Please refuse to answer me! Mitigating Over-Refusal in Large Language Models via Adaptive Contrastive Decoding	https://arxiv.org/abs/2604.17132	cc-by-4.0	file: 2604.17132.md
+2604.18510	Behind Harmful Compliance: Behavioral and Mechanistic Divergence Across LLM Jailbreaks	https://arxiv.org/abs/2604.18510	cc-by-4.0	file: 2604.18510.md
+2604.18756	Towards Understanding the Robustness of Sparse Autoencoders	https://arxiv.org/abs/2604.18756	cc-by-4.0	file: 2604.18756.md
+2604.18901	Harmful Intent as a Geometrically Recoverable Feature of LLM Residual Streams	https://arxiv.org/abs/2604.18901	cc-by-4.0	file: 2604.18901.md
+2604.19083	ProjLens: Unveiling the Role of Projectors in Multimodal Model Safety	https://arxiv.org/abs/2604.19083	cc-by-4.0	file: 2604.19083.md
+2604.19526	Evaluating LLM-Generated Obfuscated XSS Payloads for Machine Learning-Based Detection	https://arxiv.org/abs/2604.19526	cc-by-4.0	file: 2604.19526.md
+2604.23130	From Concept-Aligned Tokens to Vulnerable Features: Mechanistic Localization of Jailbreaks	https://arxiv.org/abs/2604.23130	cc-by-4.0	file: 2604.23130.md
+2604.23196	AsmRAG: LLM-Driven Malware Detection by Retrieving Functionally Similar Assembly Code	https://arxiv.org/abs/2604.23196	cc-by-4.0	file: 2604.23196.md
+2604.25264	MARD: A Multi-Agent Framework for Robust Android Malware Detection	https://arxiv.org/abs/2604.25264	cc-by-4.0	file: 2604.25264.md
+2604.27818	MASCing: Configurable Mixture-of-Experts Behavior via Activation Steering Masks	https://arxiv.org/abs/2604.27818	cc-by-4.0	file: 2604.27818.md
+2605.00553	Stable-GFlowNet: Toward Diverse and Robust LLM Red-Teaming via Contrastive Trajectory Balance	https://arxiv.org/abs/2605.00553	cc-by-4.0	file: 2605.00553.md
+2605.01769	VulKey: Automated Vulnerability Repair Guided by Domain-Specific Repair Patterns	https://arxiv.org/abs/2605.01769	cc-by-4.0	file: 2605.01769.md
+2605.01970	Trojan Hippo Bench: A Dynamic Benchmark for Persistent Memory Attacks and Defenses in LLM Agents	https://arxiv.org/abs/2605.01970	cc-by-4.0	file: 2605.01970.md
+2605.02255	On the Privacy of LLMs: An Ablation Study	https://arxiv.org/abs/2605.02255	cc-by-4.0	file: 2605.02255.md
+2605.02946	RouteHijack: Routing-Aware Attack on Mixture-of-Experts LLMs	https://arxiv.org/abs/2605.02946	cc-by-4.0	file: 2605.02946.md
+2605.02958	Tracing the Dynamics of Refusal: Exploiting Latent Refusal Trajectories for Robust Jailbreak Detection	https://arxiv.org/abs/2605.02958	cc-by-4.0	file: 2605.02958.md
+2605.03095	Revisiting JBShield: Breaking and Rebuilding Representation-Level Jailbreak Defenses	https://arxiv.org/abs/2605.03095	cc-by-4.0	file: 2605.03095.md
+2605.03140	Evaluating Retrieval-Augmented Generation for Explainable Malware Analysis	https://arxiv.org/abs/2605.03140	cc-by-4.0	file: 2605.03140.md
+2605.04992	You Snooze, You Lose: Automatic Safety Alignment Restoration through Neural Weight Translation	https://arxiv.org/abs/2605.04992	cc-by-4.0	file: 2605.04992.md
+2605.05427	The Refusal--Compliance Tradeoff: A Large-Scale Safety Behavior Audit of Large Language Models	https://arxiv.org/abs/2605.05427	cc-by-4.0	file: 2605.05427.md
+2605.05995	Safety Anchor: Defending Harmful Fine-tuning via Geometric Bottlenecks	https://arxiv.org/abs/2605.05995	cc-by-4.0	file: 2605.05995.md
+2605.06652	When No Benchmark Exists: Validating Comparative LLM Safety Scoring Without Ground-Truth Labels	https://arxiv.org/abs/2605.06652	cc-by-4.0	file: 2605.06652.md
+2605.06910	Benchmarking Large Language Models for IoC Recovery under Adversarial Code Obfuscation and Encryption	https://arxiv.org/abs/2605.06910	cc-by-4.0	file: 2605.06910.md
+2605.09461	VulTriage: Triple-Path Context Augmentation for LLM-Based Vulnerability Detection	https://arxiv.org/abs/2605.09461	cc-by-4.0	file: 2605.09461.md
+2605.09684	MonitoringBench: Semi-Automated Red-Teaming for Agent Monitoring	https://arxiv.org/abs/2605.09684	cc-by-4.0	file: 2605.09684.md
+2605.10633	Intrinsic Guardrails: How Semantic Geometry of Personality Interacts with Emergent Misalignment in LLMs	https://arxiv.org/abs/2605.10633	cc-by-4.0	file: 2605.10633.md
+2605.10998	Few-Shot Truly Benign DPO Attack for Jailbreaking LLMs	https://arxiv.org/abs/2605.10998	cc-by-4.0	file: 2605.10998.md
+2605.11868	IPI-proxy: An Intercepting Proxy for Red-Teaming Web-Browsing AI Agents Against Indirect Prompt Injection	https://arxiv.org/abs/2605.11868	cc-by-4.0	file: 2605.11868.md
+2605.11996	BadSKP: Backdoor Attacks on Knowledge Graph-Enhanced LLMs with Soft Prompts	https://arxiv.org/abs/2605.11996	cc-by-4.0	file: 2605.11996.md
+2605.12765	Inference-Time Machine Unlearning via Gated Activation Redirection	https://arxiv.org/abs/2605.12765	cc-by-4.0	file: 2605.12765.md
+2605.14605	A Few Steps Further: Why Defenses Against Malicious Finetuning Erode Under Continued Training	https://arxiv.org/abs/2605.14605	cc-by-4.0	file: 2605.14605.md
+2605.15030	WARD: Adversarially Robust Defense of Web Agents Against Prompt Injections	https://arxiv.org/abs/2605.15030	cc-by-4.0	file: 2605.15030.md
+2605.15172	MetaBackdoor: Exploiting Positional Encoding as a Backdoor Attack Surface in LLMs	https://arxiv.org/abs/2605.15172	cc-by-4.0	file: 2605.15172.md
+2605.17075	A Red Teaming Framework for Evaluating Robustness of AI-enabled Security Orchestration, Automation, and Response Systems	https://arxiv.org/abs/2605.17075	cc-by-4.0	file: 2605.17075.md
+2605.17413	Ablating Safety: Mechanisms for Removing Alignment in Language Models for Security Applications	https://arxiv.org/abs/2605.17413	cc-by-4.0	file: 2605.17413.md
+2605.17698	Agent Bazaar: Enabling Economic Alignment in Multi-Agent Marketplaces	https://arxiv.org/abs/2605.17698	cc-by-4.0	file: 2605.17698.md
+2605.17965	BLAgent: Agentic RAG for File-Level Bug Localization	https://arxiv.org/abs/2605.17965	cc-by-4.0	file: 2605.17965.md
+2605.17971	Babel: Jailbreaking Safety Attention via Obfuscation Distribution Optimized Sampling	https://arxiv.org/abs/2605.17971	cc-by-4.0	file: 2605.17971.md
+2605.18153	Three Heads Are Better Than One: A Multi-perspective Reasoning Framework for Enhanced Vulnerability Detection	https://arxiv.org/abs/2605.18153	cc-by-4.0	file: 2605.18153.md
+2605.18239	Multilingual jailbreaking of LLMs using low-resource languages	https://arxiv.org/abs/2605.18239	cc-by-4.0	file: 2605.18239.md
+2605.19270	DECOR: Auditing LLM Deception via Information Manipulation Theory	https://arxiv.org/abs/2605.19270	cc-by-4.0	file: 2605.19270.md
+2605.19722	Measuring Safety Alignment Effects in Autonomous Security Agents	https://arxiv.org/abs/2605.19722	cc-by-4.0	file: 2605.19722.md
+2605.19966	Detecting Fluent Optimization-Based Adversarial Prompts via Sequential Entropy Changes	https://arxiv.org/abs/2605.19966	cc-by-4.0	file: 2605.19966.md
+2605.20351	Refusal Evaluation in Coding LLMs and Code Agents: A Systematic Review of Thirteen Malicious-Code Prompt Corpora (2023-2025)	https://arxiv.org/abs/2605.20351	cc-by-4.0	file: 2605.20351.md
+2605.20641	Trusted Weights, Treacherous Optimizations? Optimization-Triggered Backdoor Attacks on LLMs	https://arxiv.org/abs/2605.20641	cc-by-4.0	file: 2605.20641.md
+2605.20759	Rethinking Fraud Safety Evaluation: Multi-Round Attacks Reveal Safety-Utility Tradeoffs in Graph-Context LLM Defenders	https://arxiv.org/abs/2605.20759	cc-by-4.0	file: 2605.20759.md
+2605.21146	Detecting Trojaned DNNs via Spectral Regression Analysis	https://arxiv.org/abs/2605.21146	cc-by-4.0	file: 2605.21146.md
+2605.21706	Latent-space Attacks for Refusal Evasion in Language Models	https://arxiv.org/abs/2605.21706	cc-by-4.0	file: 2605.21706.md
+2605.22984	Test-Time Training Undermines Safety Guardrails	https://arxiv.org/abs/2605.22984	cc-by-4.0	file: 2605.22984.md
+2605.24154	Palette: A Modular, Controllable, and Efficient Framework for On-demand Authorized Safety Alignment Relaxation in LLMs	https://arxiv.org/abs/2605.24154	cc-by-4.0	file: 2605.24154.md
+2605.24550	Jailbreak to Protect: Buffering and Reinforcing via Temporary Jailbreaking for Safe Fine-Tuning in Large Language Models	https://arxiv.org/abs/2605.24550	cc-by-4.0	file: 2605.24550.md
+2605.24552	Ellipsoid Control: A White-list Jailbreak Defense via Benign Latent Modeling	https://arxiv.org/abs/2605.24552	cc-by-4.0	file: 2605.24552.md
+2605.24583	Measuring Alignment-Induced Activation Shifts Correctly: A Template-Controlled Difference-in-Differences Protocol	https://arxiv.org/abs/2605.24583	cc-by-4.0	file: 2605.24583.md
+2605.26315	Curriculum Learning for Safety Alignment	https://arxiv.org/abs/2605.26315	cc-by-4.0	file: 2605.26315.md
+2605.26595	Cordyceps: Covert Control Attacks on LLMs via Data Poisoning	https://arxiv.org/abs/2605.26595	cc-by-4.0	file: 2605.26595.md
+2605.26999	Prompt Injection Detection is Regime-Dependent: A Deployment-Aware Evaluation with Interpretable Structural Signals	https://arxiv.org/abs/2605.26999	cc-by-4.0	file: 2605.26999.md
+2605.27068	QUACK: Questioning, Understanding, and Auditing Communicated Knowledge in Multimodal Social Deduction Agents	https://arxiv.org/abs/2605.27068	cc-by-4.0	file: 2605.27068.md
+2605.27238	EviACT: An Evidence-to-Action Framework for Agentic Program Repair	https://arxiv.org/abs/2605.27238	cc-by-4.0	file: 2605.27238.md
+2605.27593	Voluntary Collusion with Secret Tools in Competing LLM Agents	https://arxiv.org/abs/2605.27593	cc-by-4.0	file: 2605.27593.md
+2605.27701	Cross-Entropy Games and Frost Training	https://arxiv.org/abs/2605.27701	cc-by-4.0	file: 2605.27701.md
+2605.28030	SPARD: Defending Harmful Fine-Tuning Attack via Safety Projection with Relevance-Diversity Data Selection	https://arxiv.org/abs/2605.28030	cc-by-4.0	file: 2605.28030.md
+2605.28664	Activation Steering for Synthetic Data Generation: The Role of Diversity in Downstream Safety Detection	https://arxiv.org/abs/2605.28664	cc-by-4.0	file: 2605.28664.md
+2605.28999	Measuring Real-World Prompt Injection Attacks in LLM-based Resume Screening	https://arxiv.org/abs/2605.28999	cc-by-4.0	file: 2605.28999.md
+2605.29512	MINDGAMES: A Live Arena for Evaluating Social and Strategic Reasoning in Multi-Agent LLMs	https://arxiv.org/abs/2605.29512	cc-by-4.0	file: 2605.29512.md
+2605.29629	Beyond Attack Success Rate: Temporal Logit Observability for LLM Safety Failures	https://arxiv.org/abs/2605.29629	cc-by-4.0	file: 2605.29629.md
+2605.30058	HEART-Bench: Do LLM Agents Exhibit Human-like Psychology?	https://arxiv.org/abs/2605.30058	cc-by-4.0	file: 2605.30058.md
+2605.30105	Learning from Repair Experience: Self-Evolving Agents for Automated Vulnerability Repair	https://arxiv.org/abs/2605.30105	cc-by-4.0	file: 2605.30105.md
+2605.30162	BioRefusalAudit: Auditing Biosecurity Refusal Depth Using General and Domain-Fine-Tuned Sparse Autoencoders	https://arxiv.org/abs/2605.30162	cc-by-4.0	file: 2605.30162.md
+2605.30667	Automatically Attacking Software Reverse Engineering AI Agents	https://arxiv.org/abs/2605.30667	cc-by-4.0	file: 2605.30667.md
+2605.30677	Investigating Detection and Obfuscation of Prompt Injection Attacks Against Software Reverse Engineering AI Agents	https://arxiv.org/abs/2605.30677	cc-by-4.0	file: 2605.30677.md
+2606.01738	THRD: A Training-Free Multi-Turn Defense Framework for Jailbreak Attacks on Large Language Models	https://arxiv.org/abs/2606.01738	cc-by-4.0	file: 2606.01738.md
+2606.02640	D-Judge: Disrupting Multi-Turn Jailbreaks using Semantics-Preserving Output Rewriting	https://arxiv.org/abs/2606.02640	cc-by-4.0	file: 2606.02640.md
+2606.03128	Decoupled Smart Contract Audits: Lightweight LLM Framework via Distillation and Aggregation	https://arxiv.org/abs/2606.03128	cc-by-4.0	file: 2606.03128.md
+2606.03785	Backdoor Unlearning Generalization: A Path Toward the Removal of Unknown Triggers in LLMs	https://arxiv.org/abs/2606.03785	cc-by-4.0	file: 2606.03785.md
+2606.04425	What If Prompt Injection Never Left? Rethinking Agent Security through Cross-Session Stored Prompt Injection	https://arxiv.org/abs/2606.04425	cc-by-4.0	file: 2606.04425.md
+2606.04775	Activation Steering of Video Generation Models via Reduced-Order Linear Optimal Control	https://arxiv.org/abs/2606.04775	cc-by-4.0	file: 2606.04775.md
+2606.05396	Willing but Unable: Separating Refusal from Capability in Code LLMs via Abliteration	https://arxiv.org/abs/2606.05396	cc-by-4.0	file: 2606.05396.md
+2606.05609	SlotGCG: Exploiting the Positional Vulnerability in LLMs for Jailbreak Attacks	https://arxiv.org/abs/2606.05609	cc-by-4.0	file: 2606.05609.md
+2606.07992	VATS: Exploiting Implicit Authority in Error-Path Injection via Systematic Mutation	https://arxiv.org/abs/2606.07992	cc-by-4.0	file: 2606.07992.md
+2606.08044	When Behavioral Safety Evaluation Fails: A Representation-Level Perspective	https://arxiv.org/abs/2606.08044	cc-by-4.0	file: 2606.08044.md
+2606.08243	Building Comparative Motivation Profiles with Instrumental Interventions	https://arxiv.org/abs/2606.08243	cc-by-4.0	file: 2606.08243.md
+2606.08682	Activation Steering Induces Emergent Misalignment: Steering Vector Construction and Comprehensive Evaluation	https://arxiv.org/abs/2606.08682	cc-by-4.0	file: 2606.08682.md
+2606.09844	The Interlocutor Effect: Why LLMs Leak More Personal Data to Agents Than Humans	https://arxiv.org/abs/2606.09844	cc-by-4.0	file: 2606.09844.md
+2606.10154	Quality Is Not a Safety Proxy Under Quantization	https://arxiv.org/abs/2606.10154	cc-by-4.0	file: 2606.10154.md
+2606.11648	Dummy Backdoor as a Defense: Removing Unknown Backdoors via Shared Internal Mechanisms for Generative LLMs	https://arxiv.org/abs/2606.11648	cc-by-4.0	file: 2606.11648.md
+2606.11949	Online Shift Detection and Conformal Adaptation for Deployed Safety Classifiers	https://arxiv.org/abs/2606.11949	cc-by-4.0	file: 2606.11949.md
+2606.12737	PI-Hunter: Automated Red-Teaming for Exposing and Localizing Prompt Injections	https://arxiv.org/abs/2606.12737	cc-by-4.0	file: 2606.12737.md
+2606.13310	RogueAI: A Reverse Turing Test for Detecting Licensed AI Deception in Dialogue	https://arxiv.org/abs/2606.13310	cc-by-4.0	file: 2606.13310.md
+2606.13385	Who Pays the Price? Stakeholder-Centric Prompt Injection Benchmarking for Real-world Web Agents	https://arxiv.org/abs/2606.13385	cc-by-4.0	file: 2606.13385.md
+2606.14233	Evaluating LLMs for Obfuscation Detection and Classification in Android Apps	https://arxiv.org/abs/2606.14233	cc-by-4.0	file: 2606.14233.md
+2606.14261	Security in a Workflow: Exploring Role-Based Agentic Architectures for Vulnerability Handling	https://arxiv.org/abs/2606.14261	cc-by-4.0	file: 2606.14261.md
+2606.15531	Greedy Coordinate Diffusion: Effective and Semantically Coherent Adversarial Attacks via Diffusion Guidance	https://arxiv.org/abs/2606.15531	cc-by-4.0	file: 2606.15531.md
+2606.15788	GAS-Leak-LLM: Genetic Algorithm-Based Suffix Optimization for Black-Box LLM Jailbreaking	https://arxiv.org/abs/2606.15788	cc-by-4.0	file: 2606.15788.md
+2606.15809	AttackonCTF: Defending Hardware Security Competition Benchmarks in the Age of LLMs	https://arxiv.org/abs/2606.15809	cc-by-4.0	file: 2606.15809.md
+2606.16801	The Art of Mixology: Mixup-based Obfuscation for Privacy-Preserving Split Learning in Large Language Models	https://arxiv.org/abs/2606.16801	cc-by-4.0	file: 2606.16801.md
+2606.17229	Rift: A Conflict Signature for Deception in Language Models	https://arxiv.org/abs/2606.17229	cc-by-4.0	file: 2606.17229.md
+2606.19755	SafeSpec: Fast and Safe LLM via Dynamic Reflective Sampling	https://arxiv.org/abs/2606.19755	cc-by-4.0	file: 2606.19755.md
+2606.20436	Multi-View Decompilation for LLM-Based Malware Classification	https://arxiv.org/abs/2606.20436	cc-by-4.0	file: 2606.20436.md
+2606.21397	Evaluating LLMs for Real-World Web Vulnerability Detection	https://arxiv.org/abs/2606.21397	cc-by-4.0	file: 2606.21397.md
+2606.22686	The Geometry of Refusal: Linear Instability in Safety-Aligned LLMs	https://arxiv.org/abs/2606.22686	cc-by-4.0	file: 2606.22686.md
+2606.23375	Measuring & Mitigating Over-Alignment for LLMs in Multilingual Criminal Law Courts	https://arxiv.org/abs/2606.23375	cc-by-4.0	file: 2606.23375.md
+2606.23671	Can LLMs Reliably Self-Report Adversarial Prefills, and How?	https://arxiv.org/abs/2606.23671	cc-by-4.0	file: 2606.23671.md
+2606.24585	LLMs Prompted for Legal Context Object More: Overrefusal from Small On-Premises LLMs in Criminal Legal Context	https://arxiv.org/abs/2606.24585	cc-by-4.0	file: 2606.24585.md
+2606.24952	Perfect Detection, Failed Control: The Geometry of Knowing vs. Steering in Language Models	https://arxiv.org/abs/2606.24952	cc-by-4.0	file: 2606.24952.md
+2606.25750	RAS: Measuring LLM Safety Through Refusal Alignment	https://arxiv.org/abs/2606.25750	cc-by-4.0	file: 2606.25750.md
+2606.26161	Refusal Lives Downstream of Persona in Chat Models	https://arxiv.org/abs/2606.26161	cc-by-4.0	file: 2606.26161.md
+2606.26479	Adaptive Evaluation of Out-of-Band Defenses Against Prompt Injection in LLM Agents	https://arxiv.org/abs/2606.26479	cc-by-4.0	file: 2606.26479.md
+2606.26566	Adversarial Diffusion Across Modalities: A Fusion Survey of Attacks, Defenses, and Evaluation for Text, Vision, and Vision-Language Models	https://arxiv.org/abs/2606.26566	cc-by-4.0	file: 2606.26566.md
+2606.27287	Prompt Injection in Automated R\'esum\'e Screening with Large Language Models: Single and Multi-Injection Settings	https://arxiv.org/abs/2606.27287	cc-by-4.0	file: 2606.27287.md
+2606.27567	On the Inseparability of Instructions and Data in Shared-Embedding Sequence Models	https://arxiv.org/abs/2606.27567	cc-by-4.0	file: 2606.27567.md
+2606.28456	Is Lying an Emergent Behaviour in LLMs? Evidence from Gaslighting AI agents in a Sustainability Game	https://arxiv.org/abs/2606.28456	cc-by-4.0	file: 2606.28456.md
+2606.29646	Fuzzing Large Language Models to Elicit Hidden Behaviours	https://arxiv.org/abs/2606.29646	cc-by-4.0	file: 2606.29646.md
+2606.30383	Whose Side Is Your Agent On? Multi-Party Principal Loyalty in LLM Agents	https://arxiv.org/abs/2606.30383	cc-by-4.0	file: 2606.30383.md
+2606.30587	Words Speak Louder Than Code: Investigating Cognitive Heuristics in LLM-Based Code Vulnerability Detection	https://arxiv.org/abs/2606.30587	cc-by-4.0	file: 2606.30587.md
+2606.31602	Robust Text Watermarking for Large Language Models via Dual Semantic Embeddings	https://arxiv.org/abs/2606.31602	cc-by-4.0	file: 2606.31602.md
+2606.31725	Do Machines Struggle Where Humans Do? LLM and Human Comprehension of Obfuscated Code	https://arxiv.org/abs/2606.31725	cc-by-4.0	file: 2606.31725.md
+2606.31748	Addressing Over-Refusal in LLMs with Competing Rewards	https://arxiv.org/abs/2606.31748	cc-by-4.0	file: 2606.31748.md
+2607.00572	HARC: Coupling Harmfulness and Refusal Directions for Robust Safety Alignment	https://arxiv.org/abs/2607.00572	cc-by-4.0	file: 2607.00572.md
+2607.00820	Knowledge-Enhanced Agentic Vulnerability Repair	https://arxiv.org/abs/2607.00820	cc-by-4.0	file: 2607.00820.md
+2607.00990	SWE-Doctor: Guiding Software Engineering Agents with Runtime Diagnosis from Multi-Faceted Bug Reproduction Tests	https://arxiv.org/abs/2607.00990	cc-by-4.0	file: 2607.00990.md
+2607.01208	Distill to Detect: Exposing Stealth Biases in LLMs through Cartridge Distillation	https://arxiv.org/abs/2607.01208	cc-by-4.0	file: 2607.01208.md
+2607.01854	Has This Checkpoint Been Abliterated? A Two-Signal Audit and Its Failure Map	https://arxiv.org/abs/2607.01854	cc-by-4.0	file: 2607.01854.md
+2607.02714	Not All Refusals Are Equal: How Safety Alignment Fails Cybersecurity at Scale	https://arxiv.org/abs/2607.02714	cc-by-4.0	file: 2607.02714.md
+2607.02932	PromptPET: Privacy-Utility Optimized Prompt Obfuscation	https://arxiv.org/abs/2607.02932	cc-by-4.0	file: 2607.02932.md
+2607.05842	Beyond Refusal: A Same-Lineage Study of Aligned and Abliterated LLMs for Vulnerability Analysis	https://arxiv.org/abs/2607.05842	cc-by-4.0	file: 2607.05842.md
+2607.08066	Persuasion Attacks Can Decrease Effectiveness of CoT Monitoring	https://arxiv.org/abs/2607.08066	cc-by-4.0	file: 2607.08066.md
+2607.09697	Safe responses matter: Output-aware safety guardrail mitigate over-refusal in MLLMs	https://arxiv.org/abs/2607.09697	cc-by-4.0	file: 2607.09697.md
+2607.10112	Minionese: Comprehensive Benchmark and Mechanistic Study of Multilingual LLM Safety	https://arxiv.org/abs/2607.10112	cc-by-4.0	file: 2607.10112.md
+2607.14285	ToolAlignBench: Investigating Alignment Conflicts in Tool-Calling Enabled LLMs	https://arxiv.org/abs/2607.14285	cc-by-4.0	file: 2607.14285.md
+2607.15286	Hidden in Thought: Transferable Chain-of-Thought Artifacts Induce Harmful Behavior	https://arxiv.org/abs/2607.15286	cc-by-4.0	file: 2607.15286.md
+2607.17427	Abliteration Is Not a Scalpel: Off-Target Effects of Refusal Removal on Decision Disposition Across Model Families	https://arxiv.org/abs/2607.17427	cc-by-4.0	file: 2607.17427.md
+2607.17503	ShadowPickle: Evading Machine Learning Model Scanners via Stealthy Pickle Deserialization Attacks	https://arxiv.org/abs/2607.17503	cc-by-4.0	file: 2607.17503.md
+2607.19806	OPIUM: Mitigating Steering Externalities and Over-Refusal via Dual Objective Latent Optimization	https://arxiv.org/abs/2607.19806	cc-by-4.0	file: 2607.19806.md
+2607.21804	Adversarial Prompts for Acceptance Collapse in Speculative Decoding	https://arxiv.org/abs/2607.21804	cc-by-4.0	file: 2607.21804.md
+2607.22545	Semalith v1.4: A Calibrated 184M Safety Classifier Achieving State-of-the-Art Prompt-Injection Detection at 44x Fewer Parameters than Llama-Guard-3-8B	https://arxiv.org/abs/2607.22545	cc-by-4.0	file: 2607.22545.md
+2607.23496	Do LLMs Know Their Vulnerable Scenarios?	https://arxiv.org/abs/2607.23496	cc-by-4.0	file: 2607.23496.md
+2607.24392	When LLM Defenses Backfire: Characterizing Safety, Performance, and Cost Trade-offs	https://arxiv.org/abs/2607.24392	cc-by-4.0	file: 2607.24392.md
+2607.25936	From Role Prompt to Infinite Thinking: Exploiting Persona Conditioning for Inference Cost Attacks in LLMs	https://arxiv.org/abs/2607.25936	cc-by-4.0	file: 2607.25936.md
+2607.26120	Even More Deception: Objective Misalignment in Mixed-Motive LLM Multi-Agent Systems	https://arxiv.org/abs/2607.26120	cc-by-4.0	file: 2607.26120.md
+2607.26591	MultiFixer: A Coordinator-Proposer Based Multi-Agent Framework For Fixing Multi-Hunk Bugs	https://arxiv.org/abs/2607.26591	cc-by-4.0	file: 2607.26591.md
+2607.26849	ToxScreen: Detecting Whether an LLM Has Been Poisoned	https://arxiv.org/abs/2607.26849	cc-by-4.0	file: 2607.26849.md
+2607.27386	Beyond the Bidirectional Promise: Re-evaluating the Robustness of Diffusion Language Models	https://arxiv.org/abs/2607.27386	cc-by-4.0	file: 2607.27386.md
+2607.29422	AgenticRepair: Multi-Faceted Program Context Engineering for Agentic Vulnerability Repair	https://arxiv.org/abs/2607.29422	cc-by-4.0	file: 2607.29422.md
+2608.00150	Exposed by Design: A Dynamic Security Assessment of Internet-Facing MCP Servers at Scale	https://arxiv.org/abs/2608.00150	cc-by-4.0	file: 2608.00150.md
+2608.01414	No Single Neuron of Failure: Distributed Safety Alignment Against White-Box Attacks	https://arxiv.org/abs/2608.01414	cc-by-4.0	file: 2608.01414.md
+2608.02674	Moving the Safety Barrier: Dynamic Routing Adaptive Alignment Against White-Box Attacks	https://arxiv.org/abs/2608.02674	cc-by-4.0	file: 2608.02674.md
+2608.04477	DeepInvert: Semi-Supervised Embedding Inversion Against Obfuscated Language Models	https://arxiv.org/abs/2608.04477	cc-by-4.0	file: 2608.04477.md
+2608.05108	Agent Against Agent: An Agentic System for Automatic Prompt Injection Red Teaming	https://arxiv.org/abs/2608.05108	cc-by-4.0	file: 2608.05108.md
+2608.05578	Detecting Safety Training Modification in Language Models via Activation Analysis	https://arxiv.org/abs/2608.05578	cc-by-4.0	file: 2608.05578.md
+2608.07430	Diffusion LLMs as Targets and Adversaries: Mechanistic Safety Exploits	https://arxiv.org/abs/2608.07430	cc-by-4.0	file: 2608.07430.md
+2608.08100	Defending Retrieval-Augmented Intrusion Detection Against Knowledge Poisoning and Prompt Injection	https://arxiv.org/abs/2608.08100	cc-by-4.0	file: 2608.08100.md
+2608.11227	Forecasting Side Effects of Activation Steering	https://arxiv.org/abs/2608.11227	cc-by-4.0	file: 2608.11227.md
+2608.12345	Diagnostic Foundation for Evaluating LLMs' Research Integrity as Co-Scientists	https://arxiv.org/abs/2608.12345	cc-by-4.0	file: 2608.12345.md
+2608.12821	HiRoute: Hierarchical Routed Prompt Tuning for Safety Alignment of Large Language Models	https://arxiv.org/abs/2608.12821	cc-by-4.0	file: 2608.12821.md
+2608.14876	Workspace Topology as an Attack Vector in Agentic Coding Assistants	https://arxiv.org/abs/2608.14876	cc-by-4.0	file: 2608.14876.md
+2608.18089	Latent Space Refusal Anchoring for Low-Resource African Languages: Mechanistic Safety Recovery Without Retraining	https://arxiv.org/abs/2608.18089	cc-by-4.0	file: 2608.18089.md
+2608.18093	Abliteration Mitigation via Refusal Aliases	https://arxiv.org/abs/2608.18093	cc-by-4.0	file: 2608.18093.md
+2608.19347	Hype Meets Reality: Large Language Models as Mutators in Search-based Automated Program Repair of Simulink-Stateflow Models	https://arxiv.org/abs/2608.19347	cc-by-4.0	file: 2608.19347.md
+2608.19857	Inadvertent Context Leakage in Language Models	https://arxiv.org/abs/2608.19857	cc-by-4.0	file: 2608.19857.md
+2608.20571	AutoMOOSE: Use Case and Logical Views of Agentic Phase-Field Simulation Software	https://arxiv.org/abs/2608.20571	cc-by-4.0	file: 2608.20571.md
+2608.21895	Breaking the Assumptions: Auditing Input-Side Jailbreak Defenses Against Semantic Attacks	https://arxiv.org/abs/2608.21895	cc-by-4.0	file: 2608.21895.md
+2608.23041	AutoSaddler: Automatic Harness Optimization with Durable Updates from Agent Execution Traces	https://arxiv.org/abs/2608.23041	cc-by-4.0	file: 2608.23041.md
+2608.25390	Refusal geometry reflects refusal training: diverse refusal prefixes can raise stable rank and weaken refusal vector ablation attacks	https://arxiv.org/abs/2608.25390	cc-by-4.0	file: 2608.25390.md
+2608.26049	RTLGuard: A Lightweight Teacher-Student Defense for Poisoned RTL Code Generation Models	https://arxiv.org/abs/2608.26049	cc-by-4.0	file: 2608.26049.md
+2608.26222	NeuronFuzz: Safety Neuron Guided Fuzzing for LLM Safety Evaluation	https://arxiv.org/abs/2608.26222	cc-by-4.0	file: 2608.26222.md
+2608.26506	A Single Suffix to Break Them All: Basin-Aware Jailbreaks for Merged Model Families	https://arxiv.org/abs/2608.26506	cc-by-4.0	file: 2608.26506.md
+2608.26535	Multi2AV-Safety: Benchmarking Safety in Multimodal-to-Audio-Video Generation	https://arxiv.org/abs/2608.26535	cc-by-4.0	file: 2608.26535.md
+2608.27439	RedEvoAgent: Automatic Red-Teaming Agent with Experience-Driven Skill Evolution	https://arxiv.org/abs/2608.27439	cc-by-4.0	file: 2608.27439.md
+2608.27994	Moirae: A Multimodal Agent Collaborative Framework for Dynamic Android Malware Detection	https://arxiv.org/abs/2608.27994	cc-by-4.0	file: 2608.27994.md
+2608.28411	LongPIBench: A Long-Context Benchmark for Prompt Injection	https://arxiv.org/abs/2608.28411	cc-by-4.0	file: 2608.28411.md
+2608.29109	Recognition-Refusal Misalignment in LLMs: Why Models Answer Structurally Unanswerable Questions	https://arxiv.org/abs/2608.29109	cc-by-4.0	file: 2608.29109.md
+2608.30197	ALTSTEER: Selective Safety Steering for Moving Beyond Hard Refusals to Constructive Alternatives	https://arxiv.org/abs/2608.30197	cc-by-4.0	file: 2608.30197.md
+2609.00051	From Detection to Refusal: Safer LLMs via Circuit-Guided Weight Scaling	https://arxiv.org/abs/2609.00051	cc-by-4.0	file: 2609.00051.md
+2609.01023	AKRASIA: Stealthy Backdoor Attack on Reasoning-based Code LLMs	https://arxiv.org/abs/2609.01023	cc-by-4.0	file: 2609.01023.md
+2609.02172	Breadth Beats Depth: Improving GCG-Based Jailbreak Optimization with Breadth-Oriented Suffix Search	https://arxiv.org/abs/2609.02172	cc-by-4.0	file: 2609.02172.md
+2609.02624	Automated Vulnerability Injection in Smart Contracts Using Large Language Models	https://arxiv.org/abs/2609.02624	cc-by-4.0	file: 2609.02624.md
+2609.03026	ObserverBench: Testing Mechanistic Estimates for Intervention and Control	https://arxiv.org/abs/2609.03026	cc-by-4.0	file: 2609.03026.md
+2609.04075	PatchBench: Evaluating AI Agents for Vulnerability Patching	https://arxiv.org/abs/2609.04075	cc-by-4.0	file: 2609.04075.md
+2609.04533	Repeat-After-Me: Black-Box Adaptive Visual Prompt Injection	https://arxiv.org/abs/2609.04533	cc-by-4.0	file: 2609.04533.md
+2609.06749	A Novel Semantic Manifold Alignment Attack against Embedding-to-Embedding Obfuscation in Privacy-Preserving LLMs	https://arxiv.org/abs/2609.06749	cc-by-4.0	file: 2609.06749.md
+2609.08634	Suan: Rectifying Direct Preference Safety Alignment in Large Language Models	https://arxiv.org/abs/2609.08634	cc-by-4.0	file: 2609.08634.md
+2609.09769	XAgent: eXecution-guided Agentic AI for Effective Localization and Resolution of GitHub Issues	https://arxiv.org/abs/2609.09769	cc-by-4.0	file: 2609.09769.md
+2609.11799	SpecGuard: Inference-Time Backdoor Detection For Free	https://arxiv.org/abs/2609.11799	cc-by-4.0	file: 2609.11799.md
+2609.14780	The Stochastic Deputy: Structural Tenant Isolation for Tool-Using LLM Agents	https://arxiv.org/abs/2609.14780	cc-by-4.0	file: 2609.14780.md
+2609.14861	Semantic Fibers and Cross-Gram Interference: A Calculus of Safety Drift in Overcomplete Representations	https://arxiv.org/abs/2609.14861	cc-by-4.0	file: 2609.14861.md
+2609.15517	Beyond Safe Answers: Segment-Aware Listwise Alignment for Reasoning Safety in Large Reasoning Models	https://arxiv.org/abs/2609.15517	cc-by-4.0	file: 2609.15517.md
+2609.16193	Permutation-Based Stegomalware in Large Language Models: Threats and Countermeasures	https://arxiv.org/abs/2609.16193	cc-by-4.0	file: 2609.16193.md
+2609.16204	Decoy Direction Optimization: A Post-Hoc Defense Against LLM Abliteration	https://arxiv.org/abs/2609.16204	cc-by-4.0	file: 2609.16204.md
+2609.16305	BLINDSPOT: A Benchmark for Safety and Refusal Calibration in Long-Horizon Tool-Using Agents	https://arxiv.org/abs/2609.16305	cc-by-4.0	file: 2609.16305.md
+2609.18120	PentestChain: A Cost-Aware, MCP-Orchestrated Framework for Automated Penetration Testing with Free-Tier LLMs	https://arxiv.org/abs/2609.18120	cc-by-4.0	file: 2609.18120.md
+2609.19100	Characterizing Network Centralization and Observability in the Remote MCP Ecosystem	https://arxiv.org/abs/2609.19100	cc-by-4.0	file: 2609.19100.md
+2609.19325	AUDITPLAN: Commit, Then Answer for Auditable Safety Alignment	https://arxiv.org/abs/2609.19325	cc-by-4.0	file: 2609.19325.md
+2609.19366	The Role of Fine-grained Harm Signals in LLM Safety	https://arxiv.org/abs/2609.19366	cc-by-4.0	file: 2609.19366.md
+2609.24620	Ascent: An Agentic System over the Model Context Protocol for Real-World Clinical Data Analysis	https://arxiv.org/abs/2609.24620	cc-by-4.0	file: 2609.24620.md
+2609.25366	From Decorative to Load-Bearing: Task Difficulty Shapes the Causal Role of Chain-of-Thought	https://arxiv.org/abs/2609.25366	cc-by-4.0	file: 2609.25366.md
+2609.26749	Metrics Failure in LLM-Based Code Vulnerability Repair: An Empirical Study and a Change-Aware Screen	https://arxiv.org/abs/2609.26749	cc-by-4.0	file: 2609.26749.md
+2609.26761	A2M: Trace-Optimized Agent Hijacking in the MCP Ecosystem	https://arxiv.org/abs/2609.26761	cc-by-4.0	file: 2609.26761.md
+2609.28613	Decision Hijacking: Prompt Injection Attacks on Jev's Typed Probabilistic Decisions	https://arxiv.org/abs/2609.28613	cc-by-4.0	file: 2609.28613.md
+2609.30217	Instrumental Monitor Evasion Emerges Under Ordinary Task Pressure	https://arxiv.org/abs/2609.30217	cc-by-4.0	file: 2609.30217.md
+2609.30275	Cosine Similarity Is Not Evidence: Measuring the Noise Floor of Interpretability Transfer Under Quantization	https://arxiv.org/abs/2609.30275	cc-by-4.0	file: 2609.30275.md
+2609.31121	Monitor Jailbreaking: Evading Chain-of-Thought Monitoring Without Encoded Reasoning	https://arxiv.org/abs/2609.31121	cc-by-4.0	file: 2609.31121.md
+2609.32021	SilentCall: Hidden Tool-Call Backdoors in Open-Weight Agents, and How to Catch Them	https://arxiv.org/abs/2609.32021	cc-by-4.0	file: 2609.32021.md
+2609.32227	OptiArena: Can LLMs Improve Executable Algorithms under Fixed Resource Budgets?	https://arxiv.org/abs/2609.32227	cc-by-4.0	file: 2609.32227.md
+2609.33640	SafeMol: Dual-Modality Safety Alignment for Molecular Multimodal Models	https://arxiv.org/abs/2609.33640	cc-by-4.0	file: 2609.33640.md
+2609.33763	SecProbe: Adaptive Evaluation of Coding Agents on Cybersecurity Vulnerabilities	https://arxiv.org/abs/2609.33763	cc-by-4.0	file: 2609.33763.md
+2609.34514	How to Tame a Multi-Headed Hydra? Adaptive Multi-Category Safety Steering for Large Language Models	https://arxiv.org/abs/2609.34514	cc-by-4.0	file: 2609.34514.md
+2609.34974	Before Acting, Change the State: Prospective State Intervention for Web Agents under Deceptive Interfaces	https://arxiv.org/abs/2609.34974	cc-by-4.0	file: 2609.34974.md
+2609.36434	The Safety Operator: Modulating the Expression of Safety Instructions via Spectral Optimization	https://arxiv.org/abs/2609.36434	cc-by-4.0	file: 2609.36434.md
+2609.36603	Self-Evolving Defense: Continual Security Policy Learning for LLM Agents	https://arxiv.org/abs/2609.36603	cc-by-4.0	file: 2609.36603.md
+2609.39117	SteerProbe: Learning to Bypass Safety Steering in Vision-Language Models	https://arxiv.org/abs/2609.39117	cc-by-4.0	file: 2609.39117.md
+2610.00348	Removing the NEEDLE in the Haystack: Backdoor Removal in LLMs via Weight Orthogonalisation	https://arxiv.org/abs/2610.00348	cc-by-4.0	file: 2610.00348.md
+2610.01263	Autonomous OSS Threat Detection via Taxonomy-Aligned LLMs	https://arxiv.org/abs/2610.01263	cc-by-4.0	file: 2610.01263.md
+2610.01323	TRACE: Trajectory Return Attribution and Contrastive Erasure for Multi-Turn Safety	https://arxiv.org/abs/2610.01323	cc-by-4.0	file: 2610.01323.md
+2610.01497	OpenMTB-Audit: Exposing Over-Refusal and Clinical Expert Perspectives in LLM-Based Molecular Tumor Board Safety Evaluation	https://arxiv.org/abs/2610.01497	cc-by-4.0	file: 2610.01497.md
+2610.01801	A Safe Prototype Is Not a Safety Direction: Reference Dependence and Prompt Confounds in Response-Safety Embeddings	https://arxiv.org/abs/2610.01801	cc-by-4.0	file: 2610.01801.md
+2610.02432	Evaluating and Improving the Robustness of Large Language Models to Input Sequence Variations	https://arxiv.org/abs/2610.02432	cc-by-4.0	file: 2610.02432.md
+2610.02544	CITADEL: CWE-Guided Insertion of Hardware Trojans via Analysis of DFG-Enabled LLMs	https://arxiv.org/abs/2610.02544	cc-by-4.0	file: 2610.02544.md
+2610.02853	Bounded Reachability & Jailbreak Detection via Contraction-Constrained State Space Models	https://arxiv.org/abs/2610.02853	cc-by-4.0	file: 2610.02853.md
+2610.03010	Engineering Sustainable Agents: A Systematic Comparison of Agentic LLMs for Developer Workflows	https://arxiv.org/abs/2610.03010	cc-by-4.0	file: 2610.03010.md
+2610.04283	First-Order Steering: Translating Weight Adaptation into Activation Steering	https://arxiv.org/abs/2610.04283	cc-by-4.0	file: 2610.04283.md
+2610.04319	GrayShield: Bit-Level Sanitization for Transformer Model Supply-Chain Security	https://arxiv.org/abs/2610.04319	cc-by-4.0	file: 2610.04319.md
+2610.04470	Reactivating Alignment: Defending LLMs from Jailbreaks via Intention-Aware Input-Output Matching	https://arxiv.org/abs/2610.04470	cc-by-4.0	file: 2610.04470.md
+2610.04676	Extracting Persona Subspaces Through Iterative Nullspace Projection For Modulation	https://arxiv.org/abs/2610.04676	cc-by-4.0	file: 2610.04676.md
+2610.05637	Visual Grounding Safety in Vision-Language Models	https://arxiv.org/abs/2610.05637	cc-by-4.0	file: 2610.05637.md
+2610.06903	Component and Dimension Sparsity in Transformer Refusal Mechanisms	https://arxiv.org/abs/2610.06903	cc-by-4.0	file: 2610.06903.md
+2610.07722	Does Steering Break Your Model? A Multi-Dimensional Evaluation Suite for LLM Steering Methods	https://arxiv.org/abs/2610.07722	cc-by-4.0	file: 2610.07722.md
+2610.07723	The Model Plants the Trigger: Answer-Side Backdoor Attacks in Multi-Turn Large Language Models	https://arxiv.org/abs/2610.07723	cc-by-4.0	file: 2610.07723.md
+2610.07967	DecepEval: A Benchmark for Evaluating Deception in LLM Agents	https://arxiv.org/abs/2610.07967	cc-by-4.0	file: 2610.07967.md
+2610.08951	ASPIRE: Agentic Safety & Prompt Injection Red-teaming Engine	https://arxiv.org/abs/2610.08951	cc-by-4.0	file: 2610.08951.md
+2610.09000	How Fragile Is On-Device Language Model Safety? Localizing Safety-Critical Parameters for Sparse Fault Analysis	https://arxiv.org/abs/2610.09000	cc-by-4.0	file: 2610.09000.md
+2610.09600	SafeEvo: Deciphering the Safety Alignment Mechanism and Evolution in Language Models	https://arxiv.org/abs/2610.09600	cc-by-4.0	file: 2610.09600.md
+2610.11351	Deception by Omission: Language Models Knowingly Hide Their Mistakes	https://arxiv.org/abs/2610.11351	cc-by-4.0	file: 2610.11351.md
+2610.11578	Chronos Enables Code Agents to Reason over Software Evolution	https://arxiv.org/abs/2610.11578	cc-by-4.0	file: 2610.11578.md
+2610.12445	Telling FIBS: Probes Effectively Detect Sabotage and Catch Unverbalized Deception	https://arxiv.org/abs/2610.12445	cc-by-4.0	file: 2610.12445.md
+2610.12644	Cancerous Backdoor Attack: Gradual Activation via Invisible Tokens and A Stage Controller	https://arxiv.org/abs/2610.12644	cc-by-4.0	file: 2610.12644.md
+2610.13491	EviRepair: Evidence-Driven Agents for Reliable Vulnerability Repair	https://arxiv.org/abs/2610.13491	cc-by-4.0	file: 2610.13491.md
+2610.13886	X-AgentRed: Red-Teaming Personal Agents in Evolving Multi-Service Ecosystems	https://arxiv.org/abs/2610.13886	cc-by-4.0	file: 2610.13886.md
+2610.14701	Towards Merging-conditional Backdoor Unalignment against Large Language Models	https://arxiv.org/abs/2610.14701	cc-by-4.0	file: 2610.14701.md
+2610.17727	SkillScreen: High-Recall Screening of Malicious Agent Skills with Decision Models	https://arxiv.org/abs/2610.17727	cc-by-4.0	file: 2610.17727.md
+2610.19114	Genesis Steering: Better Activation Steering Through Training Data	https://arxiv.org/abs/2610.19114	cc-by-4.0	file: 2610.19114.md
+2610.23085	Rethinking GRPO for Large Reasoning Model Safety Alignment	https://arxiv.org/abs/2610.23085	cc-by-4.0	file: 2610.23085.md
+2610.24379	Defending Against Dormant Poisoning Attacks Across Language and Multimodal Agents	https://arxiv.org/abs/2610.24379	cc-by-4.0	file: 2610.24379.md
+2610.24999	SoK: PIAtlas: Decomposing the Unbounded Prompt Injection Attack Space	https://arxiv.org/abs/2610.24999	cc-by-4.0	file: 2610.24999.md
+2610.25372	SEAL: Towards Persistent Tool Poisoning Attack against LLM Agents via Prefix-Eliciting Trigger	https://arxiv.org/abs/2610.25372	cc-by-4.0	file: 2610.25372.md
+2610.25611	Safety Offset Learning: When Benign Fine-Tuning Misaligns LLMs	https://arxiv.org/abs/2610.25611	cc-by-4.0	file: 2610.25611.md
+2610.25705	How Effectively Do Security Skills Guide Coding Agents in Vulnerability Detection in Linux Kernel?	https://arxiv.org/abs/2610.25705	cc-by-4.0	file: 2610.25705.md
+2610.26589	Beyond Attack Success Rate: Cost-Aware Metric for Evaluating Iterative LLM Jailbreaks	https://arxiv.org/abs/2610.26589	cc-by-4.0	file: 2610.26589.md
+2610.27722	HydraPoT: A Configurable Multi-Agent Framework for Cost-Aware LLM-Assisted Honeypots	https://arxiv.org/abs/2610.27722	cc-by-4.0	file: 2610.27722.md
+2610.28897	Is Refusal Direction Universal across Low-Resourced Languages?	https://arxiv.org/abs/2610.28897	cc-by-4.0	file: 2610.28897.md
+2610.28987	PerMIT: Securing Persistent Memory for LLM Agents via Machine-Checked Integrity Theorems and Scalable Community Trust	https://arxiv.org/abs/2610.28987	cc-by-4.0	file: 2610.28987.md
+2610.29342	Uncensored Is Not Unbiased: Abliteration Removes Refusals but Not Script-Dependent Bias About Taiwan	https://arxiv.org/abs/2610.29342	cc-by-4.0	file: 2610.29342.md
+2610.29555	WRDO: Weighted Refusal Direction Optimization in Aligned Language Models	https://arxiv.org/abs/2610.29555	cc-by-4.0	file: 2610.29555.md
+2102.06994	Data-Driven Vulnerability Detection and Repair in Java Code	https://arxiv.org/abs/2102.06994	cc-by-sa-4.0	file: 2102.06994.md
+2308.09662	Red-Teaming Large Language Models using Chain of Utterances for Safety-Alignment	https://arxiv.org/abs/2308.09662	cc-by-sa-4.0	file: 2308.09662.md
+2310.14303	Language Model Unalignment: Parametric Red-Teaming to Expose Hidden Harms and Biases	https://arxiv.org/abs/2310.14303	cc-by-sa-4.0	file: 2310.14303.md
+2401.12915	Red Teaming Visual Language Models	https://arxiv.org/abs/2401.12915	cc-by-sa-4.0	file: 2401.12915.md
+2401.17010	Finetuning Large Language Models for Vulnerability Detection	https://arxiv.org/abs/2401.17010	cc-by-sa-4.0	file: 2401.17010.md
+2403.01251	Accelerating Greedy Coordinate Gradient and General Prompt Optimization via Probe Sampling	https://arxiv.org/abs/2403.01251	cc-by-sa-4.0	file: 2403.01251.md
+2403.14274	Multi-role Consensus through LLMs Discussions for Vulnerability Detection	https://arxiv.org/abs/2403.14274	cc-by-sa-4.0	file: 2403.14274.md
+2406.11880	Knowledge Return Oriented Prompting (KROP)	https://arxiv.org/abs/2406.11880	cc-by-sa-4.0	file: 2406.11880.md
+2408.06428	Large Language Models for Secure Code Assessment: A Multi-Language Empirical Study	https://arxiv.org/abs/2408.06428	cc-by-sa-4.0	file: 2408.06428.md
+2409.09013	AI-LieDar: Examine the Trade-off Between Utility and Truthfulness in LLM Agents	https://arxiv.org/abs/2409.09013	cc-by-sa-4.0	file: 2409.09013.md
+2410.04188	DiDOTS: Knowledge Distillation from Large-Language-Models for Dementia Obfuscation in Transcribed Speech	https://arxiv.org/abs/2410.04188	cc-by-sa-4.0	file: 2410.04188.md
+2410.06913	Utilize the Flow before Stepping into the Same River Twice: Certainty Represented Knowledge Flow for Refusal-Aware Instruction Tuning	https://arxiv.org/abs/2410.06913	cc-by-sa-4.0	file: 2410.06913.md
+2412.10321	AdvPrefix: An Objective for Nuanced LLM Jailbreaks	https://arxiv.org/abs/2412.10321	cc-by-sa-4.0	file: 2412.10321.md
+2412.12039	Can LLM Prompting Serve as a Proxy for Static Analysis in Vulnerability Detection	https://arxiv.org/abs/2412.12039	cc-by-sa-4.0	file: 2412.12039.md
+2501.01872	Turning Logic Against Itself : Probing Model Defenses Through Contrastive Questions	https://arxiv.org/abs/2501.01872	cc-by-sa-4.0	file: 2501.01872.md
+2501.16448	Information-theoretic Distinctions Between Deception and Confusion	https://arxiv.org/abs/2501.16448	cc-by-sa-4.0	file: 2501.16448.md
+2502.04953	A Systematic Literature Review on Automated Exploit and Security Test Generation	https://arxiv.org/abs/2502.04953	cc-by-sa-4.0	file: 2502.04953.md
+2502.05911	GRAIT: Gradient-Driven Refusal-Aware Instruction Tuning for Effective Hallucination Mitigation	https://arxiv.org/abs/2502.05911	cc-by-sa-4.0	file: 2502.05911.md
+2503.04636	Mark Your LLM: Detecting the Misuse of Open-Source Large Language Models via Watermarking	https://arxiv.org/abs/2503.04636	cc-by-sa-4.0	file: 2503.04636.md
+2503.16248	Real AI Agents with Fake Memories: Fatal Context Manipulation Attacks on Web3 Agents	https://arxiv.org/abs/2503.16248	cc-by-sa-4.0	file: 2503.16248.md
+2503.20320	Iterative Prompting with Persuasion Skills in Jailbreaking Large Language Models	https://arxiv.org/abs/2503.20320	cc-by-sa-4.0	file: 2503.20320.md
+2504.03823	The H-Elena Trojan Virus to Infect Model Weights: A Wake-Up Call on the Security Risks of Malicious Fine-Tuning	https://arxiv.org/abs/2504.03823	cc-by-sa-4.0	file: 2504.03823.md
+2504.06669	NLP Security and Ethics, in the Wild	https://arxiv.org/abs/2504.06669	cc-by-sa-4.0	file: 2504.06669.md
+2506.12152	Because we have LLMs, we Can and Should Pursue Agentic Interpretability	https://arxiv.org/abs/2506.12152	cc-by-sa-4.0	file: 2506.12152.md
+2506.15790	ETrace:Event-Driven Vulnerability Detection in Smart Contracts via LLM-Based Trace Analysis	https://arxiv.org/abs/2506.15790	cc-by-sa-4.0	file: 2506.15790.md
+2507.06282	The bitter lesson of misuse detection	https://arxiv.org/abs/2507.06282	cc-by-sa-4.0	file: 2507.06282.md
+2507.15042	DeRAG: Black-box Adversarial Attacks on Multiple Retrieval-Augmented Generation Applications via Prompt Injection	https://arxiv.org/abs/2507.15042	cc-by-sa-4.0	file: 2507.15042.md
+2508.19321	An Investigation on Group Query Hallucination Attacks	https://arxiv.org/abs/2508.19321	cc-by-sa-4.0	file: 2508.19321.md
+2508.20697	Token Buncher: Shielding LLMs from Harmful Reinforcement Learning Fine-Tuning	https://arxiv.org/abs/2508.20697	cc-by-sa-4.0	file: 2508.20697.md
+2509.01476	Do Retrieval Augmented Language Models Know When They Don't Know?	https://arxiv.org/abs/2509.01476	cc-by-sa-4.0	file: 2509.01476.md
+2510.03495	AgentHub: A Registry for Discoverable, Verifiable, and Reproducible AI Agents	https://arxiv.org/abs/2510.03495	cc-by-sa-4.0	file: 2510.03495.md
+2510.13543	In-Browser LLM-Guided Fuzzing for Real-Time Prompt Injection Testing in Agentic AI Browsers	https://arxiv.org/abs/2510.13543	cc-by-sa-4.0	file: 2510.13543.md
+2510.22014	Toward Understanding the Transferability of Adversarial Suffixes in Large Language Models	https://arxiv.org/abs/2510.22014	cc-by-sa-4.0	file: 2510.22014.md
+2511.17672	Cognitive Inception: Agentic Reasoning against Visual Deceptions by Injecting Skepticism	https://arxiv.org/abs/2511.17672	cc-by-sa-4.0	file: 2511.17672.md
+2512.13655	Comparative Analysis of LLM Abliteration Methods: A Cross-Architecture Evaluation	https://arxiv.org/abs/2512.13655	cc-by-sa-4.0	file: 2512.13655.md
+2601.03005	JPU: Bridging Jailbreak Defense and Unlearning via On-Policy Path Rectification	https://arxiv.org/abs/2601.03005	cc-by-sa-4.0	file: 2601.03005.md
+2602.02262	OmniCode: A Benchmark for Evaluating Software Engineering Agents	https://arxiv.org/abs/2602.02262	cc-by-sa-4.0	file: 2602.02262.md
+2602.08377	Reinforcement Learning with Backtracking Feedback	https://arxiv.org/abs/2602.08377	cc-by-sa-4.0	file: 2602.08377.md
+2602.11655	LoRA-based Parameter-Efficient LLMs for Continuous Learning in Edge-based Malware Detection	https://arxiv.org/abs/2602.11655	cc-by-sa-4.0	file: 2602.11655.md
+2603.01246	Defensive Refusal Bias: How Safety Alignment Fails Cyber Defenders	https://arxiv.org/abs/2603.01246	cc-by-sa-4.0	file: 2603.01246.md
+2603.07202	Lying to Win: Assessing LLM Deception through Human-AI Games and Parallel-World Probing	https://arxiv.org/abs/2603.07202	cc-by-sa-4.0	file: 2603.07202.md
+2603.18740	Measuring and Exploiting Contextual Bias in LLM-Assisted Security Code Review	https://arxiv.org/abs/2603.18740	cc-by-sa-4.0	file: 2603.18740.md
+2604.13065	Correct Chains, Wrong Answers: Dissociating Reasoning from Output in LLM Logic	https://arxiv.org/abs/2604.13065	cc-by-sa-4.0	file: 2604.13065.md
+2604.13298	Can Agents Secure Hardware? Evaluating Agentic LLM-Driven Obfuscation for IP Protection	https://arxiv.org/abs/2604.13298	cc-by-sa-4.0	file: 2604.13298.md
+2604.18519	LLM Safety From Within: Detecting Harmful Content with Internal Representations	https://arxiv.org/abs/2604.18519	cc-by-sa-4.0	file: 2604.18519.md
+2604.20945	Breaking Bad: Interpretability-Based Safety Audits of State-of-the-Art LLMs	https://arxiv.org/abs/2604.20945	cc-by-sa-4.0	file: 2604.20945.md
+2604.23067	Training a General Purpose Automated Red Teaming Model	https://arxiv.org/abs/2604.23067	cc-by-sa-4.0	file: 2604.23067.md
+2605.04251	Root-Cause-Driven Automated Vulnerability Repair	https://arxiv.org/abs/2605.04251	cc-by-sa-4.0	file: 2605.04251.md
+2606.05101	FoeGlass: Simple In-Context Learning Is Enough for Red Teaming Audio Deepfake Detectors	https://arxiv.org/abs/2606.05101	cc-by-sa-4.0	file: 2606.05101.md
+2606.11399	Scenario-based Probing and Steering Cultural Values in Large Language Models--Extended Version	https://arxiv.org/abs/2606.11399	cc-by-sa-4.0	file: 2606.11399.md
+2606.24937	The Hitchhiker's Guide to Agentic AI: From Foundations to Systems	https://arxiv.org/abs/2606.24937	cc-by-sa-4.0	file: 2606.24937.md
+2607.20208	surprisal is Not a Theory	https://arxiv.org/abs/2607.20208	cc-by-sa-4.0	file: 2607.20208.md
+2608.18260	Redakto - The Incognito Tab for LLMs	https://arxiv.org/abs/2608.18260	cc-by-sa-4.0	file: 2608.18260.md
+2608.24037	Curved Inference II: Sleeper Agent Geometry - Extending Interpretability Beyond Probes	https://arxiv.org/abs/2608.24037	cc-by-sa-4.0	file: 2608.24037.md
+2608.29458	Reference-Grafting Matches Fine-Tuning at Eliciting Sandbagged Capabilities	https://arxiv.org/abs/2608.29458	cc-by-sa-4.0	file: 2608.29458.md
+2609.03693	AlcaTRAz - Anchored Tree-Rule Defense Against Jailbreaks	https://arxiv.org/abs/2609.03693	cc-by-sa-4.0	file: 2609.03693.md
+2609.05074	Influence Score and Transformers interpretability: Measure of the Effective Impact of Attention Heads at inference time	https://arxiv.org/abs/2609.05074	cc-by-sa-4.0	file: 2609.05074.md
+2404.17153	UniDebugger: Hierarchical Multi-Agent Framework for Unified Software Debugging	https://arxiv.org/abs/2404.17153	cc0-1.0	file: 2404.17153.md
+2406.05940	M2CVD: Enhancing Vulnerability Semantic through Multi-Model Collaboration for Code Vulnerability Detection	https://arxiv.org/abs/2406.05940	cc0-1.0	file: 2406.05940.md
+2412.04415	Targeting the Core: A Simple and Effective Method to Attack RAG-based Agents via Direct LLM Manipulation	https://arxiv.org/abs/2412.04415	cc0-1.0	file: 2412.04415.md
+2502.20807	Digital Player: Evaluating Large Language Models based Human-like Agent in Games	https://arxiv.org/abs/2502.20807	cc0-1.0	file: 2502.20807.md
+2504.21045	Leveraging LLM to Strengthen ML-Based Cross-Site Scripting Detection	https://arxiv.org/abs/2504.21045	cc0-1.0	file: 2504.21045.md
+2508.21669	Cybersecurity AI: Hacking the AI Hackers via Prompt Injection	https://arxiv.org/abs/2508.21669	cc0-1.0	file: 2508.21669.md
+2509.04781	The LLM Has Left The Chat: Evidence of Bail Preferences in Large Language Models	https://arxiv.org/abs/2509.04781	cc0-1.0	file: 2509.04781.md
+2509.11523	VulAgent: Hypothesis-Validation based Multi-Agent Vulnerability Detection	https://arxiv.org/abs/2509.11523	cc0-1.0	file: 2509.11523.md
+2512.14741	Persistent Backdoor Attacks under Continual Fine-Tuning of LLMs	https://arxiv.org/abs/2512.14741	cc0-1.0	file: 2512.14741.md
+2610.03430	Jumping the Line: Exploiting Length Predictions in LLM Scheduling	https://arxiv.org/abs/2610.03430	cc0-1.0	file: 2610.03430.md

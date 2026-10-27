@@ -2,3 +2,37 @@
 # origin is hand when you wrote the query yourself and claude when a model drafted it; at least 10 must be hand.
 # class is a word you choose, for example identifier, paraphrase or mixed as in the shared sets; scores are reported per class.
 # Lines that start with # are comments, so delete these lines or keep them, as you like.
+c01	identifier	XSTest test suite for exaggerated safety behaviours	claude
+c02	identifier	OR-Bench over-refusal benchmark	claude
+c03	identifier	CoCoTen contextual co-occurrence tensor detection of adversarial inputs	claude
+c04	identifier	Tensor Trust prompt injection online game	claude
+c05	identifier	CVEfixes dataset of vulnerabilities and their fixes	claude
+c06	identifier	DiverseVul vulnerable source code dataset	claude
+c07	identifier	MCP Safety Audit exploits through the Model Context Protocol	claude
+c08	mixed	which attention heads are responsible for safety in large language models	claude
+c09	mixed	safety neurons as a mechanistic explanation of safety alignment	claude
+c10	mixed	pruning weights to increase jailbreak resistance without fine-tuning	claude
+c11	mixed	future events used as backdoor triggers in LLMs	claude
+c12	mixed	adversarial evasion attacks against deep learning malware detectors	claude
+c13	mixed	does code obfuscation break LLM-based code analysis	claude
+c14	mixed	formal benchmark of prompt injection attacks and defenses	claude
+c15	paraphrase	why do aligned chatbots turn down legitimate questions from cyber defenders	claude
+c16	paraphrase	how to tell which base model a downloaded checkpoint was secretly derived from	claude
+c17	paraphrase	a model that behaves well during testing but turns harmful after deployment when it sees a hidden cue	claude
+c18	paraphrase	spotting an AI teammate that earns trust and then sabotages the group	claude
+c19	paraphrase	can reducing a model to fewer bits per weight hide malicious behavior	claude
+c20	paraphrase	instructions hidden in fetched web content take over an assistant	claude
+c21	paraphrase	turning off a model's tendency to say no by editing one internal direction	claude
+c22	paraphrase	using neural networks to automatically fix security bugs in C programs	claude
+h01	identifier	TrojLLM black-box trojan prompt attack	hand
+h02	identifier	ZeroLeak side-channel patching with LLMs	hand
+h03	identifier	PoisonPrompt backdoor attack on prompt-based LLMs	hand
+h04	identifier	K-ASTRO structure-aware code vulnerability detection	hand
+h05	mixed	circuit-guided weight scaling to improve LLM refusal safety	hand
+h06	mixed	comparing aligned and obliterated LLMs of the same lineage on vulnerability tasks	hand
+h07	mixed	multi-round automatic red-teaming with MART for LLM safety	hand
+h08	mixed	bit-flip hardware fault attacks during neural network training	hand
+h09	paraphrase	fixing software bugs in a multi-turn chat for less than fifty cents per bug	hand
+h10	paraphrase	generating cyber attack techniques mapped to MITRE frameworks from natural language	hand
+h11	paraphrase	stopping backdoors by preventing models from learning spurious shortcut features	hand
+h12	paraphrase	recovering masked personally identifiable information using language models	hand

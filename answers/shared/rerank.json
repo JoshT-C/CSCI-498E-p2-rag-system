@@ -1,0 +1,323 @@
+{
+  "label": "rerank",
+  "system": "rerank",
+  "corpus": "shared",
+  "model": "sonnet",
+  "chunking": {
+    "words": 300,
+    "overlap": 50
+  },
+  "top": 5,
+  "prompt_sha256": "4418806497c799a1",
+  "repeat": null,
+  "answers": [
+    {
+      "qid": "a01",
+      "question": "Within how many minutes must a mine operator call MSHA after an accident that kills a miner?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "cfr30-50.10#0",
+        "cfr30-50.2#1",
+        "cfr30-50.20-5#0",
+        "cfr30-50.20#0",
+        "cfr30-50.11#0"
+      ],
+      "answer": "Within 15 minutes. The operator must contact MSHA immediately, without delay and within 15 minutes, once it knows or should know that an accident involving a death has occurred.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "The operator must contact MSHA immediately and within 15 minutes once it knows or should know of an accident involving a death at the mine.",
+          "chunk_id": "cfr30-50.10#0",
+          "quote": "The operator shall immediately contact MSHA at once without delay and within 15 minutes at the toll-free number, 1-800-746-1553, once the operator knows or should know that an accident has occurred involving:"
+        },
+        {
+          "text": "A death of an individual at the mine is one of the listed accidents that triggers this requirement.",
+          "chunk_id": "cfr30-50.10#0",
+          "quote": "(a) A death of an individual at the mine;"
+        }
+      ],
+      "seconds": 3.9,
+      "input_tokens": 4685,
+      "output_tokens": 361,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "a02",
+      "question": "What minimum incombustible content must the combined dust in an underground coal mine keep where no methane is present?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "cfr30-75.403#0",
+        "cfr30-75.403-1#0",
+        "cfr30-75.402#0",
+        "cfr30-75.2#3",
+        "cfr30-75.1106-4#0"
+      ],
+      "answer": "The incombustible content of the combined coal dust, rock dust, and other dust must be not less than 80 percent where no methane is present. Methane raises that figure.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "The incombustible content of the combined coal dust, rock dust, and other dust must be not less than 80 percent.",
+          "chunk_id": "cfr30-75.403#0",
+          "quote": "maintained in such quantities that the incombustible content of the combined coal dust, rock dust, and other dust shall be not less than 80 percent."
+        },
+        {
+          "text": "Where methane is present in a ventilating current, the percentage is increased, so 80 percent is the base figure for no methane.",
+          "chunk_id": "cfr30-75.403#0",
+          "quote": "Where methane is present in any ventilating current, the percent of incombustible content of such combined dust shall be increased 0.4 percent for each 0.1 percent of methane."
+        }
+      ],
+      "seconds": 4.9,
+      "input_tokens": 3854,
+      "output_tokens": 377,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "a03",
+      "question": "How long must the self-rescue device given to each underground coal miner be able to protect that person?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "cfr30-75.1714#0",
+        "cfr30-75.1714-1#0",
+        "cfr30-57.15030#0",
+        "cfr30-75.1714-2#0",
+        "cfr30-75.1714-3#0"
+      ],
+      "answer": "The device must be adequate to protect the person for 1 hour or longer.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "Under 30 CFR 75.1714, the operator must make available to each underground miner an approved self-rescue device adequate to protect that person for 1 hour or longer.",
+          "chunk_id": "cfr30-75.1714#0",
+          "quote": "an approved self-rescue device or devices which is adequate to protect such person for 1 hour or longer."
+        }
+      ],
+      "seconds": 3.4,
+      "input_tokens": 3888,
+      "output_tokens": 234,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "a04",
+      "question": "How often must an underground metal or nonmetal mine hold evacuation drills?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "cfr30-57.4361#0",
+        "cfr30-57.4363#0",
+        "cfr30-57.11053#0",
+        "cfr30-56.4331#0",
+        "cfr30-57.4331#0"
+      ],
+      "answer": "Underground mine evacuation drills must be held at least once every six months. Each drill must be held for each shift at some time other than a shift change and involve all persons underground.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "Underground mine evacuation drills must be held at least once every six months.",
+          "chunk_id": "cfr30-57.4361#0",
+          "quote": "At least once every six months, mine evacuation drills shall be held"
+        },
+        {
+          "text": "Drills must be held for each shift at some time other than a shift change and involve all persons underground.",
+          "chunk_id": "cfr30-57.4361#0",
+          "quote": "Be held for each shift at some time other than a shift change and involve all persons underground;"
+        }
+      ],
+      "seconds": 4.2,
+      "input_tokens": 3484,
+      "output_tokens": 302,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "a05",
+      "question": "How many hours of training must a new underground miner receive before being assigned to work duties?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "cfr30-48.5#0",
+        "cfr30-48.25#0",
+        "cfr30-46.5#0",
+        "cfr30-48.5#3",
+        "cfr30-48.25#3"
+      ],
+      "answer": "A new underground miner must receive no less than 40 hours of training before being assigned to work duties (30 CFR 48.5), with approximately 8 hours given at the minesite.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "Each new underground miner must receive no less than 40 hours of training before being assigned to work duties.",
+          "chunk_id": "cfr30-48.5#0",
+          "quote": "Each new miner shall receive no less than 40 hours of training as prescribed in this section before such miner is assigned to work duties."
+        },
+        {
+          "text": "Approximately 8 hours of the training is given at the minesite.",
+          "chunk_id": "cfr30-48.5#0",
+          "quote": "approximately 8 hours of training shall be given at the minesite."
+        }
+      ],
+      "seconds": 3.9,
+      "input_tokens": 4514,
+      "output_tokens": 320,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "a06",
+      "question": "What is the permissible exposure level for noise at a mine, as an 8-hour average?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "cfr30-62.101#1",
+        "cfr30-62.130#0",
+        "cfr30-62.140#0",
+        "cfr30-62.110#0",
+        "cfr30-62.120#0"
+      ],
+      "answer": "The permissible exposure level is a TWA8 of 90 dBA, which is equivalent to a dose of 100% of that permitted by the standard.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "The permissible exposure level is a TWA8 of 90 dBA, equivalently a dose of 100% of that permitted by the standard.",
+          "chunk_id": "cfr30-62.101#1",
+          "quote": "Permissible exposure level. A TWA8 of 90 dBA or equivalently a dose of 100% of that permitted by the standard, integrating all sound levels from 90 dBA to at least 140 dBA."
+        }
+      ],
+      "seconds": 3.9,
+      "input_tokens": 4463,
+      "output_tokens": 286,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "a07",
+      "question": "How high must berms or guardrails be on the banks of roadways at metal and nonmetal mines?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "cfr30-56.9300#0",
+        "cfr30-57.9300#0",
+        "cfr30-57.2#1",
+        "cfr30-77.1605#0",
+        "cfr30-57.9301#0"
+      ],
+      "answer": "Berms or guardrails must be at least mid-axle height of the largest self-propelled mobile equipment that usually travels the roadway. This is stated in 30 CFR 57.9300(b), which covers metal and nonmetal mines. Part 57 is the metal and nonmetal part. The chunks do not say this in so many words. The same wording appears in 56.9300(b).",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "Berms or guardrails must be at least mid-axle height of the largest self-propelled mobile equipment which usually travels the roadway.",
+          "chunk_id": "cfr30-57.9300#0",
+          "quote": "Berms or guardrails shall be at least mid-axle height of the largest self-propelled mobile equipment which usually travels the roadway."
+        }
+      ],
+      "seconds": 5.9,
+      "input_tokens": 4699,
+      "output_tokens": 335,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "a08",
+      "question": "For how many hours must the breathable air in an approved refuge alternative sustain each person?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "cfr30-7.506#0",
+        "cfr30-75.1507#0",
+        "cfr30-7.508#0",
+        "cfr30-7.503#1",
+        "cfr30-75.1507#2"
+      ],
+      "answer": "The breathable air must sustain each person for 96 hours.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "Under 30 CFR 7.506(b)(1), the breathable air within the refuge alternative must sustain each person for 96 hours.",
+          "chunk_id": "cfr30-7.506#0",
+          "quote": "The breathable air sustains each person for 96 hours,"
+        }
+      ],
+      "seconds": 3.5,
+      "input_tokens": 5239,
+      "output_tokens": 206,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "a09",
+      "question": "What must a written bloodborne pathogens exposure control plan contain under OSHA?",
+      "kind": "out",
+      "system": "rerank",
+      "retrieved": [
+        "cfr30-71.300#1",
+        "cfr30-90.300#0",
+        "cfr30-71.300#0",
+        "cfr30-60.14#1",
+        "cfr30-60.14#0"
+      ],
+      "answer": "The chunks don't cover OSHA's bloodborne pathogens exposure control plan. They only contain MSHA respirable dust control plan rules (30 CFR 71.300 and 90.300) and a respiratory protection rule (30 CFR 60.14).",
+      "not_found": true,
+      "claims": [],
+      "seconds": 3.3,
+      "input_tokens": 4622,
+      "output_tokens": 182,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "a10",
+      "question": "At what depth does OSHA require a construction trench to have a protective system such as shoring or a trench box?",
+      "kind": "out",
+      "system": "rerank",
+      "retrieved": [
+        "cfr30-77.1900#0",
+        "cfr30-56.19110#0",
+        "cfr30-57.19050#0",
+        "cfr30-56.19050#0",
+        "cfr30-75.333#3"
+      ],
+      "answer": "The provided chunks do not say at what depth OSHA requires a construction trench to have a protective system. They cover only MSHA mining rules on slopes, shafts, and ventilation controls, not OSHA trenching rules.",
+      "not_found": true,
+      "claims": [],
+      "seconds": 3.3,
+      "input_tokens": 3937,
+      "output_tokens": 168,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "a11",
+      "question": "What FAA certification does a pilot need to fly a drone over a mine site?",
+      "kind": "out",
+      "system": "rerank",
+      "retrieved": [
+        "cfr30-46.11#0",
+        "cfr30-75.100#0",
+        "cfr30-75.100#1",
+        "cfr30-77.100#1",
+        "cfr30-77.1201#0"
+      ],
+      "answer": "The provided chunks do not say what FAA certification a pilot needs to fly a drone over a mine site.",
+      "not_found": true,
+      "claims": [],
+      "seconds": 2.8,
+      "input_tokens": 4011,
+      "output_tokens": 130,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "a12",
+      "question": "When does a mine need an EPA stormwater discharge permit for runoff from its site?",
+      "kind": "out",
+      "system": "rerank",
+      "retrieved": [
+        "cfr30-77.216-2#1",
+        "cfr30-75.1716#0",
+        "cfr30-75.1717#0",
+        "cfr30-75.1716-2#0",
+        "cfr30-75.1716-4#0"
+      ],
+      "answer": "The provided chunks do not say when a mine needs an EPA stormwater discharge permit. They cover impoundment design plans and permits for mining under water, but not EPA stormwater permitting.",
+      "not_found": true,
+      "claims": [],
+      "seconds": 3.9,
+      "input_tokens": 3574,
+      "output_tokens": 158,
+      "model": "claude-sonnet-5-5"
+    }
+  ]
+}
