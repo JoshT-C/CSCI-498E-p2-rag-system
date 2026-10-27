@@ -169,6 +169,7 @@ Scores per system on your gold set.
 | bm25 | 0.767 | 0.757 | 0.731 |
 | dense | 0.811 | 0.843 | 0.804 |
 | hybrid | 0.834 | 0.841 | 0.809 |
+| rerank | 0.874 | 0.912 | 0.863 |
 
 34 judged queries; nDCG uses binary labels; a random ranking of the 937 documents would get recall@10 near 0.011.
 <!-- p2:end own -->
@@ -187,6 +188,9 @@ The same scores per query class.
 | hybrid | Recall@10 | 1.000 | 0.871 | 0.647 |
 | hybrid | MRR@10 | 1.000 | 0.932 | 0.611 |
 | hybrid | nDCG@10 | 1.000 | 0.871 | 0.576 |
+| rerank | Recall@10 | 1.000 | 0.917 | 0.719 |
+| rerank | MRR@10 | 1.000 | 0.955 | 0.792 |
+| rerank | nDCG@10 | 1.000 | 0.903 | 0.701 |
 <!-- p2:end own-classes -->
 
 The same scores for the queries you wrote yourself (`hand`) and the ones a model drafted (`claude`), with the difference between the two groups and its interval.
@@ -204,6 +208,9 @@ Once both groups have queries, the table also says whether `bm25`'s lead over `d
 | hybrid | Recall@10 | 1.000 | 0.743 | +0.257 | [+0.110, +0.424] | hand higher |
 | hybrid | MRR@10 | 0.958 | 0.777 | +0.182 | [+0.011, +0.364] | hand higher |
 | hybrid | nDCG@10 | 0.955 | 0.729 | +0.226 | [+0.067, +0.401] | hand higher |
+| rerank | Recall@10 | 1.000 | 0.805 | +0.195 | [+0.068, +0.345] | hand higher |
+| rerank | MRR@10 | 1.000 | 0.864 | +0.136 | [+0.023, +0.273] | hand higher |
+| rerank | nDCG@10 | 0.999 | 0.789 | +0.210 | [+0.092, +0.353] | hand higher |
 
 The hand and claude queries are different queries, so the interval of hand minus claude comes from resampling the queries within each group (10,000 times), not from pairing them.
 
@@ -234,6 +241,15 @@ Differences between every pair of systems.
 | hybrid minus dense | Recall@10 | +0.023 | [-0.015, +0.066] | 0.060 | not distinguishable |
 | hybrid minus dense | MRR@10 | -0.002 | [-0.044, +0.042] | 0.061 | not distinguishable |
 | hybrid minus dense | nDCG@10 | +0.005 | [-0.028, +0.035] | 0.047 | not distinguishable |
+| rerank minus bm25 | Recall@10 | +0.107 | [+0.037, +0.190] | 0.113 | rerank higher |
+| rerank minus bm25 | MRR@10 | +0.155 | [+0.053, +0.273] | 0.159 | rerank higher |
+| rerank minus bm25 | nDCG@10 | +0.133 | [+0.054, +0.224] | 0.125 | rerank higher |
+| rerank minus dense | Recall@10 | +0.063 | [+0.007, +0.122] | 0.084 | rerank higher |
+| rerank minus dense | MRR@10 | +0.069 | [+0.010, +0.147] | 0.101 | rerank higher |
+| rerank minus dense | nDCG@10 | +0.059 | [+0.019, +0.109] | 0.066 | rerank higher |
+| rerank minus hybrid | Recall@10 | +0.040 | [+0.005, +0.086] | 0.060 | rerank higher |
+| rerank minus hybrid | MRR@10 | +0.071 | [-0.007, +0.162] | 0.121 | not distinguishable |
+| rerank minus hybrid | nDCG@10 | +0.055 | [+0.014, +0.104] | 0.066 | rerank higher |
 
 The interval is a paired bootstrap (10,000 resamples of the queries); MDD is the smallest difference this many queries detect 80% of the time.
 <!-- p2:end own-pairs -->
@@ -332,6 +348,7 @@ Every trace in traces/ that records a Claude call:
 | Trace | System | Spans | Claude calls | Saved | Input tokens | Output tokens | Seconds | Input per span | Output per span | Seconds per span |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | traces/answers-rerank.jsonl | rerank | 12 | 24 | 4 | 216,295 | 4,261 | 82.8 | 18,025 | 355 | 6.9 |
+| traces/own-own-rerank.jsonl | rerank | 34 | 34 | 2 | 506,290 | 3,094 | 135.8 | 14,891 | 91 | 4.0 |
 | traces/shared-practice-rerank.jsonl | rerank | 20 | 20 | 2 | 275,606 | 2,172 | 64.3 | 13,780 | 109 | 3.2 |
 | traces/shared-practice-rerank_c10.jsonl | rerank_c10 | 20 | 20 | 2 | 165,262 | 1,853 | 54.6 | 8,263 | 93 | 2.7 |
 | traces/shared-test-rerank.jsonl | rerank | 40 | 40 | 0 | 513,291 | 3,963 | 117.6 | 12,832 | 99 | 2.9 |
@@ -349,6 +366,9 @@ Every pair of systems on the same queries where at least one calls Claude, the o
 | shared practice: dense minus rerank_c10 | 20 | -0.101 | [-0.304, +0.111] | 8,263 | 2.7 | not distinguishable |
 | shared practice: hybrid minus rerank_c10 | 20 | -0.193 | [-0.391, +0.008] | 8,263 | 2.7 | not distinguishable |
 | shared practice: rerank_c10 minus rerank | 20 | -0.136 | [-0.286, +0.000] | 5,517 | 0.5 | not distinguishable |
+| own: bm25 minus rerank | 34 | -0.155 | [-0.273, -0.053] | 14,891 | 4.0 | rerank higher |
+| own: dense minus rerank | 34 | -0.069 | [-0.147, -0.010] | 14,891 | 4.0 | rerank higher |
+| own: hybrid minus rerank | 34 | -0.071 | [-0.162, +0.007] | 14,891 | 4.0 | not distinguishable |
 
 The difference is the cheaper system's score minus the dearer one's, with its paired interval; the savings count Claude calls only, so a system that makes none saves all of the other's.
 
