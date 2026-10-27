@@ -66,12 +66,12 @@ Being honest here costs you far less than a story you cannot defend when you rec
 
 The clearest time I overruled the agent was the choice of corpus.
 Claude recommended building the corpus from arXiv abstracts only, which would have been simpler and cleaner to license, and I chose to mix the abstracts with full-text parts of the openly licensed papers my PRD cites.
-That cost extra license review: three full-text parts were flagged, and Claude fetched the arXiv pages and quoted the license lines, but I decided to keep each one.
+That cost extra license review: three full-text documents were flagged, and Claude fetched the arXiv pages and quoted the license lines, but I decided to keep each one.
 It also created the near-duplicate problem I describe in prompt 5, where parts of one paper crowd the top 10.
 
 In judging, I also rejected candidates that the pooled sheet offered and that matched the query's words. For `c10` ("pruning weights to increase jailbreak resistance without fine-tuning"), the sheet included `2402.05162`, which shares the words about pruning and safety alignment, but reading it showed that it uses pruning to break safety rather than to improve resistance, so under my logical-value rule I marked only `2401.10862` relevant.
 
-When I first asked Claude to audit my work, it returned a generous score and missed several potential logical problems in my judging process and in my evaluation as a whole. To fix this, I asked my main orchestrating agent to write an adversarial review prompt and run it in a separate agent, so that my work would reach the quality I wanted. That second agent found a number of issues the first audit had missed, and as a result I re-judged five queries and revised several earlier statements for accuracy.
+When I first asked Claude to audit my work, it returned a generous score and missed several potential logical problems in my judging process and in my evaluation as a whole. To fix this, I asked my main orchestrating agent to write an adversarial review prompt and run it in a separate agent, so that my work would reach the quality I wanted. That second agent found a number of issues the first audit had missed, and as a result I re-judged eight queries over two review rounds and revised several earlier statements for accuracy.
 
 ---
 
@@ -83,14 +83,14 @@ It could be a mean over a small query class, a difference whose interval include
 What would have to be true for you to trust it?
 Did you do anything to test it, and what did that show?
 
-The number I trust least is the perfect 1.000 MRR@10 that `rerank` and `dense` scored on my 12 `hand` queries (`own-origins`, section 4 of `EVAL.md`), and with it the claim that my `hand` queries are easier than the `claude` ones (+0.183 [+0.077, +0.312] nDCG@10 for `rerank`).
+The number I trust least is the perfect 1.000 MRR@10 that `rerank` and `dense` scored on my 12 `hand` queries (`own-origins`, section 4 of `EVAL.md`), and with it the claim that my `hand` queries are easier than the `claude` ones (+0.166 [+0.066, +0.286] nDCG@10 for `rerank`).
 
 I do not fully trust it for three reasons.
 1. Twelve queries is very few: each query is a twelfth of the mean, so one query slipping from rank 1 to rank 2 drops MRR@10 by about 0.04.
 2. I wrote `h01` to `h12` after browsing the corpus, to be sure each had a matching paper, so they share more words with their targets (0.79 content-word overlap against 0.76 for `claude`), and seven of them name a specific method or tool (TrojLLM, ZeroLeak, PoisonPrompt, K-ASTRO, circuit-guided weight scaling, MART, bit-flip attacks). They are close to known-item lookups.
-3. The judgments came from the pooled top 10 of `bm25`, `dense`, `hybrid` and a keyword search, so a relevant paper that all four missed was never read and is not in `qrels.txt`. An independent review already found relevant papers I had missed on four `claude` queries, so my labels are not complete.
+3. The judgments came from the pooled top 10 of `bm25`, `dense`, `hybrid` and a keyword search, so a relevant paper that all four missed was never read and is not in `qrels.txt`. Two rounds of independent review already found relevant papers I had missed on seven `claude` queries, so my labels are not complete.
 
-To check whether my queries tilted the comparison between systems, I looked at `bm25`'s lead over `dense` in `own-origins`: -0.046 nDCG@10 on the `claude` queries and -0.112 on the `hand` queries, and the difference between the groups (+0.066 [-0.080, +0.261]) is not distinguishable. That means this gold set cannot tell whether who wrote the queries changes the comparison, not that it makes no difference.
+To check whether my queries tilted the comparison between systems, I looked at `bm25`'s lead over `dense` in `own-origins`: -0.056 nDCG@10 on the `claude` queries and -0.112 on the `hand` queries, and the difference between the groups (+0.056 [-0.094, +0.256]) is not distinguishable. That means this gold set cannot tell whether who wrote the queries changes the comparison, not that it makes no difference.
 To trust the 1.000 itself, I would want at least 30 `hand` queries written before looking at the corpus, judged by someone who did not write them.
 
 ---

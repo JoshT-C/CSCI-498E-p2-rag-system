@@ -29,7 +29,7 @@ For each of `dense`, `hybrid` and `rerank`, one or two sentences: the embedding 
 `bm25` is the provided keyword baseline (`k1 = 0.9`, `b = 0.4`, the `"codes"` tokenizer, which keeps section numbers such as `75.403` whole).
 `dense` (`p2/retrievers/dense.py`) turns every chunk and every query into a vector with the `BAAI/bge-small-en-v1.5` embedding model and ranks chunks by cosine similarity.
 `hybrid` (`p2/retrievers/hybrid.py`) merges the full document rankings of `bm25` and `dense` with reciprocal rank fusion: each document scores the sum of 1 / (60 + its rank) in each list.
-`rerank` (`p2/retrievers/rerank.py`) takes `hybrid`'s top 20 documents, shows Claude (Sonnet, the `sonnet` setting in `p2.toml`) the first 300 words of each document, and asks for them back in order from most to least relevant; if the reply is not a valid ordering of all 20, it keeps `hybrid`'s order. Because it sees only each document's first 300 words, it can miss the relevant pages of a long full-text part.
+`rerank` (`p2/retrievers/rerank.py`) takes `hybrid`'s top 20 documents, shows Claude (Sonnet, the `sonnet` setting in `p2.toml`) the first 300 words of each document, and asks for them back in order from most to least relevant; if the reply is not a valid ordering of all 20, it keeps `hybrid`'s order. Because it sees only each document's first 300 words, it can miss relevant text further into a long document.
 
 ### Practice queries (20)
 
@@ -125,7 +125,7 @@ With only 20 queries, the minimum detectable difference (MDD) for those pairs is
 Against `bm25` it is reliably better on MRR@10 (+0.293 [+0.043, +0.533]), but its nDCG@10 lead (+0.225 [-0.011, +0.451]) and its Recall@10 lead (+0.108 [-0.133, +0.350]) are not distinguishable.
 Giving the reranker 20 candidates instead of 10 matters: `rerank` beats `rerank_c10` on Recall@10 (+0.142 [+0.050, +0.258]) and nDCG@10 (+0.158 [+0.054, +0.279]), because a relevant section at ranks 11 to 20 of `hybrid` never reaches `rerank_c10` at all.
 
-This is in line with what lectures 12 and 13 claimed, with one caution: the per-class numbers are means over only 6 or 7 queries, with no interval. On those class means, keyword search did best on exact identifier lookups (`bm25` Recall@10 1.000 on the 7 identifier queries, against 0.214 for `dense`) and embeddings did best on reworded questions (`bm25` scores 0.000 on all 7 paraphrase queries, `dense` 0.595 Recall@10). The reranker's gain over `dense` and `hybrid` is the one claim here with intervals behind it.
+This is in line with what lectures 12 and 13 claimed, with one caution: the per-class numbers are means over only 6 or 7 queries, with no interval. On those class means, keyword search did best on exact identifier lookups (`bm25` Recall@10 1.000 on the 7 identifier queries, against 0.214 for `dense`) and embeddings did far better than keyword search on reworded questions (`bm25` scores 0.000 on all 7 paraphrase queries, `dense` 0.595 Recall@10, with `rerank` level with `dense` there on Recall@10 and MRR@10). The reranker's gain over `dense` and `hybrid` is the one claim here with intervals behind it.
 It leaves open whether `hybrid` beats either of its two parts, because 20 queries cannot separate gaps that small.
 
 ---
@@ -189,7 +189,7 @@ Relevance rule: Relevance is judged on two things. 1. Semantic value: how much t
 
 Labels are binary: a document is relevant (`rel` 1) only when it has both semantic value and logical value.
 
-The gold set (`eval/own/queries.tsv`, `eval/own/qrels.txt`) has 34 queries, 12 that I wrote (`hand`) and 22 that Claude drafted (`claude`), with 84 relevance judgments.
+The gold set (`eval/own/queries.tsv`, `eval/own/qrels.txt`) has 34 queries, 12 that I wrote (`hand`) and 22 that Claude drafted (`claude`), with 94 relevance judgments.
 I used three classes so that the per-class scores test different kinds of search:
 - `identifier` (11 queries: 4 hand, 7 claude) name a specific tool, dataset or benchmark, such as XSTest, OR-Bench, TrojLLM, ZeroLeak or K-ASTRO;
 - `mixed` (11 queries: 4 hand, 7 claude) combine technical terms with an ordinary question, such as which attention heads control safety, or bit-flip attacks during training;
@@ -197,8 +197,9 @@ I used three classes so that the per-class scores test different kinds of search
 
 To find candidates, `scripts/candidates.py` pooled the top 10 of `bm25`, `dense` and `hybrid` with the top 10 of a plain keyword search into one review sheet, and I read every candidate before labeling it.
 When a paper appears both as its abstract and as full-text parts, I judged each document on its own text.
-After an independent review of the gold set, I re-judged five queries (c15, c16, c17, c20 and c21) and added six relevant documents, to four of them, that I had first missed; c21 stayed as it was.
-Many of my `hand` queries reuse much of their target paper's title: in 5 of the 12, at least 60% of the title's content words appear in the query (for example `h03` and PoisonPrompt), so they are close to known-item lookups. Even so, `bm25` did not do relatively better on them (see `own-origins` in section 4).
+Over two rounds of independent review of the gold set, I re-judged eight queries (c08, c13, c15, c16, c17, c20, c21 and c22) and added 16 relevant documents that I had first missed, to seven of them (c13 stayed as it was), which took the gold set from 78 to 94 judgments.
+In the second round I judged each candidate on the document alone, whichever system had found it.
+Many of my `hand` queries reuse much of their target paper's title: in 4 or 5 of the 12 (depending on how the words are split), at least 60% of the title's content words appear in the query (for example `h03` and PoisonPrompt), so they are close to known-item lookups. Even so, `bm25` did not do relatively better on them (see `own-origins` in section 4).
 All four systems score 1.000 MRR@10 on the 11 identifier queries, so that third of the gold set cannot tell the systems apart.
 
 ---
@@ -210,11 +211,11 @@ Scores per system on your gold set.
 <!-- p2:begin own -->
 | System | Recall@10 | MRR@10 | nDCG@10 |
 | --- | ---: | ---: | ---: |
-| bm25 | 0.766 | 0.772 | 0.736 |
-| dense | 0.809 | 0.858 | 0.805 |
-| hybrid | 0.843 | 0.847 | 0.814 |
-| rerank | 0.887 | 0.936 | 0.880 |
-| ablation/dense_potion | 0.784 | 0.806 | 0.750 |
+| bm25 | 0.738 | 0.772 | 0.722 |
+| dense | 0.795 | 0.873 | 0.798 |
+| hybrid | 0.833 | 0.847 | 0.805 |
+| rerank | 0.890 | 0.956 | 0.892 |
+| ablation/dense_potion | 0.757 | 0.806 | 0.728 |
 
 34 judged queries; nDCG uses binary labels; a random ranking of the 937 documents would get recall@10 near 0.011.
 <!-- p2:end own -->
@@ -224,21 +225,21 @@ The same scores per query class.
 <!-- p2:begin own-classes -->
 | System | Metric | identifier (n=11) | mixed (n=11) | paraphrase (n=12) |
 | --- | --- | ---: | ---: | ---: |
-| bm25 | Recall@10 | 1.000 | 0.871 | 0.455 |
+| bm25 | Recall@10 | 1.000 | 0.832 | 0.412 |
 | bm25 | MRR@10 | 1.000 | 0.886 | 0.457 |
-| bm25 | nDCG@10 | 1.000 | 0.836 | 0.402 |
-| dense | Recall@10 | 1.000 | 0.879 | 0.570 |
-| dense | MRR@10 | 1.000 | 0.924 | 0.667 |
-| dense | nDCG@10 | 0.997 | 0.867 | 0.572 |
-| hybrid | Recall@10 | 1.000 | 0.871 | 0.673 |
+| bm25 | nDCG@10 | 1.000 | 0.824 | 0.374 |
+| dense | Recall@10 | 1.000 | 0.827 | 0.579 |
+| dense | MRR@10 | 1.000 | 0.924 | 0.708 |
+| dense | nDCG@10 | 0.997 | 0.826 | 0.589 |
+| hybrid | Recall@10 | 1.000 | 0.845 | 0.670 |
 | hybrid | MRR@10 | 1.000 | 0.932 | 0.628 |
-| hybrid | nDCG@10 | 1.000 | 0.871 | 0.592 |
-| rerank | Recall@10 | 1.000 | 0.917 | 0.758 |
-| rerank | MRR@10 | 1.000 | 0.955 | 0.861 |
-| rerank | nDCG@10 | 1.000 | 0.903 | 0.750 |
-| ablation/dense_potion | Recall@10 | 0.987 | 0.841 | 0.546 |
+| hybrid | nDCG@10 | 1.000 | 0.850 | 0.584 |
+| rerank | Recall@10 | 1.000 | 0.917 | 0.764 |
+| rerank | MRR@10 | 1.000 | 0.955 | 0.917 |
+| rerank | nDCG@10 | 1.000 | 0.902 | 0.783 |
+| ablation/dense_potion | Recall@10 | 0.987 | 0.802 | 0.504 |
 | ablation/dense_potion | MRR@10 | 1.000 | 0.882 | 0.559 |
-| ablation/dense_potion | nDCG@10 | 0.989 | 0.805 | 0.481 |
+| ablation/dense_potion | nDCG@10 | 0.989 | 0.771 | 0.450 |
 <!-- p2:end own-classes -->
 
 The same scores for the queries you wrote yourself (`hand`) and the ones a model drafted (`claude`), with the difference between the two groups and its interval.
@@ -247,21 +248,21 @@ Once both groups have queries, the table also says whether `bm25`'s lead over `d
 <!-- p2:begin own-origins -->
 | System | Metric | hand (n=12) | claude (n=22) | hand minus claude | 95% interval | Reading |
 | --- | --- | ---: | ---: | ---: | ---: | --- |
-| bm25 | Recall@10 | 0.875 | 0.706 | +0.169 | [-0.073, +0.387] | not distinguishable |
+| bm25 | Recall@10 | 0.875 | 0.664 | +0.211 | [-0.028, +0.430] | not distinguishable |
 | bm25 | MRR@10 | 0.850 | 0.729 | +0.121 | [-0.147, +0.367] | not distinguishable |
-| bm25 | nDCG@10 | 0.853 | 0.672 | +0.181 | [-0.077, +0.420] | not distinguishable |
-| dense | Recall@10 | 0.958 | 0.727 | +0.231 | [+0.062, +0.404] | hand higher |
-| dense | MRR@10 | 1.000 | 0.780 | +0.220 | [+0.091, +0.379] | hand higher |
-| dense | nDCG@10 | 0.965 | 0.718 | +0.247 | [+0.091, +0.413] | hand higher |
-| hybrid | Recall@10 | 1.000 | 0.757 | +0.243 | [+0.104, +0.402] | hand higher |
+| bm25 | nDCG@10 | 0.853 | 0.651 | +0.202 | [-0.055, +0.441] | not distinguishable |
+| dense | Recall@10 | 0.958 | 0.707 | +0.252 | [+0.083, +0.422] | hand higher |
+| dense | MRR@10 | 1.000 | 0.803 | +0.197 | [+0.068, +0.356] | hand higher |
+| dense | nDCG@10 | 0.965 | 0.706 | +0.259 | [+0.109, +0.413] | hand higher |
+| hybrid | Recall@10 | 1.000 | 0.742 | +0.258 | [+0.115, +0.417] | hand higher |
 | hybrid | MRR@10 | 0.958 | 0.786 | +0.173 | [+0.008, +0.347] | hand higher |
-| hybrid | nDCG@10 | 0.955 | 0.738 | +0.217 | [+0.062, +0.385] | hand higher |
-| rerank | Recall@10 | 1.000 | 0.826 | +0.174 | [+0.061, +0.307] | hand higher |
-| rerank | MRR@10 | 1.000 | 0.902 | +0.098 | [+0.000, +0.220] | not distinguishable |
-| rerank | nDCG@10 | 0.999 | 0.816 | +0.183 | [+0.077, +0.312] | hand higher |
-| ablation/dense_potion | Recall@10 | 0.875 | 0.735 | +0.140 | [-0.067, +0.348] | not distinguishable |
+| hybrid | nDCG@10 | 0.955 | 0.723 | +0.232 | [+0.079, +0.398] | hand higher |
+| rerank | Recall@10 | 1.000 | 0.829 | +0.171 | [+0.060, +0.304] | hand higher |
+| rerank | MRR@10 | 1.000 | 0.932 | +0.068 | [+0.000, +0.182] | not distinguishable |
+| rerank | nDCG@10 | 0.999 | 0.833 | +0.166 | [+0.066, +0.286] | hand higher |
+| ablation/dense_potion | Recall@10 | 0.875 | 0.692 | +0.183 | [-0.024, +0.386] | not distinguishable |
 | ablation/dense_potion | MRR@10 | 0.871 | 0.771 | +0.100 | [-0.133, +0.328] | not distinguishable |
-| ablation/dense_potion | nDCG@10 | 0.822 | 0.711 | +0.111 | [-0.100, +0.320] | not distinguishable |
+| ablation/dense_potion | nDCG@10 | 0.822 | 0.677 | +0.144 | [-0.064, +0.350] | not distinguishable |
 
 The hand and claude queries are different queries, so the interval of hand minus claude comes from resampling the queries within each group (10,000 times), not from pairing them.
 
@@ -269,9 +270,9 @@ Do model-written queries favor keyword search? bm25's lead over dense (bm25 minu
 
 | Metric | Lead on claude | Lead on hand | Claude minus hand | 95% interval | Reading |
 | --- | ---: | ---: | ---: | ---: | --- |
-| Recall@10 | -0.021 | -0.083 | +0.062 | [-0.072, +0.259] | not distinguishable |
-| MRR@10 | -0.051 | -0.150 | +0.099 | [-0.087, +0.325] | not distinguishable |
-| nDCG@10 | -0.046 | -0.112 | +0.066 | [-0.080, +0.261] | not distinguishable |
+| Recall@10 | -0.043 | -0.083 | +0.041 | [-0.106, +0.241] | not distinguishable |
+| MRR@10 | -0.074 | -0.150 | +0.076 | [-0.125, +0.311] | not distinguishable |
+| nDCG@10 | -0.056 | -0.112 | +0.056 | [-0.094, +0.256] | not distinguishable |
 
 Mean content-word overlap, the share of a query's content words found in its best relevant document: hand 0.79 (12 queries), claude 0.76 (22 queries).
 
@@ -283,36 +284,36 @@ Differences between every pair of systems.
 <!-- p2:begin own-pairs -->
 | Comparison | Metric | Mean difference | 95% interval | MDD | Reading |
 | --- | --- | ---: | ---: | ---: | --- |
-| dense minus bm25 | Recall@10 | +0.043 | [-0.019, +0.123] | 0.104 | not distinguishable |
-| dense minus bm25 | MRR@10 | +0.086 | [+0.004, +0.181] | 0.130 | dense higher |
-| dense minus bm25 | nDCG@10 | +0.069 | [+0.004, +0.150] | 0.106 | dense higher |
-| hybrid minus bm25 | Recall@10 | +0.077 | [+0.019, +0.153] | 0.099 | hybrid higher |
+| dense minus bm25 | Recall@10 | +0.057 | [-0.013, +0.141] | 0.113 | not distinguishable |
+| dense minus bm25 | MRR@10 | +0.101 | [+0.008, +0.206] | 0.146 | dense higher |
+| dense minus bm25 | nDCG@10 | +0.076 | [+0.008, +0.157] | 0.111 | dense higher |
+| hybrid minus bm25 | Recall@10 | +0.095 | [+0.032, +0.174] | 0.104 | hybrid higher |
 | hybrid minus bm25 | MRR@10 | +0.075 | [+0.020, +0.141] | 0.090 | hybrid higher |
-| hybrid minus bm25 | nDCG@10 | +0.078 | [+0.027, +0.140] | 0.083 | hybrid higher |
-| hybrid minus dense | Recall@10 | +0.034 | [-0.012, +0.086] | 0.072 | not distinguishable |
-| hybrid minus dense | MRR@10 | -0.011 | [-0.057, +0.034] | 0.066 | not distinguishable |
-| hybrid minus dense | nDCG@10 | +0.009 | [-0.028, +0.049] | 0.056 | not distinguishable |
-| rerank minus bm25 | Recall@10 | +0.122 | [+0.050, +0.203] | 0.113 | rerank higher |
-| rerank minus bm25 | MRR@10 | +0.165 | [+0.062, +0.282] | 0.159 | rerank higher |
-| rerank minus bm25 | nDCG@10 | +0.144 | [+0.065, +0.235] | 0.125 | rerank higher |
-| rerank minus dense | Recall@10 | +0.079 | [+0.018, +0.144] | 0.093 | rerank higher |
-| rerank minus dense | MRR@10 | +0.078 | [+0.010, +0.162] | 0.108 | rerank higher |
-| rerank minus dense | nDCG@10 | +0.075 | [+0.026, +0.133] | 0.079 | rerank higher |
-| rerank minus hybrid | Recall@10 | +0.044 | [+0.009, +0.092] | 0.060 | rerank higher |
-| rerank minus hybrid | MRR@10 | +0.090 | [+0.022, +0.175] | 0.111 | rerank higher |
-| rerank minus hybrid | nDCG@10 | +0.066 | [+0.024, +0.116] | 0.067 | rerank higher |
+| hybrid minus bm25 | nDCG@10 | +0.083 | [+0.030, +0.144] | 0.084 | hybrid higher |
+| hybrid minus dense | Recall@10 | +0.038 | [-0.012, +0.093] | 0.076 | not distinguishable |
+| hybrid minus dense | MRR@10 | -0.026 | [-0.092, +0.029] | 0.090 | not distinguishable |
+| hybrid minus dense | nDCG@10 | +0.007 | [-0.040, +0.052] | 0.066 | not distinguishable |
+| rerank minus bm25 | Recall@10 | +0.151 | [+0.073, +0.238] | 0.121 | rerank higher |
+| rerank minus bm25 | MRR@10 | +0.184 | [+0.072, +0.311] | 0.173 | rerank higher |
+| rerank minus bm25 | nDCG@10 | +0.170 | [+0.084, +0.264] | 0.132 | rerank higher |
+| rerank minus dense | Recall@10 | +0.094 | [+0.027, +0.167] | 0.101 | rerank higher |
+| rerank minus dense | MRR@10 | +0.083 | [+0.015, +0.167] | 0.107 | rerank higher |
+| rerank minus dense | nDCG@10 | +0.094 | [+0.042, +0.156] | 0.082 | rerank higher |
+| rerank minus hybrid | Recall@10 | +0.056 | [+0.015, +0.107] | 0.066 | rerank higher |
+| rerank minus hybrid | MRR@10 | +0.109 | [+0.029, +0.203] | 0.125 | rerank higher |
+| rerank minus hybrid | nDCG@10 | +0.087 | [+0.041, +0.142] | 0.072 | rerank higher |
 | ablation/dense_potion minus bm25 | Recall@10 | +0.018 | [-0.067, +0.113] | 0.130 | not distinguishable |
 | ablation/dense_potion minus bm25 | MRR@10 | +0.034 | [-0.041, +0.109] | 0.107 | not distinguishable |
-| ablation/dense_potion minus bm25 | nDCG@10 | +0.014 | [-0.060, +0.084] | 0.105 | not distinguishable |
-| ablation/dense_potion minus dense | Recall@10 | -0.025 | [-0.083, +0.026] | 0.080 | not distinguishable |
-| ablation/dense_potion minus dense | MRR@10 | -0.052 | [-0.134, +0.022] | 0.115 | not distinguishable |
-| ablation/dense_potion minus dense | nDCG@10 | -0.055 | [-0.123, +0.005] | 0.096 | not distinguishable |
-| ablation/dense_potion minus hybrid | Recall@10 | -0.059 | [-0.132, +0.012] | 0.105 | not distinguishable |
+| ablation/dense_potion minus bm25 | nDCG@10 | +0.006 | [-0.065, +0.073] | 0.101 | not distinguishable |
+| ablation/dense_potion minus dense | Recall@10 | -0.039 | [-0.105, +0.020] | 0.093 | not distinguishable |
+| ablation/dense_potion minus dense | MRR@10 | -0.066 | [-0.163, +0.018] | 0.134 | not distinguishable |
+| ablation/dense_potion minus dense | nDCG@10 | -0.069 | [-0.142, -0.004] | 0.104 | dense higher |
+| ablation/dense_potion minus hybrid | Recall@10 | -0.077 | [-0.155, -0.001] | 0.111 | hybrid higher |
 | ablation/dense_potion minus hybrid | MRR@10 | -0.040 | [-0.100, +0.003] | 0.076 | not distinguishable |
-| ablation/dense_potion minus hybrid | nDCG@10 | -0.064 | [-0.127, -0.009] | 0.088 | hybrid higher |
-| ablation/dense_potion minus rerank | Recall@10 | -0.103 | [-0.187, -0.022] | 0.120 | rerank higher |
-| ablation/dense_potion minus rerank | MRR@10 | -0.130 | [-0.235, -0.042] | 0.144 | rerank higher |
-| ablation/dense_potion minus rerank | nDCG@10 | -0.130 | [-0.210, -0.057] | 0.113 | rerank higher |
+| ablation/dense_potion minus hybrid | nDCG@10 | -0.076 | [-0.140, -0.018] | 0.089 | hybrid higher |
+| ablation/dense_potion minus rerank | Recall@10 | -0.133 | [-0.222, -0.045] | 0.128 | rerank higher |
+| ablation/dense_potion minus rerank | MRR@10 | -0.150 | [-0.267, -0.049] | 0.160 | rerank higher |
+| ablation/dense_potion minus rerank | nDCG@10 | -0.163 | [-0.247, -0.086] | 0.118 | rerank higher |
 
 The interval is a paired bootstrap (10,000 resamples of the queries); MDD is the smallest difference this many queries detect 80% of the time.
 <!-- p2:end own-pairs -->
@@ -321,19 +322,19 @@ Which differences are distinguishable and which are not, at your gold-set size?
 Do the `hand` queries and the `claude` queries tell the same story?
 Did your prediction in `DECISIONS.md` prompt 1 hold?
 
-On my 34 queries (`own-pairs`), `dense` (0.858 MRR@10, 0.805 nDCG@10) is **reliably better than `bm25`** (0.772 MRR@10, 0.736 nDCG@10) on MRR@10 (+0.086 [+0.004, +0.181], MDD 0.130) and nDCG@10 (+0.069 [+0.004, +0.150], MDD 0.106), but not distinguishable on Recall@10 (+0.043 [-0.019, +0.123]).
-`hybrid` (0.843 Recall@10, 0.847 MRR@10, 0.814 nDCG@10) is reliably better than `bm25` on all three metrics, for example +0.075 [+0.020, +0.141] on MRR@10.
-`hybrid` and `dense` are **not distinguishable** on any metric (MRR@10 -0.011 [-0.057, +0.034]; nDCG@10 +0.009 [-0.028, +0.049], MDD 0.056).
-`rerank` (0.887 Recall@10, 0.936 MRR@10, 0.880 nDCG@10) is **reliably better than all three** on every metric; over `hybrid` it is +0.044 [+0.009, +0.092] on Recall@10, +0.090 [+0.022, +0.175] on MRR@10 and +0.066 [+0.024, +0.116] on nDCG@10.
-The MRR@10 lead over `hybrid` depends on my re-judging: before I added six labels after the independent review, `rerank` minus `hybrid` on MRR@10 was +0.071 [-0.007, +0.162], not distinguishable. Five of the six added documents were ones `rerank` itself had ranked in its top 5, so the re-judging was not blind to the systems, and this result should be read with that in mind.
+On my 34 queries (`own-pairs`), `dense` (0.873 MRR@10, 0.798 nDCG@10) is **reliably better than `bm25`** (0.772 MRR@10, 0.722 nDCG@10) on MRR@10 (+0.101 [+0.008, +0.206], MDD 0.146) and nDCG@10 (+0.076 [+0.008, +0.157], MDD 0.111), but not distinguishable on Recall@10 (+0.057 [-0.013, +0.141]).
+`hybrid` (0.833 Recall@10, 0.847 MRR@10, 0.805 nDCG@10) is reliably better than `bm25` on all three metrics, for example +0.075 [+0.020, +0.141] on MRR@10.
+`hybrid` and `dense` are **not distinguishable** on any metric (MRR@10 -0.026 [-0.092, +0.029]; nDCG@10 +0.007 [-0.040, +0.052], MDD 0.066).
+`rerank` (0.890 Recall@10, 0.956 MRR@10, 0.892 nDCG@10) is **reliably better than all three** on every metric; over `hybrid` it is +0.056 [+0.015, +0.107] on Recall@10, +0.109 [+0.029, +0.203] on MRR@10 and +0.087 [+0.041, +0.142] on nDCG@10.
+The MRR@10 lead over `hybrid` depends on my re-judging: with my original 78 judgments, `rerank` minus `hybrid` on MRR@10 was +0.071 [-0.007, +0.162], not distinguishable. In the first round of re-judging, five of the six documents I added were ones `rerank` itself had ranked in its top 5, so that round was not blind to the systems; in the second round I judged candidates that the other systems had also found (seven of the ten added documents were also in the top 10 of `bm25`, `dense` or `hybrid`). This result should be read with that in mind.
 
 On the `hand` and `claude` queries separately, every system has a higher mean on my `hand` queries.
-That gap is distinguishable for `dense` and `hybrid` on all three metrics and for `rerank` on Recall@10 and nDCG@10 (for example +0.183 [+0.077, +0.312] nDCG@10 for `rerank`), but not for `bm25`, and not for `rerank` on MRR@10 (+0.098 [+0.000, +0.220]).
+That gap is distinguishable for `dense` and `hybrid` on all three metrics and for `rerank` on Recall@10 and nDCG@10 (for example +0.166 [+0.066, +0.286] nDCG@10 for `rerank`), but not for `bm25`, and not for `rerank` on MRR@10 (+0.068 [+0.000, +0.182]).
 My queries share slightly more words with their target documents (content-word overlap 0.79 against 0.76).
-`bm25`'s lead over `dense` is negative in both groups (-0.046 nDCG@10 on the claude queries, -0.112 on the hand queries), and the difference between the groups (+0.066 [-0.080, +0.261]) is not distinguishable, so this gold set cannot tell whether who wrote the queries changes the comparison.
+`bm25`'s lead over `dense` is negative in both groups (-0.056 nDCG@10 on the claude queries, -0.112 on the hand queries), and the difference between the groups (+0.056 [-0.094, +0.256]) is not distinguishable, so this gold set cannot tell whether who wrote the queries changes the comparison.
 
 So **my prediction in `DECISIONS.md` prompt 1 was wrong** on this gold set: I expected `bm25` to win because security papers use very specific terms, and it came last.
-The class means suggest why, though they are means over 11 or 12 queries with no interval: on the identifier queries `bm25` tied for the top (1.000 MRR@10, as did `dense`, `hybrid` and `rerank`), while on the paraphrase queries it had the lowest mean (0.402 nDCG@10, against 0.572 for `dense` and 0.750 for `rerank`), where a question describes what an attack does without using the paper's own name for it.
+The class means suggest why, though they are means over 11 or 12 queries with no interval: on the identifier queries `bm25` tied for the top (1.000 MRR@10, as did `dense`, `hybrid` and `rerank`), while on the paraphrase queries it had the lowest mean (0.374 nDCG@10, against 0.589 for `dense` and 0.783 for `rerank`), where a question describes what an attack does without using the paper's own name for it.
 
 ---
 
@@ -348,16 +349,16 @@ The run file for it lives in `runs/own/ablation/`.
 | --- | --- | ---: | ---: | ---: | --- |
 | ablation/dense_potion minus bm25 | Recall@10 | +0.018 | [-0.067, +0.113] | 0.130 | not distinguishable |
 | ablation/dense_potion minus bm25 | MRR@10 | +0.034 | [-0.041, +0.109] | 0.107 | not distinguishable |
-| ablation/dense_potion minus bm25 | nDCG@10 | +0.014 | [-0.060, +0.084] | 0.105 | not distinguishable |
-| ablation/dense_potion minus dense | Recall@10 | -0.025 | [-0.083, +0.026] | 0.080 | not distinguishable |
-| ablation/dense_potion minus dense | MRR@10 | -0.052 | [-0.134, +0.022] | 0.115 | not distinguishable |
-| ablation/dense_potion minus dense | nDCG@10 | -0.055 | [-0.123, +0.005] | 0.096 | not distinguishable |
-| ablation/dense_potion minus hybrid | Recall@10 | -0.059 | [-0.132, +0.012] | 0.105 | not distinguishable |
+| ablation/dense_potion minus bm25 | nDCG@10 | +0.006 | [-0.065, +0.073] | 0.101 | not distinguishable |
+| ablation/dense_potion minus dense | Recall@10 | -0.039 | [-0.105, +0.020] | 0.093 | not distinguishable |
+| ablation/dense_potion minus dense | MRR@10 | -0.066 | [-0.163, +0.018] | 0.134 | not distinguishable |
+| ablation/dense_potion minus dense | nDCG@10 | -0.069 | [-0.142, -0.004] | 0.104 | dense higher |
+| ablation/dense_potion minus hybrid | Recall@10 | -0.077 | [-0.155, -0.001] | 0.111 | hybrid higher |
 | ablation/dense_potion minus hybrid | MRR@10 | -0.040 | [-0.100, +0.003] | 0.076 | not distinguishable |
-| ablation/dense_potion minus hybrid | nDCG@10 | -0.064 | [-0.127, -0.009] | 0.088 | hybrid higher |
-| ablation/dense_potion minus rerank | Recall@10 | -0.103 | [-0.187, -0.022] | 0.120 | rerank higher |
-| ablation/dense_potion minus rerank | MRR@10 | -0.130 | [-0.235, -0.042] | 0.144 | rerank higher |
-| ablation/dense_potion minus rerank | nDCG@10 | -0.130 | [-0.210, -0.057] | 0.113 | rerank higher |
+| ablation/dense_potion minus hybrid | nDCG@10 | -0.076 | [-0.140, -0.018] | 0.089 | hybrid higher |
+| ablation/dense_potion minus rerank | Recall@10 | -0.133 | [-0.222, -0.045] | 0.128 | rerank higher |
+| ablation/dense_potion minus rerank | MRR@10 | -0.150 | [-0.267, -0.049] | 0.160 | rerank higher |
+| ablation/dense_potion minus rerank | nDCG@10 | -0.163 | [-0.247, -0.086] | 0.118 | rerank higher |
 
 The interval is a paired bootstrap (10,000 resamples of the queries); MDD is the smallest difference this many queries detect 80% of the time.
 <!-- p2:end own-ablation -->
@@ -372,9 +373,9 @@ ablation/dense_potion against dense (BASE = "dense" in p2/retrievers/dense_potio
 | --- | --- | --- | ---: | ---: | ---: | --- |
 | c20 | paraphrase | claude | 0.500 | 1.000 | +0.500 | helped |
 | c13 | mixed | claude | 0.167 | 0.500 | +0.333 | helped |
+| c17 | paraphrase | claude | 1.000 | 0.000 | -1.000 | hurt |
 | h06 | mixed | hand | 1.000 | 0.200 | -0.800 | hurt |
 | h09 | paraphrase | hand | 1.000 | 0.250 | -0.750 | hurt |
-| c17 | paraphrase | claude | 0.500 | 0.000 | -0.500 | hurt |
 | c21 | paraphrase | claude | 0.500 | 0.125 | -0.375 | hurt |
 | c18 | paraphrase | claude | 0.500 | 0.333 | -0.167 | hurt |
 
@@ -391,12 +392,12 @@ The ablation is `p2/retrievers/dense_potion.py` (`BASE = "dense"`), and it chang
 One correction to my hypothesis above: potion is not an exact-word search. It is a static embedding model, which gives every word piece one fixed vector no matter what words surround it, so it still captures some meaning, but not context the way bge-small does.
 
 Speed: `dense_potion` took about 1.4 ms per query against 4.9 ms for `dense`, and in my run it encoded the whole corpus in under a second against about a minute and a half for bge-small. These times come from one run on one machine (the per-query times are in `traces/retrieval/`, which git ignores, and the encoding times are from the run's output), so they have no interval and cannot be checked from the repo.
-Accuracy: in the `own-ablation` table, `dense_potion` minus `dense` is -0.052 [-0.134, +0.022] on MRR@10 (MDD 0.115) and -0.055 [-0.123, +0.005] on nDCG@10 (MDD 0.096).
-Both intervals include zero, so the two models are **not distinguishable on this 34-query gold set**: the means moved in the direction I predicted, but any difference smaller than about 0.1 is too small for this gold set to detect.
+Accuracy: in the `own-ablation` table, `dense_potion` minus `dense` is -0.066 [-0.163, +0.018] on MRR@10 (MDD 0.134), -0.069 [-0.142, -0.004] on nDCG@10 (MDD 0.104) and -0.039 [-0.105, +0.020] on Recall@10.
+So the drop in accuracy I predicted is **distinguishable on nDCG@10**, the order of the whole top 10, but **not on MRR@10 or Recall@10**. My hypothesis named no metric, so I report all three rather than picking the one that agrees. The nDCG@10 interval ends close to zero (-0.004), and with my original 78 judgments it included zero (-0.054 [-0.121, +0.003]), so this result is fragile and depends on my later re-judging.
 
 The `own-ablation-queries` table only partly matches my explanation.
 The change helped 2 queries, hurt 5 and left 27 the same; the 11 identifier queries barely moved, as expected for exact names.
-It hurt `h06` (1.000 to 0.200), `h09` (1.000 to 0.250) and the paraphrase queries `c17`, `c21` and `c18`, which fits the idea that a model without context loses reworded questions.
+It hurt `c17` (1.000 to 0.000), `h06` (1.000 to 0.200), `h09` (1.000 to 0.250) and the paraphrase queries `c21` and `c18`, which fits the idea that a model without context loses reworded questions.
 But it also helped `c20`, which is a paraphrase query (0.500 to 1.000), and `c13` (0.167 to 0.500), so "potion loses paraphrases" does not explain every query.
 
 ---
@@ -410,15 +411,15 @@ Then sort the failures by cause, for example a vocabulary mismatch, near-duplica
 | qid | what the best system returned | what was relevant | cause | what you would try |
 |---|---|---|---|---|
 | c16 | #1 `2607.01854` (*Has This Checkpoint Been Abliterated?*), #2 `2605.21146` (*Detecting Trojaned DNNs*); no relevant document in the top 10 | `2306.09308` (*Matching Pairs: Attributing Fine-Tuned Models to their Pre-Trained Large Language Models*), `2509.26598` (*Are Robust LLM Fingerprints Adversarially Robust?*) | Vocabulary mismatch: the query asks which base model a checkpoint was "secretly derived from", while the papers say "attributing fine-tuned models" and "fingerprinting". Neither was in `hybrid`'s top 20, so `rerank` never saw them. | Expand the query with related terms before searching, or give the reranker a deeper pool (50 instead of 20). |
-| c17 | #1 `2602.08449` (*When Evaluation Becomes a Side Channel*), relevant documents at #3 (`2606.29646`) and #5 (`2610.24379`); 2 of 5 relevant in the top 10 | `2106.08970`, `2511.15992`, `2608.24037`, `2606.29646`, `2610.24379` (sleeper-agent and hidden-behaviour papers) | Partly a wrong label: first time round I had judged neither `2606.29646` nor `2610.24379` relevant, which made this query look like a total miss (MRR 0). The other three sleeper-agent papers never say "testing" or "deployment" the way the query does, and none of them made `hybrid`'s top 20. | Pool deeper when judging broad paraphrase queries; add a plain-English summary to each document so everyday wording meets "sleeper agent". |
+| c17 | Relevant documents at #1 (`2602.08449`), #3 (`2606.29646`) and #5 (`2610.24379`); 3 of 6 relevant in the top 10 | `2106.08970`, `2511.15992`, `2608.24037`, `2602.08449`, `2606.29646`, `2610.24379` (sleeper-agent and hidden-behaviour papers) | Partly a wrong label: first time round I had judged none of `2602.08449`, `2606.29646` and `2610.24379` relevant, which made this query look like a total miss (MRR 0). The other three sleeper-agent papers never say "testing" or "deployment" the way the query does, and none of them made `hybrid`'s top 20. | Pool deeper when judging broad paraphrase queries; add a plain-English summary to each document so everyday wording meets "sleeper agent". |
 | c13 | #1 `2505.19887` (*Deconstructing Obfuscation*), #2 `2605.06910` (relevant), #3 `2604.08083` (*Can LLMs Deobfuscate Binary Code?*) | `2310.12357`, `2605.06910`, `2606.31725` | Many similar papers on one topic: the corpus has dozens of obfuscation papers, and papers about LLMs that *undo* obfuscation crowded out two that ask whether obfuscation *breaks* LLM code analysis; neither of those two made `hybrid`'s top 20. | Tell the reranker prompt to separate "does obfuscation break analysis" from "tools that deobfuscate code", and pool deeper. |
 | c20 | Relevant documents at #1, #2, #4, #5, #6 and #8; 6 of 7 relevant in the top 10 | `2306.05499`, `2403.14720`, `2505.16957`, `2507.14799`, `2508.21669`, `2605.11868`, `2605.15030` | A wrong label: `rerank` put `2508.21669` (*Hacking the AI Hackers via Prompt Injection*) at #1, and I had first judged it not relevant, so this query looked like a reranker mistake (RR 0.5). Reading it again, it is about hidden text in web responses taking over AI agents, so I added it and `2505.16957`. The one remaining miss, `2306.05499`, speaks of "LLM-integrated applications" rather than "fetched web content" and was not in `hybrid`'s top 20. | Map everyday phrases such as "fetched web content" to the field's term, "indirect prompt injection". |
-| c21 | Relevant documents at #1, #2, #6 and #10 (MRR 1.000), but only 4 of 12 relevant documents in the top 10 (Recall@10 0.333) | 12 refusal-direction and abliteration documents, including `2607.05842` and its two full-text parts | Too many relevant documents for 10 places: dozens of refusal papers compete, only 4 of the 12 relevant ones made `hybrid`'s top 20, and the reranker can only reorder what it gets. | Merge each paper's full-text parts into one document, and pool deeper for broad questions. |
+| c21 | Relevant documents at #1, #2, #6 and #10 (MRR 1.000), but only 4 of 13 relevant documents in the top 10 (Recall@10 0.308) | 13 refusal-direction and abliteration documents, including `2607.05842` and its two full-text parts | Too many relevant documents for 10 places: dozens of refusal papers compete, only 4 of the 13 relevant ones made `hybrid`'s top 20, and the reranker can only reorder what it gets. | Merge each paper's full-text parts into one document, and pool deeper for broad questions. |
 
 Across these five, two patterns stand out.
 First, everyday wording meets the field's own terms in crowded topic areas: all five are `claude` queries (`c13` is mixed, the other four are paraphrases) that describe a problem in plain words ("secretly derived from", "turns harmful after deployment", "tendency to say no") while the papers use their own names for it ("model attribution", "sleeper agents", "abliteration"), and in all five some relevant documents never reached `hybrid`'s top 20, so the reranker had no chance to bring them up.
-Second, the gold set itself failed twice: on c17 and c20, the documents the reranker ranked high were relevant and I had first missed them, so part of what looked like system failure was my labeling.
-Some other candidates are arguably relevant too, such as `2609.00051` for c08 and `2605.01769` for c22. I did not add more, because they came from `rerank`'s own top results, and adding them would tilt the comparison further toward it; my labels are a limit of this gold set.
+Second, the gold set itself failed: on c17 and c20, the documents the reranker ranked high were relevant and I had first missed them, so part of what looked like system failure was my labeling.
+The second review round found more of the same on queries outside this table (for example `2609.00051` for c08, which every system ranked in its top 3, and two repair papers for c22), and I added them; a few candidates stay arguable, such as `2505.19887` for c13, which I judged not relevant. My labels are still a limit of this gold set.
 
 ---
 
@@ -436,23 +437,23 @@ Scores copied from the `shared-practice` table (section 1) and the `own` table (
 | Corpus | Queries | `bm25` | `dense` | `hybrid` | `rerank` |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Shared (30 CFR) | 20 | 0.518 | 0.480 | 0.443 | **0.743** |
-| Own (LLM security) | 34 | 0.736 | 0.805 | 0.814 | **0.880** |
+| Own (LLM security) | 34 | 0.722 | 0.798 | 0.805 | **0.892** |
 
 `rerank` has the highest mean on both corpora, but how clearly it wins depends on the metric.
 On my corpus it is reliably better than all three other systems on every metric, though over `hybrid` on MRR@10 only after my re-judging (see section 4).
 On 30 CFR it is reliably better than `dense` and `hybrid` on every metric, but over `bm25` only on MRR@10 (+0.293 [+0.043, +0.533]); its nDCG@10 lead over `bm25` (+0.225 [-0.011, +0.451]) and its Recall@10 lead are not distinguishable.
 What changed is the order of the first-stage systems underneath it.
-On 30 CFR, `bm25` had the highest mean of the three on nDCG@10 and Recall@10 (on MRR@10 `dense` was higher, 0.562 against 0.507), and none of those differences is distinguishable; on my corpus, `dense` and `hybrid` are reliably better than `bm25` (`dense` minus `bm25` +0.069 [+0.004, +0.150], `hybrid` minus `bm25` +0.078 [+0.027, +0.140] on nDCG@10).
+On 30 CFR, `bm25` had the highest mean of the three on nDCG@10 and Recall@10 (on MRR@10 `dense` was higher, 0.562 against 0.507), and none of those differences is distinguishable; on my corpus, `dense` and `hybrid` are reliably better than `bm25` (`dense` minus `bm25` +0.076 [+0.008, +0.157], `hybrid` minus `bm25` +0.083 [+0.030, +0.144] on nDCG@10).
 
 Three differences between the collections could explain it.
 (1) Identifiers: 30 CFR queries often name a section number, which only keyword search can match, and there `bm25` beat `dense` 0.857 to 0.211 nDCG@10 on the identifier queries; on my corpus the identifiers are tool and benchmark names that appear in each paper's title, which every abstract document carries at its top, and `dense` nearly tied `bm25` on them (0.997 against 1.000).
-(2) Reworded questions: on my paraphrase queries, `dense` and `hybrid` (0.572 and 0.592 nDCG@10) were ahead of `bm25` (0.402).
+(2) Reworded questions: on my paraphrase queries, `dense` and `hybrid` (0.589 and 0.584 nDCG@10) were ahead of `bm25` (0.374).
 (3) Document length: the CFR sections are short (median 68 words) while my abstracts are longer (median about 205 words) and written as connected prose, which may give an embedding model more meaning to work with.
 For (1) and (2) I have observed class means, over 7 queries per class on 30 CFR and 11 or 12 on my corpus, with no interval, so they point in a direction but do not prove it. Why security papers reward embeddings (for example, that they describe the same attack in many different ways) is a guess, and so is (3); I tested neither.
 
 The gold-set sizes limit both sides.
 With 20 queries on 30 CFR, the minimum detectable difference is 0.160 to 0.415, so `bm25`, `dense` and `hybrid` cannot be separated there, and the "flip" in their order may be noise on that side.
-With 34 queries on my corpus it is 0.056 to 0.159, which is enough to show that `dense` and `hybrid` beat `bm25` and that `rerank` beats every other system, but not enough to separate `hybrid` from `dense`.
+With 34 queries on my corpus it is 0.066 to 0.173, which is enough to show that `hybrid` beats `bm25` on all three metrics and `dense` beats it on MRR@10 and nDCG@10 (not Recall@10), and that `rerank` beats every other system, but not enough to separate `hybrid` from `dense`.
 
 ---
 
@@ -509,9 +510,9 @@ Every pair of systems on the same queries where at least one calls Claude, the o
 | shared practice: dense minus rerank_c10 | 20 | -0.101 | [-0.304, +0.111] | 8,263 | 2.7 | not distinguishable |
 | shared practice: hybrid minus rerank_c10 | 20 | -0.193 | [-0.391, +0.008] | 8,263 | 2.7 | not distinguishable |
 | shared practice: rerank_c10 minus rerank | 20 | -0.136 | [-0.286, +0.000] | 5,517 | 0.5 | not distinguishable |
-| own: bm25 minus rerank | 34 | -0.165 | [-0.282, -0.062] | 14,891 | 4.0 | rerank higher |
-| own: dense minus rerank | 34 | -0.078 | [-0.162, -0.010] | 14,891 | 4.0 | rerank higher |
-| own: hybrid minus rerank | 34 | -0.090 | [-0.175, -0.022] | 14,891 | 4.0 | rerank higher |
+| own: bm25 minus rerank | 34 | -0.184 | [-0.311, -0.072] | 14,891 | 4.0 | rerank higher |
+| own: dense minus rerank | 34 | -0.083 | [-0.167, -0.015] | 14,891 | 4.0 | rerank higher |
+| own: hybrid minus rerank | 34 | -0.109 | [-0.203, -0.029] | 14,891 | 4.0 | rerank higher |
 
 The difference is the cheaper system's score minus the dearer one's, with its paired interval; the savings count Claude calls only, so a system that makes none saves all of the other's.
 
@@ -546,8 +547,8 @@ _No stretch runs yet (stretch option 5): `uv run p2 run --corpus own --queries e
 3. **The table:** `stretch-cost`, above.
 4. **What the intervals let me claim:**
    - Shared practice: `rerank_c10` saves 5,517 input tokens per query (8,263 against 13,780, 40% fewer) and 0.5 seconds per query. Its MRR@10 drop against `rerank` (-0.136 [-0.286, +0.000]) is not distinguishable, but `rerank` is reliably better on Recall@10 (+0.142 [+0.050, +0.258]) and nDCG@10 (+0.158 [+0.054, +0.279]). Against free `hybrid`, `rerank_c10` is reliably better on nDCG@10 (+0.142 [+0.020, +0.267]) but not distinguishable on MRR@10 (+0.193 [-0.008, +0.391]).
-   - My corpus: skipping Claude and using `hybrid` alone saves all of `rerank`'s 14,891 input tokens and 4.0 seconds per query (`hybrid` takes about 7 ms per query locally), but it costs a distinguishable amount of quality on the current labels: `hybrid` minus `rerank` is -0.090 [-0.175, -0.022] on MRR@10 (before my six added labels it was -0.071 [-0.162, +0.007], not distinguishable, so this part depends on them), and `rerank` is also reliably better on nDCG@10 (+0.066 [+0.024, +0.116]) and Recall@10 (+0.044 [+0.009, +0.092]).
-   - So I would make neither cheap trade by default: cutting to 10 candidates costs measurable recall on the shared corpus, and dropping the reranker costs measurable MRR@10 on mine, on the current labels. Where cost matters more than the order of the top 10, `hybrid` is the free option, with a loss somewhere between about 0.02 and 0.18 MRR@10 on my corpus.
+   - My corpus: skipping Claude and using `hybrid` alone saves all of `rerank`'s 14,891 input tokens and 4.0 seconds per query (`hybrid` takes about 7 ms per query locally), but it costs a distinguishable amount of quality on the current labels: `hybrid` minus `rerank` is -0.109 [-0.203, -0.029] on MRR@10 (with my original 78 judgments it was -0.071 [-0.162, +0.007], not distinguishable, so this part depends on my re-judging), and `rerank` is also reliably better on nDCG@10 (+0.087 [+0.041, +0.142]) and Recall@10 (+0.056 [+0.015, +0.107]).
+   - So I would make neither cheap trade by default: cutting to 10 candidates costs measurable recall on the shared corpus, and dropping the reranker costs measurable MRR@10 on mine, on the current labels. Where cost matters more than the order of the top 10, `hybrid` is the free option, with a loss somewhere between about 0.03 and 0.20 MRR@10 on my corpus.
    - What it does not let me claim: these are 20 and 34 queries, so differences smaller than the MDDs (0.160 to 0.209 for `rerank_c10` against `rerank`) are invisible, the cheaper variant was only run on the shared corpus, and the seconds come from one run each.
 5. **Next:** a gate in front of the reranker that calls Claude only when `hybrid`'s first and second results score close together, and skips it on easy identifier lookups, where `hybrid` already scores 1.000 MRR@10 on my corpus. It worked if tokens per query fall by at least a third while the interval of gated minus full `rerank` stays around zero and within plus or minus the MDD.
 

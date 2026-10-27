@@ -14,7 +14,7 @@ All work is on the `dev` branch; `main` gets it by a merge the student makes.
 - [x] [YOU] license review: 0 fail, 3 flags reviewed with quotes; online check matched all 937
 - [x] [YOU] DECISIONS.md prompt 1, committed before any own-corpus score
 - [x] [YOU] 12 hand queries; [C] 22 claude queries drafted
-- [x] [YOU] relevance rule and 84 judgments (6 added after an independent review)
+- [x] [YOU] relevance rule and 94 judgments (16 added over two rounds of independent review)
 - [x] [C] own runs of all four systems, scored
 - [x] [YOU] ablation hypothesis, committed before the run; [C] `dense_potion` run and scored
 
