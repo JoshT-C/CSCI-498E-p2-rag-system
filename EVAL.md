@@ -135,6 +135,7 @@ It leaves open whether `hybrid` beats either of its two parts, because 20 querie
 <!-- p2:begin answers -->
 | Label | System | Verified (in) | 95% interval | not_found (in) | Declined (out) | 95% interval | Quotes found |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| prd-rerank | rerank | 15 of 18 (83%) | [0.608, 0.942] | 3 of 18 (17%) | 4 of 6 (67%) | [0.300, 0.903] | 48 of 48 |
 | rerank | rerank | 8 of 8 (100%) | [0.676, 1.000] | 0 of 8 (0%) | 4 of 4 (100%) | [0.510, 1.000] | 12 of 12 |
 <!-- p2:end answers -->
 
@@ -491,6 +492,7 @@ Every trace in traces/ that records a Claude call:
 
 | Trace | System | Spans | Claude calls | Saved | Input tokens | Output tokens | Seconds | Input per span | Output per span | Seconds per span |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| traces/answers-prd-rerank.jsonl | rerank | 24 | 48 | 4 | 561,845 | 14,390 | 258.2 | 23,410 | 600 | 10.8 |
 | traces/answers-rerank.jsonl | rerank | 12 | 24 | 4 | 216,295 | 4,261 | 82.8 | 18,025 | 355 | 6.9 |
 | traces/own-own-rerank.jsonl | rerank | 34 | 34 | 2 | 506,290 | 3,094 | 135.8 | 14,891 | 91 | 4.0 |
 | traces/shared-practice-rerank.jsonl | rerank | 20 | 20 | 2 | 275,606 | 2,172 | 64.3 | 13,780 | 109 | 3.2 |

@@ -2845,6 +2845,56 @@
     }
   },
   "answers": {
+    "own/prd-rerank": {
+      "file": "answers/own/prd-rerank.json",
+      "corpus": "own",
+      "system": "rerank",
+      "model": "sonnet",
+      "n_in": 18,
+      "n_out": 6,
+      "verified": 15,
+      "not_found_in": 3,
+      "declined_out": 4,
+      "claims": 48,
+      "claims_verified": 48,
+      "verified_share": 0.833333,
+      "verified_wilson95": [
+        0.60778,
+        0.941634
+      ],
+      "not_found_in_share": 0.166667,
+      "declined_out_share": 0.666667,
+      "declined_out_wilson95": [
+        0.299993,
+        0.903229
+      ],
+      "passed": {
+        "s01": true,
+        "s02": true,
+        "s03": true,
+        "s04": true,
+        "s05": false,
+        "s06": false,
+        "s07": true,
+        "s08": true,
+        "s09": true,
+        "s10": true,
+        "s11": false,
+        "s12": true,
+        "s13": true,
+        "s14": true,
+        "s15": true,
+        "s16": true,
+        "s17": true,
+        "s18": true,
+        "s19": true,
+        "s20": true,
+        "s21": true,
+        "s22": false,
+        "s23": true,
+        "s24": false
+      }
+    },
     "shared/rerank": {
       "file": "answers/shared/rerank.json",
       "corpus": "shared",
@@ -2891,6 +2941,16 @@
     },
     "cost": {
       "traces": [
+        {
+          "file": "traces/answers-prd-rerank.jsonl",
+          "system": "rerank",
+          "spans": 24,
+          "calls": 48,
+          "saved": 4,
+          "input_tokens": 561845,
+          "output_tokens": 14390,
+          "seconds": 258.24
+        },
         {
           "file": "traces/answers-rerank.jsonl",
           "system": "rerank",

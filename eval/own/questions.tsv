@@ -1,0 +1,27 @@
+# Fact-check questions for the Sentinel-Weights proposal (v7): one per citation-backed claim, qid<TAB>kind<TAB>question<TAB>gold docids.
+# "in" questions are answered by a cited paper whose full text is in the corpus; "out" questions cite a paper that is not in the corpus, so a careful system declines them.
+# The questions are worded neutrally (without the proposal's own figures), so the answer reports what the source says and the proposal is compared against it.
+s01	in	In the same-lineage study of aligned and abliterated LLMs for vulnerability analysis (Li et al.), what share of Gemma patches compiled for the aligned model and for the abliterated model?	2607.05842,2607.05842-full__p001-005,2607.05842-full__p006-010
+s02	in	Which aligned and abliterated model pairs did Li et al. compare in their same-lineage study of vulnerability analysis?	2607.05842,2607.05842-full__p001-005,2607.05842-full__p006-010
+s03	in	What decoding and context settings did Li et al. hold fixed across the aligned and abliterated models?	2607.05842,2607.05842-full__p001-005,2607.05842-full__p006-010
+s04	in	What stages does the executable patch-validation funnel in Li et al. use to judge a generated patch?	2607.05842,2607.05842-full__p001-005,2607.05842-full__p006-010
+s05	in	How do Li et al. describe the abliteration procedure that removes the refusal direction from a model's weights?	2607.05842,2607.05842-full__p001-005,2607.05842-full__p006-010
+s06	in	How many paired harmful and neutral prompts do Chu et al. use to find harmful detection heads in their circuit-guided weight scaling work?	2609.00051,2609.00051-full__p001-005,2609.00051-full__p006-010,2609.00051-full__p011-015,2609.00051-full__p016-020,2609.00051-full__p021-024
+s07	in	In Chu et al.'s circuit-guided weight scaling, what fraction of heads and neurons are scaled, and by what factors?	2609.00051,2609.00051-full__p001-005,2609.00051-full__p006-010,2609.00051-full__p011-015,2609.00051-full__p016-020,2609.00051-full__p021-024
+s08	in	How stable are the safety components that Chu et al. identify across random subsamples of their prompts?	2609.00051,2609.00051-full__p001-005,2609.00051-full__p006-010,2609.00051-full__p011-015,2609.00051-full__p016-020,2609.00051-full__p021-024
+s09	in	How much does circuit-guided weight scaling change safety rates under GCG attacks, and how much general capability does it cost, according to Chu et al.?	2609.00051,2609.00051-full__p001-005,2609.00051-full__p006-010,2609.00051-full__p011-015,2609.00051-full__p016-020,2609.00051-full__p021-024
+s10	in	What three kinds of components make up the safety circuit that Chu et al. describe?	2609.00051,2609.00051-full__p001-005,2609.00051-full__p006-010,2609.00051-full__p011-015,2609.00051-full__p016-020,2609.00051-full__p021-024
+s11	in	Do Chu et al. report a cosine similarity between edited weights and the base model's safety directions after weight scaling?	2609.00051,2609.00051-full__p001-005,2609.00051-full__p006-010,2609.00051-full__p011-015,2609.00051-full__p016-020,2609.00051-full__p021-024
+s12	in	What task and setting do Musaffar et al. use to study adversarial intent in human-AI teams?	2603.20976-full__p001-005,2603.20976-full__p006-010
+s13	in	How well do off-the-shelf LLM monitors detect an adversarial AI teammate from a single round, according to Musaffar et al.?	2603.20976-full__p001-005,2603.20976-full__p006-010
+s14	in	What detection accuracy do Musaffar et al. report when the monitor looks at multi-round windows of the interaction?	2603.20976-full__p001-005,2603.20976-full__p006-010
+s15	in	What F1 score does CoCoTen reach, and with what share of labeled prompts?	2508.02997-full
+s16	in	How does CoCoTen build and decompose its co-occurrence tensor, including window size and decomposition rank?	2508.02997-full
+s17	in	What is defensive refusal bias, and how often do aligned models refuse legitimate cyber-defense requests, according to Campbell et al.?	2603.01246,2603.01246-full__p001-005,2603.01246-full__p006-010,2603.01246-full__p011-013
+s18	in	Where was the OR-Bench over-refusal benchmark published, and what does it measure?	2405.20947,2405.20947-full__p001-005,2405.20947-full__p006-010,2405.20947-full__p011-015,2405.20947-full__p016-020,2405.20947-full__p021-025,2405.20947-full__p026-028
+s19	out	What share of GCG adversarial suffixes does a LightGBM classifier on perplexity and sequence length catch, according to Alon and Kamfonas?	-
+s20	out	By how much does LLM vulnerability-detection specificity fall when code is obfuscated with Obfuscator-LLVM, according to Boke and Torka?	-
+s21	out	What detection accuracy, false positive rate and latency does the Adversarial Prompt Disentanglement method of Fang and Fang report?	-
+s22	out	Do the sleeper agent backdoors of Hubinger et al. persist through standard safety training?	-
+s23	out	Does the StoryScope paper by Russell et al. define a Wordsmith v2 Model Context Protocol workflow with an IntentContract?	-
+s24	out	What benchmark does AgentDojo by Debenedetti et al. provide for prompt injection attacks on LLM agents?	-

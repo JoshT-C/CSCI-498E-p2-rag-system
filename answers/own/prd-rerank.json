@@ -1,0 +1,752 @@
+{
+  "label": "prd-rerank",
+  "system": "rerank",
+  "corpus": "own",
+  "model": "sonnet",
+  "chunking": {
+    "words": 300,
+    "overlap": 50
+  },
+  "top": 5,
+  "prompt_sha256": "4418806497c799a1",
+  "repeat": null,
+  "answers": [
+    {
+      "qid": "s01",
+      "question": "In the same-lineage study of aligned and abliterated LLMs for vulnerability analysis (Li et al.), what share of Gemma patches compiled for the aligned model and for the abliterated model?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "2607.05842-full__p006-010#7",
+        "2607.05842-full__p001-005#0",
+        "2607.05842#0",
+        "2607.05842-full__p006-010#10",
+        "2607.05842-full__p006-010#0"
+      ],
+      "answer": "In the Gemma-based Java/Vul4J repair-validation study, 9.0% of patches compiled for the aligned model and 32.8% compiled for the abliterated model.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "Abliterated Gemma patches compiled at 32.8%, compared with 9.0% for Aligned.",
+          "chunk_id": "2607.05842#0",
+          "quote": "with 67.8%, 65.0%, and 32.8% of patches judged usable, successfully applied, and successfully compiled, respectively, compared with 29.9%, 24.9%, and 9.0% for Aligned."
+        }
+      ],
+      "seconds": 5.3,
+      "input_tokens": 6975,
+      "output_tokens": 287,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s02",
+      "question": "Which aligned and abliterated model pairs did Li et al. compare in their same-lineage study of vulnerability analysis?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "2607.05842-full__p001-005#3",
+        "2607.05842-full__p001-005#0",
+        "2607.05842#0",
+        "2607.05842-full__p001-005#4",
+        "2607.05842-full__p001-005#5"
+      ],
+      "answer": "Li et al. compared two same-lineage pairs. The primary pair was Gemma: gemma-4-31B-it (ALIGNED) against its public refusal-ablated descendant gemma-4-31B-CRACK (ABLITERATED). The supplementary pair was Qwen, used for the overview and vulnerable-line localization analyses. The chunks do not name the specific Qwen models.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "Gemma was the primary same-lineage pair, comparing gemma-4-31B-it with the public refusal-ablated descendant gemma-4-31B-CRACK.",
+          "chunk_id": "2607.05842-full__p001-005#3",
+          "quote": "Gemma [21] serves as\nthe primary same-lineage pair for the full study, comparing\ngemma-4-31B-itwith the public refusal-ablated descendantgemma-4-31B-CRACK."
+        },
+        {
+          "text": "Qwen was a supplementary same-lineage pair for the overview and vulnerable-line localization analyses.",
+          "chunk_id": "2607.05842-full__p001-005#3",
+          "quote": "Qwen [22] provides a supplementary same-lineage pair for the overview and vulnerableline localization analyses"
+        }
+      ],
+      "seconds": 7.0,
+      "input_tokens": 6252,
+      "output_tokens": 492,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s03",
+      "question": "What decoding and context settings did Li et al. hold fixed across the aligned and abliterated models?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "2607.05842-full__p001-005#14",
+        "2607.05842-full__p001-005#9",
+        "2607.05842-full__p006-010#11",
+        "2607.05842-full__p001-005#0",
+        "2607.05842#0"
+      ],
+      "answer": "For the Gemma pair, both the aligned and abliterated states used the same local llama-server binary. They also shared a context length of 32,768, temperature 0, top-p 1, top-k 0, repeat penalty 1, and seed 42. Qwen used the same settings as Gemma for the corresponding studies. More broadly, both states had the same prompt construction, local serving stack, decoding controls, and scoring pipeline.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "Both Gemma states used the same local llama-server binary, with context length 32,768, temperature 0, top-p 1, top-k 0, repeat penalty 1, and seed 42.",
+          "chunk_id": "2607.05842-full__p001-005#14",
+          "quote": "Both\nGemma states use the same local llama-server binary, context\nlength 32,768, temperature 0, top-p1, top-k0, repeat penalty\n1, and seed 42."
+        },
+        {
+          "text": "Qwen uses the same settings as Gemma for the corresponding studies.",
+          "chunk_id": "2607.05842-full__p001-005#14",
+          "quote": "Qwen uses the same settings as Gemma\nfor the corresponding studies."
+        },
+        {
+          "text": "Both states are evaluated with the same prompt construction, local serving stack, decoding controls, and scoring pipeline.",
+          "chunk_id": "2607.05842-full__p001-005#9",
+          "quote": "Both states are evaluated with\nthe same prompt construction, local serving stack, decoding\ncontrols, and scoring pipeline."
+        }
+      ],
+      "seconds": 8.5,
+      "input_tokens": 6206,
+      "output_tokens": 589,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s04",
+      "question": "What stages does the executable patch-validation funnel in Li et al. use to judge a generated patch?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "2607.05842-full__p006-010#6",
+        "2607.05842-full__p006-010#7",
+        "2607.05842-full__p001-005#13",
+        "2607.05842-full__p006-010#10",
+        "2607.05842-full__p006-010#8"
+      ],
+      "answer": "The funnel has five ordered gates, running from answer availability to executable repair: (1) Usable: the response has a parseable patch-like answer that can enter patch extraction. (2) Applied: the extracted patch changes the target source and applies to the vulnerable checkout. (3) Compiled: the patched project builds far enough for validation to proceed. (4) PoV pass: the vulnerability-specific proof-of-vulnerability trigger is blocked. (5) Full validation pass: the patch also passes the broader validation suite available for the Vul4J project.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "The funnel gates are ordered from answer availability to executable repair.",
+          "chunk_id": "2607.05842-full__p006-010#6",
+          "quote": "The gates are intentionally ordered from answer\navailability to executable repair."
+        },
+        {
+          "text": "Usable: the response contains a parseable patch-like answer that can enter patch extraction.",
+          "chunk_id": "2607.05842-full__p006-010#6",
+          "quote": "means the response\ncontains a parseable patch-like answer that can enter patch\nextraction."
+        },
+        {
+          "text": "Applied: the extracted patch changes the target source and applies to the vulnerable checkout.",
+          "chunk_id": "2607.05842-full__p006-010#6",
+          "quote": "means the extracted patch changes the\ntarget source and applies to the vulnerable checkout."
+        },
+        {
+          "text": "Compiled: the patched project builds far enough for validation to proceed.",
+          "chunk_id": "2607.05842-full__p006-010#7",
+          "quote": "means the patched project builds far enough for validation to\nproceed."
+        },
+        {
+          "text": "PoV pass: the vulnerability-specific proof-of-vulnerability trigger is blocked.",
+          "chunk_id": "2607.05842-full__p006-010#7",
+          "quote": "means the vulnerability-specific proof-ofvulnerability trigger is blocked."
+        },
+        {
+          "text": "Full validation pass: the patch also passes the broader validation suite available for the Vul4J project.",
+          "chunk_id": "2607.05842-full__p006-010#7",
+          "quote": "means the\npatch also passes the broader validation suite available for the\nVul4J project."
+        }
+      ],
+      "seconds": 7.2,
+      "input_tokens": 6584,
+      "output_tokens": 802,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s05",
+      "question": "How do Li et al. describe the abliteration procedure that removes the refusal direction from a model's weights?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "2608.18093#0",
+        "2607.17427#0",
+        "2606.05396#0",
+        "2512.13655#0",
+        "2610.29555#0"
+      ],
+      "answer": "The chunks don't say how Li et al. describe abliteration. None of them name their authors, so I can't attribute any description to Li et al.",
+      "not_found": true,
+      "claims": [],
+      "seconds": 5.2,
+      "input_tokens": 5184,
+      "output_tokens": 173,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s06",
+      "question": "How many paired harmful and neutral prompts do Chu et al. use to find harmful detection heads in their circuit-guided weight scaling work?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "2609.00051-full__p001-005#5",
+        "2609.00051-full__p001-005#6",
+        "2609.00051-full__p001-005#7",
+        "2609.00051-full__p001-005#2",
+        "2609.00051-full__p001-005#1"
+      ],
+      "answer": "The chunks don't say how many paired harmful and neutral prompts were used. Chu et al. (2025) is cited only as prior work on editing a small set of heads to strengthen refusal, not as the source of the circuit-guided weight scaling method or its paired-prompt setup.",
+      "not_found": true,
+      "claims": [],
+      "seconds": 10.4,
+      "input_tokens": 6460,
+      "output_tokens": 348,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s07",
+      "question": "In Chu et al.'s circuit-guided weight scaling, what fraction of heads and neurons are scaled, and by what factors?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "2609.00051-full__p006-010#3",
+        "2609.00051-full__p006-010#2",
+        "2609.00051-full__p001-005#9",
+        "2609.00051-full__p001-005#10",
+        "2609.00051-full__p001-005#3"
+      ],
+      "answer": "The top 3% of harmful detection heads and refusal heads are scaled by 2.0 (α_det = α_ref = 2.0). The top 1% of safety neurons are scaled by 1.5 (α_saf = 1.5).",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "The top 3% of harmful detection heads and refusal heads are scaled by a factor of 2.0 each.",
+          "chunk_id": "2609.00051-full__p006-010#3",
+          "quote": "the\ntop 3% of harmful detection heads and refusal heads\nare scaled using𝛼det =𝛼 ref =2.0"
+        },
+        {
+          "text": "The top 1% of safety neurons are scaled by a factor of 1.5.",
+          "chunk_id": "2609.00051-full__p006-010#3",
+          "quote": "the top 1%\nof safety neurons are scaled using𝛼saf =1.5"
+        }
+      ],
+      "seconds": 5.3,
+      "input_tokens": 6619,
+      "output_tokens": 376,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s08",
+      "question": "How stable are the safety components that Chu et al. identify across random subsamples of their prompts?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "2609.00051-full__p011-015#4",
+        "2609.00051-full__p001-005#0",
+        "2609.00051-full__p001-005#5",
+        "2609.00051-full__p001-005#1",
+        "2609.00051-full__p001-005#10"
+      ],
+      "answer": "The paper reports high stability under data variations. The retrieved text doesn't say the perturbation was specifically random subsampling of prompts, and it doesn't include the Table 6 numbers or the exact procedure. Semantic directions keep cosine similarity of at least 0.92, and the discrete circuit components (safety heads and neurons) show strong Jaccard overlap. The authors conclude the circuit reflects intrinsic model mechanisms rather than dataset artifacts.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "Both the continuous semantic directions (cosine similarity at least 0.92) and the discrete circuit components maintain high stability across data variations.",
+          "chunk_id": "2609.00051-full__p011-015#4",
+          "quote": "both continuous semantic directions (cos𝜃≥0.92 ) and discrete circuit components\nmaintain high stability across data variations."
+        },
+        {
+          "text": "Strong Jaccard overlap scores show the pipeline consistently recovers the same safety heads and neurons.",
+          "chunk_id": "2609.00051-full__p011-015#4",
+          "quote": "The strong Jaccard overlap scores confirm that our pipeline\nconsistently recovers the same underlying safety heads and neurons"
+        },
+        {
+          "text": "The authors conclude the circuit captures intrinsic model mechanisms rather than dataset artifacts.",
+          "chunk_id": "2609.00051-full__p011-015#4",
+          "quote": "demonstrating that the mapped circuit\ncaptures intrinsic model mechanisms rather than dataset artifacts."
+        }
+      ],
+      "seconds": 14.4,
+      "input_tokens": 6323,
+      "output_tokens": 998,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s09",
+      "question": "How much does circuit-guided weight scaling change safety rates under GCG attacks, and how much general capability does it cost, according to Chu et al.?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "2609.00051-full__p001-005#3",
+        "2609.00051-full__p001-005#0",
+        "2609.00051#0",
+        "2609.00051-full__p006-010#5",
+        "2609.00051-full__p006-010#4"
+      ],
+      "answer": "According to Chu et al., circuit-guided weight scaling improves safety rates under GCG attacks by 26.5% on average across six LLMs (from 43.2% to 69.7%). The cost to general capability is small: an average accuracy reduction of only 1.7% across four task-oriented benchmarks.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "Averaged across six LLMs, circuit-guided scaling improves safety rates under attacks by 26.5%, from 43.2% to 69.7%.",
+          "chunk_id": "2609.00051-full__p001-005#3",
+          "quote": "Averaged across six LLMs,\nthis training-free circuit-guided scaling improves\nsafety rates under attacks by 26.5% (from 43.2%\nto 69.7%)"
+        },
+        {
+          "text": "The utility cost is an average accuracy reduction of only 1.7% across four task-oriented benchmarks.",
+          "chunk_id": "2609.00051-full__p001-005#3",
+          "quote": "with an average accuracy reduction\nof only 1.7% across four task-oriented benchmarks."
+        }
+      ],
+      "seconds": 6.3,
+      "input_tokens": 6085,
+      "output_tokens": 442,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s10",
+      "question": "What three kinds of components make up the safety circuit that Chu et al. describe?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "2609.00051-full__p001-005#0",
+        "2609.00051-full__p001-005#2",
+        "2609.00051-full__p001-005#3",
+        "2609.00051-full__p001-005#5",
+        "2609.00051-full__p006-010#7"
+      ],
+      "answer": "The safety circuit has three kinds of components: Harmful Detection Heads, which respond to harmful inputs; Safety Neurons, which mediate and stabilize safety signals in the residual stream; and Refusal Heads, which translate these signals into safe response generation.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "The circuit consists of Harmful Detection Heads that respond to harmful inputs, Safety Neurons that mediate and stabilize safety signals in the residual stream, and Refusal Heads that translate these signals into safe response generation.",
+          "chunk_id": "2609.00051-full__p001-005#0",
+          "quote": "consisting of\n(i)Harmful Detection Headsthat respond\nto harmful inputs, (ii)Safety Neuronsthat\nmediate and stabilize safety signals in the\nresidual stream, and (iii)Refusal Heads\nthat translate these signals into safe response\ngeneration."
+        }
+      ],
+      "seconds": 6.6,
+      "input_tokens": 6410,
+      "output_tokens": 395,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s11",
+      "question": "Do Chu et al. report a cosine similarity between edited weights and the base model's safety directions after weight scaling?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "2609.00051-full__p011-015#3",
+        "2609.00051-full__p011-015#4",
+        "2609.00051-full__p001-005#9",
+        "2609.00051-full__p006-010#5",
+        "2609.00051-full__p001-005#0"
+      ],
+      "answer": "The chunks don't show this. The paper reports cosine similarities only in a bootstrap robustness analysis. That analysis compares safety directions across 80% subsamples of the probing data. It does not compare edited weights with the base model's safety directions after weight scaling.",
+      "not_found": true,
+      "claims": [],
+      "seconds": 4.0,
+      "input_tokens": 6464,
+      "output_tokens": 181,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s12",
+      "question": "What task and setting do Musaffar et al. use to study adversarial intent in human-AI teams?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "2603.20976-full__p001-005#1",
+        "2603.20976-full__p001-005#2",
+        "2603.20976-full__p001-005#3",
+        "2603.20976-full__p001-005#4",
+        "2603.20976-full__p001-005#0"
+      ],
+      "answer": "They use a 25-round trivia game played by three human agents and a malicious AI manipulator. The AI follows a model-based reinforcement learning policy to manipulate trust and degrade team performance. An LLM-based observer reads only behavioral traces (chat logs, agent selections, trust allocations) and classifies whether the AI's behavior is adversarial. It doesn't see the trivia questions, answer options, or ground-truth answers, so the task is task-agnostic.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "The dataset comes from a 25-round trivia game between three human agents and a malicious AI manipulator.",
+          "chunk_id": "2603.20976-full__p001-005#1",
+          "quote": "a 25-round trivia game between three human agents and a malicious AI\nmanipulator."
+        },
+        {
+          "text": "The AI assistant follows a model-based reinforcement learning policy to strategically manipulate trust and degrade team performance.",
+          "chunk_id": "2603.20976-full__p001-005#3",
+          "quote": "the AI\nassistant follows a model-based reinforcement learning (MBRL) policy to strategically manipulate\ntrust and degrade team performance."
+        },
+        {
+          "text": "An LLM-based observer performs binary classification on each sample to decide whether the AI behavior is adversarial, relying solely on behavioral signals.",
+          "chunk_id": "2603.20976-full__p001-005#4",
+          "quote": "An LLM-based observerfthen performs binary classification on each sample to determine whether the AI behavior is\nadversarial, relying solely on behavioral signals."
+        },
+        {
+          "text": "The observer is restricted from seeing the trivia questions, answer options, or ground-truth answers, making detection task-agnostic.",
+          "chunk_id": "2603.20976-full__p001-005#4",
+          "quote": "is deliberately restricted from observing the underlying\ntrivia questions, answer options, or ground-truth answers."
+        }
+      ],
+      "seconds": 6.8,
+      "input_tokens": 5959,
+      "output_tokens": 709,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s13",
+      "question": "How well do off-the-shelf LLM monitors detect an adversarial AI teammate from a single round, according to Musaffar et al.?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "2603.20976-full__p001-005#7",
+        "2603.20976-full__p001-005#8",
+        "2603.20976-full__p001-005#6",
+        "2603.20976-full__p006-010#6",
+        "2603.20976-full__p001-005#2"
+      ],
+      "answer": "Poorly. In the 1-round setting, all the non-fine-tuned models showed zero recall and zero false positive rate. They assumed every sample was helpful, which the paper calls a \"benign bias\". Fine-tuning fixed most of this. Fine-tuning gpt-4.1-mini on only 50 samples raised recall from 0% to 100%, but the false positive rate was 0.178.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "In the 1-round setting, all non-fine-tuned models had zero recall and zero FPR, assuming every sample to be helpful.",
+          "chunk_id": "2603.20976-full__p001-005#7",
+          "quote": "In the 1-round setting, all non-fine-tuned\nmodels exhibit zero recall and zero FPR, assuming every sample to be helpful."
+        },
+        {
+          "text": "Fine-tuning on only 50 samples increased 1-round recall from 0% to 100%, with non-zero FPR due to distribution mismatch.",
+          "chunk_id": "2603.20976-full__p001-005#7",
+          "quote": "In the 1-round setting, fine-tuning on\nonly 50 samples (8% of the dataset) increases recall from 0% to 100%, with non-zero FPR due to\ndistribution mismatch between training and evaluation sets."
+        },
+        {
+          "text": "The fine-tuned gpt-4.1-mini had 100.0 recall and 0.178 FPR in the 1-round setting.",
+          "chunk_id": "2603.20976-full__p001-005#7",
+          "quote": "1-Roundft:gpt-4.1-mini100.0(Recall) /0.178(FPR) —"
+        }
+      ],
+      "seconds": 6.9,
+      "input_tokens": 6628,
+      "output_tokens": 625,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s14",
+      "question": "What detection accuracy do Musaffar et al. report when the monitor looks at multi-round windows of the interaction?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "2603.20976-full__p001-005#6",
+        "2603.20976-full__p001-005#7",
+        "2603.20976-full__p001-005#8",
+        "2603.20976-full__p001-005#4",
+        "2603.20976-full__p001-005#5"
+      ],
+      "answer": "In the multi-round windows, the best models reach roughly 82% accuracy. In the 10-round window, wr:o3 scores 82.0%, wr:gpt-4.1 81.2%, and wr:gpt-4.1-mini 69.4%. All three are significant against the 50% random baseline (p<0.001), while wr:gpt-4o scores 51.2% and is not significant. In the 5-round window, wr:o3 scores 82.4% and wr:gpt-4.1 79.4%. The non-reasoning gpt-4.1-mini sits at 50.0%, and its fine-tuned version reaches 82.6%.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "In the 10-round window, wr:o3 scores 82.0%, wr:gpt-4.1 81.2%, and wr:gpt-4.1-mini 69.4%, with wr:gpt-4o at 51.2% (p=0.311, not significant).",
+          "chunk_id": "2603.20976-full__p001-005#6",
+          "quote": "10-Roundwr:gpt-4.181.2(79.8,82.6)<0.001\nwr:gpt-4.1-mini69.4(67.2,71.6)<0.001\nwr:o382.0(80.4,83.6)<0.001\nwr:gpt-4o51.2(49.6,52.8)0.311"
+        },
+        {
+          "text": "GPT-4.1, GPT-4.1-mini, and GPT-o3 achieve statistically significant detection in the 10-round window (p<0.001).",
+          "chunk_id": "2603.20976-full__p001-005#7",
+          "quote": "and GPT-o3 achieve statistically significant detection in the 10-round window (p <0.001)."
+        },
+        {
+          "text": "In the 5-round window, wr:o3 scores 82.4%, wr:gpt-4.1 79.4%, non-reasoning gpt-4.1-mini 50.0%, and fine-tuned gpt-4.1-mini 82.6%.",
+          "chunk_id": "2603.20976-full__p001-005#7",
+          "quote": "5-Roundnr:gpt-4.1-mini50.0(50.0,50.0)0.518\nnrft:gpt-4.1-mini82.6(81.6,83.6)<0.001\nwr:gpt-4.179.4(77.4,81.4)<0.001\nwr:o382.4(80.8,84.0)<0.001"
+        }
+      ],
+      "seconds": 7.3,
+      "input_tokens": 6502,
+      "output_tokens": 882,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s15",
+      "question": "What F1 score does CoCoTen reach, and with what share of labeled prompts?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "2508.02997-full#0",
+        "2508.02997-full#6",
+        "2508.02997-full#9",
+        "2508.02997-full#8",
+        "2508.02997-full#2"
+      ],
+      "answer": "CoCoTen reaches an F1 score of 0.83 using only 0.5% of labeled prompts. The abstract describes this as a 96.6% improvement over baselines.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "CoCoTen achieves an F1 score of 0.83 using only 0.5% of labeled prompts.",
+          "chunk_id": "2508.02997-full#0",
+          "quote": "Our evaluations show that this approach achieves a notable F1 score of 0.83 using only 0.5% of labeled prompts, which is a 96.6% improvement over baselines."
+        }
+      ],
+      "seconds": 4.3,
+      "input_tokens": 6459,
+      "output_tokens": 275,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s16",
+      "question": "How does CoCoTen build and decompose its co-occurrence tensor, including window size and decomposition rank?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "2508.02997-full#3",
+        "2508.02997-full#4",
+        "2508.02997-full#8",
+        "2508.02997-full#11",
+        "2508.02997-full#10"
+      ],
+      "answer": "CoCoTen builds a windowed co-occurrence matrix for each prompt, using a sliding window (typically 5–10 tokens) over the entire corpus vocabulary, giving N×N matrices. With M prompts, these are stacked into an N×N×M tensor X built from both jailbreak and benign prompts. The tensor is then decomposed with CP (CANDECOMP/PARAFAC) decomposition into a sum of R rank-one tensors, producing factor matrices A (N×R), B (N×R) and C (M×R). C serves as the embeddings matrix of the prompts. In experiments, window sizes of 3, 5, 10, 15, 20 and 25 and ranks of 1, 10, 30, 50 and 80 were explored. The main results use a window size of 5 and a rank of 10.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "Each prompt gets a co-occurrence matrix over a sliding window, typically 5–10 tokens.",
+          "chunk_id": "2508.02997-full#3",
+          "quote": "Our approach (Fig. 1) is based on the Windowed\nCo-occurrence Matrix, that captures local word-word relationships\nwithin a defined sliding window, typically 5–10 tokens."
+        },
+        {
+          "text": "Matrices use the entire corpus vocabulary (N×N) and the M matrices are stacked into an N×N×M tensor.",
+          "chunk_id": "2508.02997-full#3",
+          "quote": "Given a dataset comprising M\nprompts, these M individual co-occurrence matrices are stacked to\nform a tensor X of dimensions 𝑁× 𝑁× 𝑀."
+        },
+        {
+          "text": "The tensor is built from both jailbreak and benign prompts.",
+          "chunk_id": "2508.02997-full#4",
+          "quote": "this tensor is constructed utilizing\nboth jailbreak and benign prompts"
+        },
+        {
+          "text": "It is decomposed with CP decomposition into rank-one tensors.",
+          "chunk_id": "2508.02997-full#4",
+          "quote": "We employ the CANDE-\nCOMP/PARAFAC(CP) decomposition, a standard technique for\ndecomposing a tensor into a sum of rank-one tensors"
+        },
+        {
+          "text": "CP yields factor matrices A, B, C; C is the embeddings matrix.",
+          "chunk_id": "2508.02997-full#4",
+          "quote": "This CP decomposition yields three factor matrices: A∈ R𝑁×𝑅,\nB∈ R𝑁×𝑅, and C∈ R𝑀×𝑅. The third factor matrix, C, serves as\nthe embeddings matrix, capturing the latent representations of the\nM prompts."
+        },
+        {
+          "text": "Window sizes and ranks explored; main results use window 5 and rank 10.",
+          "chunk_id": "2508.02997-full#8",
+          "quote": "Our\nexperiments explored multiple co-occurrence window sizes (3, 5,\n10, 15, 20, and 25) and tensor decomposition ranks (1, 10, 30, 50, and\n80). For clarity, we primarily report results for a window size of 5\nand a rank of 10"
+        }
+      ],
+      "seconds": 9.0,
+      "input_tokens": 6027,
+      "output_tokens": 1135,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s17",
+      "question": "What is defensive refusal bias, and how often do aligned models refuse legitimate cyber-defense requests, according to Campbell et al.?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "2603.01246#0",
+        "2603.01246-full__p001-005#0",
+        "2603.01246-full__p001-005#2",
+        "2603.01246-full__p001-005#6",
+        "2603.01246-full__p001-005#7"
+      ],
+      "answer": "Defensive Refusal Bias is the tendency of safety-tuned frontier LLMs to refuse assistance for authorized defensive cybersecurity tasks when those tasks include language similar to an offensive cyber task. Across all 2,390 NCCDC conversations, the overall refusal rate was 12.2% (291 refusals). It varied by model: 19.5% for the safety-focused model, 10.2% for the frontier model and 6.6% for the open-source model. Prompts with offensive-sounding terms were refused at 30.5%, versus 11.2% for semantically equivalent prompts without them (2.72×).",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "Defensive Refusal Bias is the tendency of safety-tuned frontier LLMs to refuse assistance for authorized defensive cybersecurity tasks when those tasks include similar language to an offensive cyber task.",
+          "chunk_id": "2603.01246#0",
+          "quote": "We study Defensive Refusal Bias -- the tendency of safety-tuned frontier LLMs to refuse assistance for authorized defensive cybersecurity tasks when those tasks include similar language to an offensive cyber task."
+        },
+        {
+          "text": "Across all 2,390 conversations, the overall refusal rate was 12.2% (291 refusals).",
+          "chunk_id": "2603.01246-full__p001-005#6",
+          "quote": "Across all 2,390 conversations, we observe a 12.2% overall refusal rate (291 refusals)."
+        },
+        {
+          "text": "Refusal varied by model: 19.5% for the safety-focused model, 10.2% for the frontier model, and 6.6% for the open-source model.",
+          "chunk_id": "2603.01246-full__p001-005#6",
+          "quote": "the safety-focused model refuses 19.5% of requests, the frontier model\n10.2%, and the open-source model 6.6%."
+        },
+        {
+          "text": "Prompts with offensive terms were refused at 2.72× the rate of equivalent prompts without them (30.5% vs. 11.2%).",
+          "chunk_id": "2603.01246-full__p001-005#6",
+          "quote": "are refused at2.72×the rate of semantically equivalent\nprompts without such terminology (30.5% vs. 11.2%;χ 2 = 37.3,p<0.001)."
+        }
+      ],
+      "seconds": 7.5,
+      "input_tokens": 6331,
+      "output_tokens": 843,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s18",
+      "question": "Where was the OR-Bench over-refusal benchmark published, and what does it measure?",
+      "kind": "in",
+      "system": "rerank",
+      "retrieved": [
+        "2405.20947-full__p001-005#0",
+        "2405.20947#0",
+        "2405.20947-full__p001-005#2",
+        "2405.20947-full__p006-010#11",
+        "2405.20947-full__p001-005#3"
+      ],
+      "answer": "OR-Bench was published in the Proceedings of the 42nd International Conference on Machine Learning (ICML), Vancouver, Canada, PMLR 267, 2025. It measures over-refusal in LLMs, meaning how often models reject innocuous (safe) prompts and become less helpful because of safety alignment. It has 80,000 over-refusal prompts across 10 categories, a hard subset of about 1,000 prompts, and 600 toxic prompts that check models don't respond indiscriminately. It was used to evaluate 32 LLMs across 8 model families.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "OR-Bench was published in the Proceedings of the 42nd International Conference on Machine Learning, Vancouver, Canada, PMLR 267, 2025.",
+          "chunk_id": "2405.20947-full__p001-005#0",
+          "quote": "Proceedings of the 42 nd International Conference on Machine\nLearning, Vancouver, Canada. PMLR 267, 2025."
+        },
+        {
+          "text": "It measures over-refusal, where LLMs reject innocuous prompts and become less helpful.",
+          "chunk_id": "2405.20947#0",
+          "quote": "the enhanced safety often come with the side effect of over-refusal, where LLMs may reject innocuous prompts and become less helpful."
+        },
+        {
+          "text": "It comprises 80,000 over-refusal prompts across 10 categories, a hard subset of around 1,000 prompts, and 600 toxic prompts to prevent indiscriminate responses.",
+          "chunk_id": "2405.20947#0",
+          "quote": "OR-Bench comprises 80,000 over-refusal prompts across 10 common rejection categories, a subset of around 1,000 hard prompts that are challenging even for state-of-the-art LLMs, and an additional 600 toxic prompts to prevent indiscriminate responses."
+        },
+        {
+          "text": "It was used to measure over-refusal of 32 popular LLMs across 8 model families.",
+          "chunk_id": "2405.20947#0",
+          "quote": "We then conduct a comprehensive study to measure the over-refusal of 32 popular LLMs across 8 model families."
+        }
+      ],
+      "seconds": 6.5,
+      "input_tokens": 6098,
+      "output_tokens": 793,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s19",
+      "question": "What share of GCG adversarial suffixes does a LightGBM classifier on perplexity and sequence length catch, according to Alon and Kamfonas?",
+      "kind": "out",
+      "system": "rerank",
+      "retrieved": [
+        "2606.15531#0",
+        "2510.08604#0",
+        "2605.19966#0",
+        "2505.09602#0",
+        "2507.15042#0"
+      ],
+      "answer": "The provided chunks do not say what share of GCG suffixes a LightGBM classifier on perplexity and sequence length catches, according to Alon and Kamfonas.",
+      "not_found": true,
+      "claims": [],
+      "seconds": 7.0,
+      "input_tokens": 4872,
+      "output_tokens": 151,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s20",
+      "question": "By how much does LLM vulnerability-detection specificity fall when code is obfuscated with Obfuscator-LLVM, according to Boke and Torka?",
+      "kind": "out",
+      "system": "rerank",
+      "retrieved": [
+        "2511.19130#0",
+        "2606.14233#0",
+        "2605.06910#0",
+        "2408.03489#0",
+        "2603.18740#0"
+      ],
+      "answer": "The chunks don't answer this. None of them mentions Boke and Torka, or a drop in LLM vulnerability-detection specificity under Obfuscator-LLVM.",
+      "not_found": true,
+      "claims": [],
+      "seconds": 3.5,
+      "input_tokens": 4871,
+      "output_tokens": 153,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s21",
+      "question": "What detection accuracy, false positive rate and latency does the Adversarial Prompt Disentanglement method of Fang and Fang report?",
+      "kind": "out",
+      "system": "rerank",
+      "retrieved": [
+        "2603.11875#0",
+        "2605.15030#0",
+        "2502.13141#0",
+        "2605.19966#0",
+        "2509.00088#0"
+      ],
+      "answer": "The provided chunks do not mention an \"Adversarial Prompt Disentanglement\" method by Fang and Fang, so they don't give its detection accuracy, false positive rate or latency.",
+      "not_found": true,
+      "claims": [],
+      "seconds": 4.0,
+      "input_tokens": 4949,
+      "output_tokens": 157,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s22",
+      "question": "Do the sleeper agent backdoors of Hubinger et al. persist through standard safety training?",
+      "kind": "out",
+      "system": "rerank",
+      "retrieved": [
+        "2511.15992#0",
+        "2608.24037#0",
+        "2604.00324#0",
+        "2407.04108#0",
+        "2506.13206#0"
+      ],
+      "answer": "Yes. The chunks say Hubinger et al. demonstrated that these backdoors persist through safety training. Another chunk describes Anthropic's Sleeper Agents research as showing that artificial backdoors persist through safety training.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "Hubinger et al. demonstrated that the sleeper agent backdoors persist through safety training.",
+          "chunk_id": "2511.15992#0",
+          "quote": "Recent work by Hubinger et al. demonstrated that these backdoors persist through safety training"
+        },
+        {
+          "text": "Anthropic's Sleeper Agents research showed that artificial backdoors persist through safety training.",
+          "chunk_id": "2608.24037#0",
+          "quote": "This paper extends Anthropic's Sleeper Agents research [1], which showed artificial backdoors persist through safety training"
+        }
+      ],
+      "seconds": 5.3,
+      "input_tokens": 4945,
+      "output_tokens": 359,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s23",
+      "question": "Does the StoryScope paper by Russell et al. define a Wordsmith v2 Model Context Protocol workflow with an IntentContract?",
+      "kind": "out",
+      "system": "rerank",
+      "retrieved": [
+        "2510.05968#0",
+        "2609.14780#0",
+        "2604.12258#0",
+        "2505.02306#0",
+        "2504.03767#0"
+      ],
+      "answer": "The provided chunks don't mention a StoryScope paper by Russell et al., a Wordsmith v2 workflow, or an IntentContract, so I can't answer this from them.",
+      "not_found": true,
+      "claims": [],
+      "seconds": 3.7,
+      "input_tokens": 4455,
+      "output_tokens": 154,
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "qid": "s24",
+      "question": "What benchmark does AgentDojo by Debenedetti et al. provide for prompt injection attacks on LLM agents?",
+      "kind": "out",
+      "system": "rerank",
+      "retrieved": [
+        "2603.01246-full__p006-010#5",
+        "2606.26479#0",
+        "2607.05842-full__p001-005#7",
+        "2609.36603#0",
+        "2603.13026#0"
+      ],
+      "answer": "AgentDojo provides a dynamic environment for evaluating prompt injection attacks and defenses for LLM agents.",
+      "not_found": false,
+      "claims": [
+        {
+          "text": "AgentDojo (Debenedetti et al.) is a dynamic environment to evaluate prompt injection attacks and defenses for LLM agents.",
+          "chunk_id": "2603.01246-full__p006-010#5",
+          "quote": "Agentdojo: A dynamic environment to evaluate prompt injection attacks and defenses"
+        }
+      ],
+      "seconds": 4.4,
+      "input_tokens": 5983,
+      "output_tokens": 250,
+      "model": "claude-sonnet-5-5"
+    }
+  ]
+}
